@@ -1,0 +1,129 @@
+.intrest_main {
+  width: 100%;
+  .intrest_content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  h3 {
+    color: #010010;
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .intrest_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .left_dropDown {
+      width: 100%;
+      padding: 0 25px;
+    }
+    .ant-card-bordered {
+      background-color: #8dd9c2;
+      border-radius: 10px;
+    }
+    .intrest_radio {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+    .intrest_checkbox {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    .ant-checkbox-inner {
+      border-radius: 6px;
+    }
+    .ant-checkbox-wrapper {
+      padding: 0;
+      margin: 0;
+      span {
+        color: #6b6b6b;
+        font-size: 15px;
+      }
+    }
+    .ant-collapse-header {
+      font-size: 15px;
+      color: #010010 !important;
+    }
+    .ant-collapse-content-box {
+      padding-top: 0px !important;
+    }
+    .ant-radio-inner {
+      width: 20px;
+      height: 20px;
+    }
+    .ant-radio-wrapper {
+      color: #010010;
+      font-size: 17px;
+    }
+    .anticon {
+      color: #2c99cb;
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 98px;
+    padding-bottom: 50px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+
+  @include md {
+    h3 {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .intrest_main {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  @include sm {
+    h3 {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .intrest_main {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  @include xs {
+    h3 {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .intrest_main {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .intrest_main .left_dropDown {
+      padding: 0;
+      margin-top: 20px;
+    }
+    .intrest_main .intrestCard .right_card {
+      padding: 0;
+    }
+  }
+}

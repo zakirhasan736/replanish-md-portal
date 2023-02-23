@@ -1,0 +1,46 @@
+.ad_desc {
+  width: 100%;
+  .ad_desc_main {
+    width: 100%;
+    h3 {
+      color: #010010;
+      text-align: center;
+      font-size: 24px;
+      margin-top: 30px;
+      font-family: Lato, sans-serif;
+      padding-bottom: 30px;
+    }
+  }
+  .ad_desc_content {
+    width: 70%;
+    margin: 0 auto;
+    .ad_textArea {
+      .ant-input {
+        border-radius: 8px;
+        border: 1px solid #ededed;
+      }
+    }
+  }
+  .button_main {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include sm {
+    .ad_desc_content {
+      width: 80%;
+    }
+  }
+
+  @include xs {
+    .ad_desc_content {
+      width: 90%;
+    }
+  }
+}

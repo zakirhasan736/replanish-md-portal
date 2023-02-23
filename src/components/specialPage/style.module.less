@@ -1,0 +1,70 @@
+.Special-list-container {
+	padding: 8rem 0;
+	text-align: center;
+	background-image: url("/images/services-bg.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #fff;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+
+	.main-heading {
+		margin: 0;
+		color: #000000;
+		font-size: 2.25rem;
+		font-family: Tenor, sans-serif;
+
+		@media (max-width: 768px) {
+			margin-bottom: 1rem;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.75rem;
+		}
+	}
+}
+
+.image-card-container {
+	position: relative;
+
+	.card-content {
+		position: absolute;
+		padding: 3rem 1.5rem;
+		background-color: #ffffffe6;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		bottom: 2rem;
+		left: 2.5rem;
+		right: 2.5rem;
+
+		.heading {
+			font-family: Tenor, sans-serif;
+			margin: 0;
+			color: @black;
+			font-size: 1.5rem;
+			text-align: left;
+		}
+		.description {
+			font-family: Montserrat, sans-serif;
+			padding: 0.75rem 0;
+			opacity: 0.5;
+			color: #00000080;
+			margin: 0;
+			font-size: 1rem;
+			text-align: left;
+			line-height: 24px;
+			text-align: center;
+		}
+		.read-more-btn {
+			display: flex;
+			align-items: center;
+			color: @secondary-color;
+			font-family: Montserrat, sans-serif;
+			font-size: 0.9rem;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.traffic_main {
+  width: 100%;
+  h3 {
+    color: #010010;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 30px;
+    font-family: Lato, sans-serif;
+  }
+  .traffic_content {
+    width: 60%;
+    margin: 0 auto;
+    .website_field {
+      border-radius: 8px;
+      border: 1px solid #ededed;
+      padding: 10px 21px;
+      &::placeholder {
+        color: #010010;
+        font-size: 16px;
+      }
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 50px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include md {
+    .traffic_content {
+      width: 65% !important;
+    }
+  }
+  @include sm {
+    .traffic_content {
+      width: 82% !important;
+    }
+  }
+  @include xs {
+    .traffic_content {
+      width: 90% !important;
+    }
+    h3 {
+      width: 75%;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+}

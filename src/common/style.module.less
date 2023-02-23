@@ -1,0 +1,350 @@
+@import "./inputField/style.module.less";
+@import "./inputFieldWithoutCount/style.module.less";
+@import "./modal/style.module.less";
+
+.contact-card-wrapper > .contact-card {
+	border-color: @primary-color;
+	background: transparent;
+	border-radius: 4px;
+	padding: 1rem 2.5rem !important;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	width: 100vh;
+
+	@media (max-width: 992px) {
+		padding: 1rem 1.5rem;
+	}
+
+	@media (max-width: 768px) {
+		padding: 1rem;
+	}
+
+	@media (max-width: 1180.98px) {
+		min-height: 374px;
+	}
+	@media (max-width: 953.98px) {
+		min-height: 385px;
+	}
+	@media (max-width: 576px) {
+		min-height: auto;
+	}
+
+	p,
+	h1 {
+		margin: 0;
+	}
+
+	.primary-text {
+		font-size: 1.25rem;
+		font-family: Tenor, sans-serif;
+	}
+	.main-text {
+		font-family: Montserrat, sans-serif;
+		font-size: 2.5rem;
+		color: @white;
+		line-height: 57px;
+
+		@media (max-width: 992px) {
+			line-height: normal;
+		}
+
+		@media (max-width: 793.99px) {
+			font-size: 2rem;
+			line-height: normal;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.75rem;
+			line-height: normal;
+		}
+	}
+	.secondary-text {
+		font-family: Manrope, sans-serif;
+		font-size: 1.3rem;
+		color: @white;
+	}
+}
+
+.service-img-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.service-img {
+	}
+	.title-text {
+		font-family: Montserrat, sans-serif;
+		font-size: 1.3rem;
+		color: @black;
+		padding-top: 1.8rem;
+		font-weight: 500;
+	}
+}
+
+.icon-text-wrapper {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 768px) {
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	.title-text {
+		font-family: Montserrat, sans-serif;
+		font-size: 1.25rem;
+		color: @base-gray;
+		font-weight: 400;
+		margin: 0;
+		padding-left: 1rem;
+
+		@media (max-width: 768px) {
+			font-size: 1rem;
+		}
+	}
+}
+
+.question-text {
+	font-family: Tenor, sans-serif;
+	margin: 0;
+	font-weight: 400;
+	font-size: 2.5rem;
+	color: @black;
+	padding-bottom: 2rem;
+	line-height: 42px;
+	letter-spacing: -0.03em;
+
+	@media (max-width: 768px) {
+		font-size: 1.5rem;
+		padding-bottom: 1rem;
+		width: 90%;
+	}
+}
+.answer-text {
+	font-family: Montserrat, sans-serif;
+	font-size: 1.15rem;
+	color: @black;
+	font-weight: 400;
+	margin: 0;
+	opacity: 0.5;
+	width: 70%;
+	line-height: 32px;
+	letter-spacing: -0.03em;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		font-size: 1rem;
+	}
+}
+
+.radio-group-container {
+	margin-top: 6rem;
+
+	.radio-btn {
+		border: 1px solid;
+		width: 100%;
+		padding: 1rem;
+		border-radius: 4px;
+		font-family: Tenor, sans-serif;
+		font-weight: 400;
+		font-size: 1.25rem;
+		line-height: 23px;
+		text-align: start;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		min-height: 80px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 576px) {
+			font-size: 1rem;
+		}
+
+		.ant-radio {
+			margin-right: 0.5rem;
+
+			.ant-radio-inner {
+				width: 20px;
+				height: 20px;
+				border-color: @white2;
+				top: -2px;
+
+				&::after {
+					width: 28px;
+					height: 28px;
+					margin-top: -14px;
+					margin-left: -14px;
+					background: @white2;
+				}
+			}
+		}
+	}
+}
+
+.work-points-section {
+	display: flex;
+	align-items: flex-start;
+
+	.point-num {
+		padding-right: 1.5rem;
+
+		@media (max-width: 768px) {
+			width: initial;
+		}
+	}
+
+	.point-content {
+		width: initial;
+		text-align: left;
+
+		@media (max-width: 768px) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.page-content-header-container {
+	background: #ececec;
+	padding: 8.5rem 0;
+	background-image: url("/images/service-bg.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #fff;
+	text-align: center;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+
+	.main-heading {
+		font-family: Tenor, sans-serif;
+		font-weight: 400;
+		font-size: 4rem;
+		color: @black;
+		line-height: 75px;
+		letter-spacing: -0.03em;
+		margin-bottom: 2rem;
+
+		@media (max-width: 768px) {
+			font-size: 2rem;
+			line-height: normal;
+		}
+	}
+
+	.inner-content {
+		font-family: Montserrat, sans-serif;
+		font-size: 1.15rem;
+		color: #00000080;
+		line-height: 32px;
+
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: normal;
+		}
+	}
+
+	.online-btn {
+		background: @secondary-color;
+		border-color: @secondary-color;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 1rem 2rem;
+		height: auto;
+		border-radius: 4px;
+		font-family: Montserrat, sans-serif;
+		margin-top: 2rem;
+	}
+}
+
+.inline-title-content-content {
+	display: flex;
+	align-items: center;
+
+	p {
+		font-family: Montserrat, sans-serif;
+		font-weight: 500;
+		font-size: 1rem;
+	}
+
+	.dark-text {
+		color: @black;
+	}
+	.light-text {
+		color: #448666;
+	}
+}
+
+.text-field-container {
+	margin-bottom: 1.25rem;
+
+	@media (max-width: 576px) {
+		margin-bottom: 0.75rem;
+	}
+
+	@media (max-width: 992px) {
+		margin-bottom: 0.75rem;
+	}
+
+	.text-field {
+		padding: 1.25rem !important;
+		border-color: #efefef !important;
+		font-family: Poppins-Medium, sans-serif;
+		font-size: 1rem;
+		color: #8b8fa8;
+
+		@media (max-width: 576px) {
+			padding: 0.5rem !important;
+			font-size: 0.75rem;
+		}
+		@media (max-width: 992px) {
+			padding: 0.6rem !important;
+			font-size: 0.8rem;
+		}
+
+		.ant-input-prefix {
+			margin-right: 1.25rem;
+
+			@media (max-width: 576px) {
+				margin-right: 0.5rem;
+				width: 0.6rem;
+			}
+			@media (max-width: 992px) {
+				margin-right: 0.75rem;
+				width: 0.9rem;
+			}
+		}
+		.ant-input {
+			font-family: Poppins-Medium, sans-serif;
+			font-size: 1rem;
+			color: #8b8fa8;
+
+			@media (max-width: 576px) {
+				font-size: 0.75rem;
+			}
+			@media (max-width: 992px) {
+				font-size: 0.85rem;
+			}
+
+			&::placeholder {
+				font-family: Poppins-Medium, sans-serif;
+				font-size: 1rem;
+				color: #8b8fa8;
+
+				@media (max-width: 576px) {
+					font-size: 0.75rem;
+				}
+				@media (max-width: 992px) {
+					font-size: 0.85rem;
+				}
+			}
+		}
+	}
+}

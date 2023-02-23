@@ -1,0 +1,83 @@
+.payment_main {
+  width: 100%;
+  .payment_content {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 75px;
+  }
+  h3 {
+    color: #010010;
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato, sans-serif;
+    margin-top: 30px;
+  }
+  .payment_details_above {
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 102px;
+  }
+  .payment_details_lower {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 102px;
+  }
+  .payment_fields {
+    padding: 10px 21px;
+    border-radius: 8px;
+  }
+  .ant-form-vertical .ant-form-item-label > label {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+  }
+  .ant-input {
+    border-radius: 8px;
+  }
+  .ant-row {
+    width: 48%;
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 41px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include sm {
+    .payment_details_above {
+      display: block;
+      padding: 0 50px;
+      div {
+        width: 100% !important;
+      }
+    }
+    .payment_details_lower {
+      display: block;
+      padding: 0 50px;
+      div {
+        width: 100% !important;
+      }
+    }
+  }
+  @include xs {
+    .payment_details_above {
+      display: block;
+      padding: 0 50px;
+      div {
+        width: 100% !important;
+      }
+    }
+    .payment_details_lower {
+      display: block;
+      padding: 0 50px;
+      div {
+        width: 100% !important;
+      }
+    }
+  }
+}

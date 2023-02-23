@@ -1,0 +1,140 @@
+.writeAd_main {
+  width: 100%;
+  .writeAd_content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  h3 {
+    color: #010010;
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .adForm_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 113px;
+    padding-left: 35px;
+    padding-right: 35px;
+    .adForm_main_left {
+      width: 50%;
+      // padding-left: 40px;
+    }
+    .form_card {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 15px;
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  .ant-input-group-addon {
+    width: 71px !important;
+    border-radius: 8px !important;
+    border: 1px solid #ededed !important;
+    padding: 10px 21px !important;
+    background: white !important;
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+      .ant-select-selector {
+      border-color: transparent !important;
+      box-shadow: none !important;
+    }
+    .ant-select-arrow {
+      color: #2c99cb;
+    }
+  }
+  .ant-input-group > .ant-input:last-child {
+    width: 98%;
+  }
+  .phone_number .ant-input {
+    border-radius: 8px !important;
+    border: 1px solid #ededed;
+    padding: 10px 21px;
+    margin-left: 2%;
+    &::placeholder {
+      color: #010010;
+      font-size: 16px;
+    }
+  }
+  .bottomText {
+    padding-bottom: 42px;
+  }
+  @include md {
+    .adForm_main {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+      display: block;
+      .adForm_main_left {
+        width: 75%;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+    .form_card {
+      margin: 0 auto;
+      padding: 0;
+      padding-bottom: 50px;
+    }
+  }
+
+  @include sm {
+    .adForm_main {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      display: block;
+      .adForm_main_left {
+        width: 75%;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+    .form_card {
+      margin: 0 auto;
+      margin-top: 25px;
+      padding: 0;
+      padding-bottom: 50px;
+    }
+  }
+  @include xs {
+    h3 {
+      width: 75%;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+    .adForm_main {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      .adForm_main_left {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 45px;
+      }
+    }
+    .form_card {
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 35px;
+      padding-bottom: 30px;
+    }
+    .bottomText {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+export const TherapyData = [
+	"Hydrate Drip",
+	"Myers Drip",
+	"Detox Drip",
+	"Detox Drip",
+	"Libido Drip",
+	"Party Drip",
+	"Fit Drip",
+	"Slim Drip",
+	"Slim Drip",
+	"Beauty Drip",
+	"Migraine Drip",
+	"Beauty Drip",
+	"High C Drip",
+	"NAD+",
+];

@@ -1,0 +1,87 @@
+.webMob_container {
+  width: 100%;
+  .webMob_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      color: #010010;
+      text-align: center;
+      font-size: 24px;
+      font-family: Lato, sans-serif;
+      margin-top: 30px;
+    }
+    .webMob_button {
+      width: 350px;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 78px;
+      margin-bottom: 45px;
+    }
+    .mob_button {
+      width: 118px;
+      height: 40px;
+      background-color: white;
+      color: #2c99cb;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid #2c99cb;
+      &:hover {
+        opacity: 0.9;
+      }
+      .active {
+        background-color: #8dd9c2;
+        opacity: 0.8;
+      }
+    }
+    .web_button {
+      width: 118px;
+      height: 40px;
+      background-color: white;
+      color: #2c99cb;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid #2c99cb;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .active {
+      background-color: #8dd9c2;
+      color: white;
+      opacity: 0.8;
+      border: 1px solid #8dd9c2;
+      path {
+        stroke: white;
+      }
+    }
+    .mobileImage {
+      margin-left: 50px;
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 38px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include sm {
+    h3 {
+      width: 70%;
+    }
+  }
+  @include xs {
+    h3 {
+      width: 85%;
+    }
+  }
+}

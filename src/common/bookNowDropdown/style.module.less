@@ -1,0 +1,36 @@
+.btn-wrapper {
+	.book-btn {
+		text-transform: uppercase;
+		padding: 1rem 2rem;
+		height: auto;
+		border-radius: 4px;
+		font-size: 1.25em;
+		font-family: Montserrat, sans-serif;
+
+		@media (max-width: 768px) {
+			padding: 0.5rem 1rem;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: @dark-color !important;
+		}
+	}
+}
+
+.overlay-custom-class {
+	.ant-dropdown-menu {
+		background: #e5e5e5;
+
+		.ant-dropdown-menu-item-selected {
+			background: #33333029;
+		}
+
+		a {
+			color: @base-gray;
+			&:hover {
+				color: @base-gray;
+			}
+		}
+	}
+}

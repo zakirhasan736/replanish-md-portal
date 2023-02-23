@@ -1,0 +1,214 @@
+.price-plane-container {
+	background: #ececec;
+	padding: 6.5rem 0;
+	background-image: url("/images/about-logo.png");
+	background-position-x: left;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-color: #fff;
+	text-align: center;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+
+	.main-heading {
+		font-family: Tenor, sans-serif;
+		font-weight: 400;
+		font-size: 2.4rem;
+		color: @black;
+		line-height: 75px;
+		letter-spacing: -0.03em;
+		margin: 0;
+
+		@media (max-width: 768px) {
+			font-size: 1.75rem;
+			line-height: normal;
+		}
+	}
+
+	.inner-content {
+		font-family: Montserrat, sans-serif;
+		font-size: 1.15rem;
+		color: #00000080;
+		line-height: 32px;
+		max-width: 1195px;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: normal;
+		}
+	}
+}
+
+.pricing-table-container {
+	margin: 3rem 0;
+	margin-bottom: 5rem;
+
+	.price-btn-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.active-btn {
+			background: @primary-color;
+			border-color: @primary-color;
+
+			&:hover {
+				background: @primary-color;
+				border-color: @primary-color;
+			}
+		}
+		.nonActive-btn {
+			background: @white;
+			border-color: @black;
+
+			&:hover {
+				background: @white;
+				border-color: @black;
+			}
+		}
+
+		button {
+			padding: 0 2.3rem;
+			text-transform: uppercase;
+			height: 50px;
+			font-family: Montserrat, sans-serif;
+			font-size: 0.9rem;
+			color: @black;
+			font-weight: 600;
+			border-radius: 4px;
+			min-width: 158px;
+
+			&:last-child {
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+
+.table-container {
+	margin: 6rem 0;
+	box-shadow: 0px 31px 24px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	background: @white;
+
+	.r-br {
+		border-radius: 0 10px 0 0;
+	}
+	.l-br {
+		border-radius: 10px 0 0;
+	}
+
+	.table-heading {
+		padding: 1.25rem;
+		text-transform: capitalize;
+		font-family: Montserrat, sans-serif;
+		font-size: 1.15rem;
+		color: @black !important
+		;
+		font-weight: 700;
+		background: @primary-color;
+	}
+
+	.table-content {
+		font-family: Montserrat, sans-serif;
+		font-size: 1.15rem;
+		color: @black;
+		padding: 1rem 0;
+		margin: 0;
+		padding-bottom: 0.5rem;
+
+		&:last-child {
+			margin-bottom: 2rem;
+			min-height: 86px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.dark-bg {
+		background: @secondary-color;
+		border-radius: 0 14px 14px 0;
+
+		h1,
+		p {
+			color: @white;
+		}
+	}
+	.primary-bg {
+		background: @primary-color;
+	}
+	.light-bg {
+		background: #f8f8f8;
+	}
+
+	button {
+		margin: 2rem 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 0.9rem;
+		padding: 1rem 2rem;
+		height: auto;
+		border-radius: 4px;
+		font-family: Montserrat, sans-serif;
+		margin-bottom: 4rem;
+	}
+	.dark-btn {
+		background: @secondary-color;
+		border-color: @secondary-color;
+		color: @white;
+
+		&:hover {
+			background: @secondary-color;
+			border-color: @secondary-color;
+			color: @white;
+		}
+	}
+	.light-btn {
+		background: @white;
+		border-color: @white;
+		color: @secondary-color;
+
+		&:hover {
+			background: @white;
+			border-color: @white;
+			color: @secondary-color;
+		}
+	}
+}
+
+.member-how-works-container {
+	padding: 8rem 0;
+	text-align: center;
+	background-image: url("/images/membership-work-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	padding-bottom: 10rem;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+
+	.main-heading {
+		color: @black;
+		font-size: 2.5rem;
+		font-family: Tenor, sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 42px;
+		letter-spacing: -0.03em;
+		margin-bottom: 2.6rem;
+
+		@media (max-width: 768px) {
+			font-size: 2rem;
+			line-height: normal;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.75rem;
+			margin-bottom: 3rem;
+		}
+	}
+}

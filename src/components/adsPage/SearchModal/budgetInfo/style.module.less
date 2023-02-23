@@ -1,0 +1,158 @@
+.budgetInfo_main {
+  width: 100%;
+  .budgetInfo_content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  h3 {
+    color: #010010;
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 36px;
+  }
+  .budgetInfo_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 57px;
+    padding-left: 60px;
+    padding-right: 60px;
+    .budgetInfo_main_left {
+      width: 100%;
+      .ant-input {
+        width: 92%;
+      }
+    }
+    .fieldAndEdit {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
+    .fieldAndEdit_textArea {
+      display: flex;
+      width: 100%;
+    }
+    .field {
+      width: 100%;
+    }
+    .edit {
+      width: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50px;
+      right: 0;
+    }
+    .info_textArea {
+      .ant-input {
+        border-radius: 8px;
+        border: 1px solid #ededed;
+        &::placeholder {
+          color: #010010;
+        }
+      }
+    }
+    .ant-input-number {
+      width: 100%;
+      height: 40px;
+      padding-top: 4px;
+      padding-left: 10px;
+      border-radius: 8px;
+      border: 1px solid #ededed;
+      font-size: 15px;
+      color: #010010;
+    }
+    .budgetInfo_Card {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 22px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include md {
+    .budgetInfo_main {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0;
+      .budgetInfo_main_left {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .budgetInfo_Card {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+      }
+    }
+  }
+  @include sm {
+    .budgetInfo_main {
+      display: block;
+    }
+    .budgetInfo_main_left {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .budgetInfo_Card {
+      width: 100%;
+      display: flex;
+      justify-content: center !important;
+      margin-top: 50px;
+    }
+  }
+  @include xs {
+    .budgetInfo_main {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+    .budgetInfo_main .budgetInfo_main_left {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      .ant-input {
+        width: 100%;
+      }
+    }
+    .budgetInfo_main .fieldAndEdit {
+      display: block;
+      width: 100%;
+    }
+    .budgetInfo_Card {
+      width: 100%;
+      display: flex;
+      justify-content: center !important;
+      margin-bottom: 40px;
+    }
+    .budgetInfo_main .fieldAndEdit .edit {
+      top: 12px;
+    }
+  }
+}
+
+.ant-form-item-label {
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+  color: #010010;
+}

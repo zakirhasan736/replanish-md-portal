@@ -1,0 +1,121 @@
+.custom_budget_main {
+  width: 100%;
+  .custom_budget_main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  h3 {
+    color: #010010;
+    text-align: center;
+    font-size: 24px;
+    font-family: Lato, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 92px;
+  }
+  .custom_budget_main {
+    width: 100%;
+    .custom_budget_select {
+      display: flex;
+      justify-content: space-between;
+    }
+    .custom_budget_dropdown {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .budget_radio {
+      margin-top: 11px;
+    }
+    .ant-radio-inner {
+      width: 24px;
+      height: 24px;
+    }
+    .ant-radio-wrapper {
+      color: #010010;
+      font-size: 15px;
+      align-items: center;
+    }
+    span.ant-radio + * {
+      padding-top: 9px;
+    }
+    .amount {
+      display: flex;
+      padding-top: 35px;
+      padding-left: 40px;
+      .amount_input {
+        width: 174px;
+        margin-bottom: 35px;
+      }
+      .ant-input-number {
+        width: 174px;
+        height: 50px;
+        padding-top: 6px;
+        padding-left: 17px;
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 5px;
+        border: 1px solid #e6e6e6;
+      }
+    }
+    .slider {
+      margin-bottom: 400px;
+    }
+    .ant-slider-track:hover .ant-slider-handle:hover {
+      background-color: #8dd9c2;
+    }
+    .ant-slider-track {
+      background-color: #8dd9c2;
+      height: 8px;
+      border-radius: 16px;
+    }
+    .ant-slider-rail {
+      height: 8px;
+      border-radius: 16px;
+    }
+    .ant-slider-handle {
+      margin-top: -3px;
+      border: solid 7px #8dd9c2;
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 35px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include xs {
+    h3 {
+      margin-bottom: 30px;
+    }
+    .button_main {
+      padding-bottom: 70px !important;
+    }
+    .custom_budget_main {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+      .slider {
+        margin-bottom: 80px;
+      }
+    }
+    .custom_budget_main .custom_budget_dropdown {
+      margin-top: 6px;
+    }
+    .custom_budget_main .amount {
+      display: block;
+      padding-left: 0;
+      p {
+        padding-left: 0 !important;
+        margin-bottom: 35px !important;
+      }
+      .amount_input {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

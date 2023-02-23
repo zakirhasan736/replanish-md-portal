@@ -1,0 +1,104 @@
+.topbar_Main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  .left_nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .logo {
+      padding-right: 15px;
+    }
+  }
+  .right_nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .searchIcon {
+      padding-right: 5px;
+      display: none;
+    }
+    .avatar {
+      .ant-avatar {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .profileName {
+      margin-bottom: 0;
+      padding-left: 20px;
+      display: block;
+    }
+    .dropdown {
+      display: none;
+    }
+    .notification {
+      padding-left: 20px;
+    }
+    .setting {
+      padding-left: 20px;
+    }
+  }
+  .ant-input-affix-wrapper {
+    border-radius: 50px;
+    background: #f5f5f5;
+    .ant-input {
+      background: #f5f5f5;
+      padding-left: 5px;
+    }
+  }
+  span {
+    border-radius: 50%;
+  }
+  @include xs {
+    .left_nav {
+      width: 90%;
+      .input {
+        display: none;
+      }
+    }
+    .right_nav {
+      .searchIcon {
+        display: block;
+        margin-right: 10px;
+        padding: 0;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .avatar {
+        margin-right: 10px;
+        padding: 0;
+        .ant-avatar {
+          width: 40px;
+          height: 40px;
+          svg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .profileName {
+        display: none;
+      }
+      .dropdown {
+        margin-right: 10px;
+        padding: 0;
+        display: block;
+      }
+      .notification {
+        margin-right: 10px;
+        padding: 0;
+      }
+      .setting {
+        padding: 0;
+      }
+    }
+  }
+}

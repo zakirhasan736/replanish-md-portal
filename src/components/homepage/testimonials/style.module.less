@@ -1,0 +1,63 @@
+.testimonial-wrapper {
+	padding: 8rem 0;
+	text-align: center;
+	background-image: url("/images/testimonial-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+	.tertimonial-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main-heading {
+		margin-bottom: 2.5rem;
+		color: #000000;
+		font-size: 2.25rem;
+		font-family: Tenor, sans-serif;
+
+		@media (max-width: 768px) {
+			margin-bottom: 1rem;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.author-name {
+		color: #000000;
+		font-weight: 500;
+		padding-top: 1rem;
+	}
+
+	.banners {
+		position: relative;
+
+		.custom-dot {
+			bottom: -50px;
+			li {
+				background: #decfb3;
+				width: 28px;
+				height: 5px;
+				border-radius: 4px;
+				button {
+					background: inherit;
+					transition: none;
+				}
+			}
+			.slick-active {
+				background: @secondary-color !important;
+				width: 28px;
+				height: 5px;
+				button {
+					background: inherit;
+					transition: none;
+				}
+			}
+		}
+	}
+}

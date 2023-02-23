@@ -1,0 +1,251 @@
+.blogs-list-container {
+	padding: 8rem 0;
+	text-align: center;
+	background-image: url("/images/services-bg.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #fff;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+
+	.ant-skeleton {
+		width: 100%;
+
+		.ant-skeleton-image {
+			max-width: 448px;
+			max-height: 300px;
+			width: 100%;
+			height: 100vh;
+		}
+	}
+
+	.main-heading {
+		margin: 0;
+		color: #000000;
+		font-size: 2.25rem;
+		font-family: Tenor, sans-serif;
+
+		@media (max-width: 768px) {
+			margin-bottom: 1rem;
+		}
+		@media (max-width: 576px) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.pagination-conatiner {
+		margin-top: 6rem;
+
+		.pagination-sec {
+			color: @black;
+
+			.ant-pagination-prev,
+			.ant-pagination-next {
+				width: 48px;
+				height: 48px;
+
+				@media (max-width: 485px) {
+					width: 32px;
+					height: 32px;
+				}
+
+				button {
+					border-radius: 100%;
+				}
+			}
+
+			.ant-pagination-disabled {
+				button {
+					color: rgba(0, 0, 0, 0.25) !important;
+					border-color: #d9d9d9 !important;
+				}
+			}
+			.ant-pagination-prev {
+				button {
+					border-color: @primary-color;
+					color: @black;
+				}
+			}
+			.ant-pagination-next {
+				button {
+					background: @primary-color;
+					border: none;
+					color: @black;
+				}
+			}
+			.ant-pagination-item {
+				width: 48px;
+
+				@media (max-width: 485px) {
+					width: 32px;
+				}
+
+				border: none;
+				a {
+					color: @black;
+					font-family: Montserrat, sans-serif;
+				}
+			}
+			.ant-pagination-item-active {
+				color: @black;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.blog-card-container {
+	.blog-img-section {
+		position: relative;
+
+		.blog-image {
+			width: 100%;
+			height: 306px;
+			object-fit: cover;
+		}
+
+		.date-tag {
+			position: absolute;
+			padding: 0.8rem 2rem;
+			color: @black;
+			background-color: @primary-color;
+			font-family: Montserrat, sans-serif;
+			font-size: 0.9rem;
+			border-radius: 4px;
+			font-weight: 600;
+			top: 12px;
+			left: 15px;
+		}
+	}
+
+	.card-heading {
+		font-family: Tenor, sans-serif;
+		padding-top: 1.8rem;
+		margin: 0;
+		color: @black;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+	.card-content {
+		font-family: Montserrat, sans-serif;
+		padding: 0.75rem 0;
+		opacity: 0.5;
+		color: @black;
+		margin: 0;
+		font-size: 1rem;
+		text-align: left;
+		line-height: 24px;
+	}
+
+	.read-more-btn {
+		display: flex;
+		align-items: center;
+		color: @secondary-color;
+		font-family: Montserrat, sans-serif;
+		font-size: 0.9rem;
+	}
+}
+
+.details-image-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	.blog-banner {
+		height: 720px;
+		object-fit: cover;
+
+		@media (max-width: 1439.98px) {
+			height: auto;
+		}
+	}
+
+	.inner-content {
+		position: absolute;
+		margin: 0 auto;
+		top: 15rem;
+
+		@media (max-width: 1439.98px) {
+			top: 6rem;
+		}
+		@media (max-width: 991.98px) {
+			top: 4rem;
+		}
+		@media (max-width: 576px) {
+			top: 2rem;
+		}
+
+		.image-heading {
+			font-family: Tenor, sans-serif;
+			color: @white;
+			font-size: 4rem;
+			margin: 0;
+			text-align: center;
+			padding: 0 1rem;
+
+			@media (max-width: 1439.98px) {
+				font-size: 3rem;
+			}
+			@media (max-width: 991.98px) {
+				font-size: 2.5rem;
+			}
+			@media (max-width: 768px) {
+				font-size: 2rem;
+			}
+			@media (max-width: 576px) {
+				font-size: 1.5rem;
+			}
+			@media (max-width: 420px) {
+				font-size: 1.25rem;
+			}
+		}
+		.image-text {
+			font-family: Montserrat, sans-serif;
+			font-size: 0.95rem;
+			color: @white;
+			text-align: center;
+		}
+	}
+}
+
+.blog-content-container {
+	background: @white;
+
+	.blog-content-section {
+		position: relative;
+		top: -136px;
+		padding: 4.5rem;
+		border-radius: 1.5rem;
+		background: @white;
+		background-image: url("/images/side-logo.png");
+		background-position-x: right;
+		background-position-y: top;
+		background-repeat: no-repeat;
+
+		@media (max-width: 991.98px) {
+			top: -4rem;
+		}
+		@media (max-width: 768px) {
+			padding: 3rem;
+		}
+		@media (max-width: 576px) {
+			top: -3rem;
+			padding: 1.75rem;
+		}
+
+		.blog-title {
+			color: @black;
+			opacity: 0.5;
+			font-family: Montserrat, sans-serif;
+			font-size: 1.15rem;
+			line-height: 32px;
+
+			@media (max-width: 768px) {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

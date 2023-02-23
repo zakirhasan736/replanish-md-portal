@@ -1,0 +1,152 @@
+.team-meet-container {
+	background: #ececec;
+	padding: 6.5rem 0;
+	background-image: url("/images/about-logo.png");
+	background-position-x: left;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-color: #fff;
+	text-align: center;
+
+	@media (max-width: 768px) {
+		padding: 3rem 0;
+	}
+
+	.main-heading {
+		font-family: Tenor, sans-serif;
+		font-weight: 400;
+		font-size: 2.4rem;
+		color: @black;
+		line-height: 75px;
+		letter-spacing: -0.03em;
+		margin: 0;
+
+		@media (max-width: 768px) {
+			font-size: 1.75rem;
+			line-height: normal;
+		}
+	}
+
+	.more-btn {
+		margin-top: 3rem;
+		background: @primary-color;
+		border-color: @primary-color;
+		color: @black;
+		text-transform: uppercase;
+		padding: 1rem 2rem;
+		height: auto;
+		border-radius: 4px;
+		font-family: Montserrat, sans-serif;
+	}
+}
+
+.team-popup-container {
+	background: @white;
+	padding: 2.5rem;
+	background-image: url("/images/team-popup-bg.png");
+	background-position-x: right;
+	background-position-y: bottom;
+	background-repeat: no-repeat;
+	background-size: auto;
+	text-align: left;
+	justify-content: space-between;
+
+	.popup-inline-header {
+		display: flex;
+		align-items: baseline;
+
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+		}
+
+		h1 {
+			font-family: Tenor, sans-serif;
+			font-size: 2.4rem;
+		}
+		p {
+			font-family: Montserrat, sans-serif;
+			font-size: 1rem;
+			color: #00000080;
+		}
+	}
+
+	.popup-about-heading {
+		font-family: Montserrat, sans-serif;
+		color: @black;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	.popup-content {
+		font-family: Montserrat, sans-serif;
+		color: @black;
+		font-size: 0.85rem;
+	}
+}
+
+.team-image-container {
+	position: relative;
+
+	.on-hover-section {
+		position: absolute;
+		border-radius: 0px 34px 34px 0px;
+		background: @dark-color;
+		padding: 0.9rem 2.5rem 0.9rem 1rem;
+		text-align: left;
+		min-width: 200px;
+		bottom: 2rem;
+
+		.heading {
+			font-family: Tenor, sans-serif;
+			font-size: 1.25rem;
+			color: @white;
+			margin: 0;
+			line-height: normal;
+		}
+		.title {
+			font-family: Montserrat, sans-serif;
+			font-size: 0.9rem;
+			color: @white;
+			line-height: normal;
+			margin: 0;
+		}
+	}
+
+	.animated {
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+
+	@-webkit-keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(-50px);
+			transform: translateX(-50px);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+	@keyframes fadeInLeft {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(-50px);
+			-ms-transform: translateX(-50px);
+			transform: translateX(-50px);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+	.fadeInLeft {
+		-webkit-animation-name: fadeInLeft;
+		animation-name: fadeInLeft;
+	}
+}

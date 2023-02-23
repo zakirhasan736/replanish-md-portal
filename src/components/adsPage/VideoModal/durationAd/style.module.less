@@ -1,0 +1,86 @@
+.period_ad {
+  width: 100%;
+  .period_ad_main {
+    width: 100%;
+    h3 {
+      color: #010010;
+      text-align: center;
+      font-size: 24px;
+      margin-top: 30px;
+      font-family: Lato, sans-serif;
+      padding-bottom: 37px;
+    }
+  }
+  .period_ad_content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+    .period_ad_form {
+      width: 100%;
+      padding-right: 35px;
+    }
+    .ant-select-arrow {
+      color: #2c99cb;
+    }
+    .ant-card-bordered {
+      background-color: #8dd9c2;
+      border-radius: 10px;
+    }
+    .video_mediaCard {
+      width: 100%;
+      .right_card {
+        padding: 0;
+        padding-left: 35px;
+      }
+    }
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 48px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  .bottomText {
+    width: 60%;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
+  @include sm {
+    .period_ad_content .video_mediaCard {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+      .right_card {
+        padding: 0;
+      }
+    }
+    .bottomText {
+      width: 80%;
+    }
+  }
+  @include xs {
+    .period_ad_content {
+      display: block;
+    }
+    .period_ad_content .period_ad_form {
+      padding: 0;
+    }
+    .period_ad_content .video_mediaCard {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+      .right_card {
+        padding: 0;
+      }
+    }
+    .bottomText {
+      width: 80%;
+    }
+  }
+}

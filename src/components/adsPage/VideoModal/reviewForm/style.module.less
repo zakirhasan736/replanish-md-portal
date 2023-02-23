@@ -1,0 +1,139 @@
+.review_ad {
+  width: 100%;
+  .review_ad_main {
+    width: 100%;
+    h3 {
+      color: #010010;
+      text-align: center;
+      font-size: 24px;
+      margin-top: 30px;
+      font-family: Lato, sans-serif;
+      padding-bottom: 37px;
+    }
+  }
+  .review_ad_content {
+    width: 80%;
+    padding-left: 50px;
+    .alert {
+      width: 75%;
+      background: #f4fdfa;
+      border: 1px solid #2c99cb;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .edit_fields {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      .ant-input {
+        width: 100%;
+      }
+      .inputField {
+        width: 94%;
+      }
+      .edit {
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        right: 0;
+      }
+    }
+    .review_fields {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .ant-input {
+        width: 100%;
+      }
+    }
+    .withoutEdit {
+      width: 94%;
+    }
+    .ant-select-arrow {
+      color: #2c99cb;
+    }
+    .ant-card-bordered {
+      background-color: #8dd9c2;
+      border-radius: 10px;
+    }
+    .ant-alert-content {
+      padding-left: 15px;
+    }
+    .ant-alert-description {
+      color: #9c9c9c;
+    }
+    .anticon-close {
+      color: #2c99cb;
+    }
+  }
+  .review_card {
+    width: 45%;
+    margin-left: auto;
+    margin-bottom: 93px;
+  }
+  .ant-card-bordered {
+    background-color: #8dd9c2;
+    border-radius: 10px;
+  }
+  .button_main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 72px;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+  @include sm {
+    .review_ad_main {
+      width: 55%;
+      margin: 0 auto;
+    }
+    .review_ad_content {
+      padding: 0;
+      margin: 0 auto;
+      .alert {
+        width: 94%;
+      }
+    }
+    .review_ad_content .withoutEdit {
+      width: 94%;
+    }
+    .review_card {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 35px;
+    }
+  }
+  @include xs {
+    .review_ad_main {
+      width: 85%;
+      margin: 0 auto;
+    }
+    .review_ad_content {
+      padding: 0;
+      margin: 0 auto;
+      .alert {
+        width: 94%;
+      }
+    }
+    .review_ad_content .withoutEdit {
+      width: 94%;
+    }
+    .review_card {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 35px;
+      margin-top: 35px;
+      .right_card {
+        padding: 0;
+      }
+    }
+  }
+}
