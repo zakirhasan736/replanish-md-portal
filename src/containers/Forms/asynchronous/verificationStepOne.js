@@ -1,15 +1,43 @@
-import React from 'react'
+import React,{useState} from 'react'
 import SectionTitle from 'src/common/Forms/sectionTitle'
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
 import { Col, Row, Button } from 'antd';
-import Link from 'next/link';
 import Image from 'next/image';
 
-const VerificationStepOne = () => {
+const VerificationStepOne = ({ handleStep, currval }) => {
+    const [uploading, setUploading] = useState(false);
+
+    const uploadPhotoNext = () => {
+        //write the code for image upload and save
+        // finally update the step for next process
+        setUploading(true);
+        setTimeout(() => {
+            setUploading(false);
+            handleStep(17);
+        }, 3000);
+
+    }
+
+    if (uploading) {
+        return (
+            <div className='steps-section-wrapper verification-loading--wrapper'>
+                <div className='steps-progress-section-wrapper'>
+                    <div className='verification-loading-screen'>
+                        <div className='progress-loading-bar'>
+                            <span className='progress-loading-inner'></span>
+                        </div>
+                        <h3 className='progress-loading-title'>Uploading your photo...</h3>
+                        <p className='progress-loading-desc'>Hang on, this way take a few seconds.</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
 
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='3. Identity Verification'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep}  currval={currval} NextPage={true} BackToPrev={true} SiteTitle='3. Identity Verification'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }}>
@@ -36,14 +64,14 @@ const VerificationStepOne = () => {
 
                                 <div className='basic-info-input-data-box'>
                                     <div className='async-user-medical-question-infobox'>
-                                    
+
                                         <div className='medical-question-modalimg text-center'>
                                             <Image src='/assets/images/verification-modal-one.png' width={487} height={347} alt='medical question modal image' />
                                         </div>
 
                                         <Row>
                                             <Col xxl={{ span: 24, offset: 0 }} >
-                                                <Button className='submit-button black-button'>take or upload photo</Button>
+                                                <Button onClick={() => uploadPhotoNext()} className='submit-button black-button'>take or upload photo</Button>
                                                 <p className='info-text-desc'>Your Photos won’t be shared with anyone besides your doctor or nurse practitioner.</p>
                                             </Col>
                                         </Row>

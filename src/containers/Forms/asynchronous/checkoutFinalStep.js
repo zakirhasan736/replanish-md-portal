@@ -7,10 +7,14 @@ import Image from 'next/image';
 import InputField from 'src/common/inputField';
 import { MdEdit } from "react-icons/md";
 
-const CheckoutFinalSteps = () => {
+const CheckoutFinalSteps = ({ handleStep, currval }) => {
 
+    const submitFullCheckoutInfo = () => {
+        //complete all required task here after that need to update stepvalue
+        handleStep(20)
+    }
     return (
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='Checkout'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Checkout'>
             <div className='steps-section-content'>
 
                 <div className='steps-with-sidebar-wrapper sidebar-checkout-wrap'>
@@ -109,7 +113,7 @@ const CheckoutFinalSteps = () => {
                                         </Row>
                                         <Row>
                                             <Col xxl={{ span: 24, offset: 0 }} >
-                                                <Button className='submit-button black-button'>Pay $0 Today</Button>
+                                                <Button onClick={() => submitFullCheckoutInfo()} className='submit-button black-button'>Pay $0 Today</Button>
                                                 <div className='privecy-info-pin-text' >  <Image src='/assets/images/bxs_lock-alt.png' width={24} height={24} alt='lock icons' />  <p className='info-text-desc'>256-BIT TLS SECURITY</p></div>
                                             </Col>
                                         </Row>
@@ -139,46 +143,46 @@ const CheckoutFinalSteps = () => {
                                         <h5 className='topic-title'>Your Plan</h5>
                                         <div className='product-info-box'>
                                             <div className='product-info-left'>
-                                            <Image src='/assets/images/checkout-product-img.png' width={64.59} height={56.24} alt='checkout product image' />
-                                            <div className='product-details-info'>
-                                                 <h6 className='bodytitle'>Sildenafil13+</h6>
-                                                 <p className='bodytext'>60mg</p>
-                                                 <p className='bodytext'>4 x Month ($6 ea.)</p>
-                                                 <p className='bodytext'>3 Months supply</p>
-                                                 <Button className='edit-button'><MdEdit /> edit</Button>
-                                            </div>
+                                                <Image src='/assets/images/checkout-product-img.png' width={64.59} height={56.24} alt='checkout product image' />
+                                                <div className='product-details-info'>
+                                                    <h6 className='bodytitle'>Sildenafil13+</h6>
+                                                    <p className='bodytext'>60mg</p>
+                                                    <p className='bodytext'>4 x Month ($6 ea.)</p>
+                                                    <p className='bodytext'>3 Months supply</p>
+                                                    <Button className='edit-button'><MdEdit /> edit</Button>
+                                                </div>
                                             </div>
                                             <div className='product-info-right'>
-                                            <span className='product-price'>$ 72 /3 mo</span>
+                                                <span className='product-price'>$ 72 /3 mo</span>
                                             </div>
                                         </div>
                                         <ul className='product-price-info'>
-                                        <li className='price-info-list'>
-                                          <p className='bodytext'>First order promo</p>
-                                          <span className='bodytext charge-price'>-$15</span>
-                                        </li>
-                                        <li className='price-info-list'>
-                                          <p className='bodytext'>First order promo</p>
-                                          <span className='bodytext offer-text'>Free</span>
-                                        </li>
-                                        <li className='price-info-list'>
-                                          <p className='bodytext'>First order promo</p>
-                                          <span className='bodytext offer-text'>Free</span>
-                                        </li>
+                                            <li className='price-info-list'>
+                                                <p className='bodytext'>First order promo</p>
+                                                <span className='bodytext charge-price'>-$15</span>
+                                            </li>
+                                            <li className='price-info-list'>
+                                                <p className='bodytext'>First order promo</p>
+                                                <span className='bodytext offer-text'>Free</span>
+                                            </li>
+                                            <li className='price-info-list'>
+                                                <p className='bodytext'>First order promo</p>
+                                                <span className='bodytext offer-text'>Free</span>
+                                            </li>
                                         </ul>
                                         <ul className='product-price-info sub-total'>
-                                        <li className='price-info-list'>
-                                          <p className='bodytext'>Total due if prescribed</p>
-                                          <span className='bodytext charge-price'>$57</span>
-                                        </li>
+                                            <li className='price-info-list'>
+                                                <p className='bodytext'>Total due if prescribed</p>
+                                                <span className='bodytext charge-price'>$57</span>
+                                            </li>
                                         </ul>
                                         <ul className='product-price-info due-total'>
-                                        <li className='price-info-list'>
-                                          <p className='bodytext'>Due today</p>
-                                          <span className='bodytext charge-price'>$0</span>
-                                        </li>
+                                            <li className='price-info-list'>
+                                                <p className='bodytext'>Due today</p>
+                                                <span className='bodytext charge-price'>$0</span>
+                                            </li>
                                         </ul>
-                                        <span className='details-link' ><Link  href='/'>When am i charged?</Link></span>
+                                        <span className='details-link' ><Link href='/'>When am i charged?</Link></span>
                                     </div>
 
                                     <div className='sidebar-bottom-text-cont'>

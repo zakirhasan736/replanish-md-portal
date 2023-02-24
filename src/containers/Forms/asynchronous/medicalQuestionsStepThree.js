@@ -6,11 +6,14 @@ import InputField from 'src/common/inputField';
 import TextField from 'src/common/textField/index';
 
 
-const MedicalQuestionStepThree = () => {
-
+const MedicalQuestionStepThree = ({ handleStep, currval }) => {
+    const handleMedicalData = () => {
+        //store or set data in a state after that need to update the step value for the next processing
+        handleStep(12)
+    }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }}>
@@ -62,7 +65,7 @@ const MedicalQuestionStepThree = () => {
                              
                                 <Row>
                                     <Col xxl={{ span: 24, offset: 0 }} >
-                                        <Button className='submit-button black-button'>Submit</Button>
+                                        <Button onClick={()=>handleMedicalData()} className='submit-button black-button'>Submit</Button>
                                     </Col>
                                 </Row>
                          

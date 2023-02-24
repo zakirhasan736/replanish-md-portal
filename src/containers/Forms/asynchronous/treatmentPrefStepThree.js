@@ -1,16 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 import SectionTitle from 'src/common/Forms/sectionTitle'
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
-import { Col, Row, Button } from 'antd';
-import CheckboxSelectQuestion from 'src/components/Forms/asynchronous/ckeckboxQuestionselect';
+import { Col, Row,Checkbox } from 'antd';
+import { TreatmentPrefDataThree } from 'src/components/Forms/asynchronous/db';
+import CheckBoxQuestionSelect from 'src/common/Forms/checkboxQuestion';
 
+const TreatmentPrefStepThree = ({ handleStep, currval }) => {
 
+    const [value, setvalue] = useState(null);
 
-const TreatmentPrefStepThree = () => {
-
+    const onChange = (checkedValues) => {
+        setvalue(checkedValues);
+        handleSubmitData()
+    };
+    const handleSubmitData = () => {
+        //handle input field data afte that need to update step value
+        handleStep(15)
+    }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='3. Treatment Preference'>
+        <LayoutWrapper SiteLogo={false} currval={currval} handleStep={handleStep} NextPage={true} BackToPrev={true} SiteTitle='3. Treatment Preference'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }}>
@@ -33,7 +42,23 @@ const TreatmentPrefStepThree = () => {
                                 </Row>
                             </div>
 
-                            <CheckboxSelectQuestion StepQuestionData={'TreatPrefThree'} />
+                            <div className="question-select-box">
+                                    <Checkbox.Group
+                                        onChange={onChange}
+
+                                        className="radio-group-container question-select"
+                                    >
+                                        {
+                                            <Row gutter={[0, 25]}>
+                                                {TreatmentPrefDataThree.map((data) => (
+                                                    <CheckBoxQuestionSelect data={data} />
+                                                ))}
+                                            </Row>
+                                        }
+
+                                    </Checkbox.Group>
+
+                                </div>
 
                         </div>
                         </div>

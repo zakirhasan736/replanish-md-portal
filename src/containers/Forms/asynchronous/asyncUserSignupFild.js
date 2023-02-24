@@ -5,12 +5,17 @@ import { Button, Col, Row, Checkbox } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 import InputField from 'src/common/inputField';
-const AsyncStepThree = () => {
+
+const SignupByEmailPassword = ({ handleStep, currval }) => {
     const onChange = (e) => {
         console.log(`checked = ${e.target.checked}`);
     };
+    const handleGotoDashboard = () => {
+        //write your logic for the dashboard after completing, need to update step()
+        handleStep(6)
+    }
     return (
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='Welcome'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Welcome'>
             <div className='steps-section-content'>
 
                 <div className='steps-with-sidebar-wrapper'>
@@ -133,11 +138,13 @@ const AsyncStepThree = () => {
                                                     </Row>
                                                     <Row>
                                                         <Col xxl={{ span: 24, offset: 0 }} >
-                                                            <Button className='submit-button black-button'>Start my visit</Button>
+                                                            <Button
+                                                                onClick={() => handleGotoDashboard()}
+                                                                className='submit-button black-button'>Start my visit</Button>
                                                         </Col>
                                                     </Row>
                                                 </div>
-                                                
+
                                             </form>
                                         </div>
                                     </Col>
@@ -156,4 +163,4 @@ const AsyncStepThree = () => {
     )
 }
 
-export default AsyncStepThree
+export default SignupByEmailPassword

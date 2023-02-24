@@ -10,11 +10,12 @@ const propTypes = {
 };
 
 
-const SelectQuestion = ({ FillBtnText, StepNext, StepQuestionData }) => {
+const SelectQuestion = ({ FillBtnText, StepNext, StepQuestionData,handleStep }) => {
 	const [value, setValue] = useState(1);
 
 	const onChange = (e) => {
 		setValue(e.target.value);
+		handleStep(2)
 	};
 
 	return (

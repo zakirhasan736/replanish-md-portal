@@ -5,11 +5,13 @@ import { Col, Row, Button } from 'antd';
 import Image from 'next/image';
 import InfoCard from 'src/components/Forms/asynchronous/infocard/infocard';
 
-const AsyncUserAfterHome = () => {
+const WelcomeDashboard = ({ handleStep, currval }) => {
 
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='Welcome' >
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={
+            ((currval + 1) - currval) === 1 ? currval : currval - 1
+        } NextPage={true} BackToPrev={true} SiteTitle='Welcome' >
 
             <div className='steps-section-wrapper'>
 
@@ -26,7 +28,7 @@ const AsyncUserAfterHome = () => {
                                     </div>
                                 </Col>
                                 <Col xxl={{ span: 4, offset: 14 }} >
-                                    <Button className='black-button top-home-button'><Image src='/assets/images/small-brand-icon.png' width={12.86} height={17} alt='brand logo' />   <span>Start my visit</span></Button>
+                                    <Button onClick={() => handleStep(7)} className='black-button top-home-button'><Image src='/assets/images/small-brand-icon.png' width={12.86} height={17} alt='brand logo' />   <span>Start my visit</span></Button>
                                 </Col>
                             </Row>
                         </div>
@@ -43,16 +45,16 @@ const AsyncUserAfterHome = () => {
                     </div>
 
                     <div className='user-after-home-info-cardbox'>
-                       <InfoCard />
+                        <InfoCard />
                     </div>
 
                 </div>
 
             </div>
-            
+
         </LayoutWrapper>
 
     )
 }
 
-export default AsyncUserAfterHome
+export default WelcomeDashboard

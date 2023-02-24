@@ -6,10 +6,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InputField from 'src/common/inputField';
 
-const CheckoutSTepsOne = () => {
-
+const CheckoutSTepsOne = ({ handleStep, currval }) => {
+    const handleSubmitAndContinue = () => {
+        //write the code for hanlde input value before go to next process then update the stepvalue
+        handleStep(19)
+    }
     return (
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='Checkout'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Checkout'>
             <div className='steps-section-content'>
 
                 <div className='steps-with-sidebar-wrapper sidebar-checkout-wrap'>
@@ -60,29 +63,29 @@ const CheckoutSTepsOne = () => {
 
                             <Col xxl={{ span: 10, offset: 0 }}>
                                 <div className='steps-progress-section-wrapper'>
-                                        <ul className='steps-progress-bars'>
-                                            <li className='steps-progress-bars-item active'></li>
-                                            <li className='steps-progress-bars-item active'></li>
-                                            <li className='steps-progress-bars-item active'></li>
-                                            <li className='steps-progress-bars-item active'></li>
-                                        </ul>
-                                        <div className='step-progress-steps-titlebox'>
-                                            <Row justify="start" gutter={[0, 16]}>
-                                                <Col xxl={{ span: 24, offset: 0 }} >
-                                                    <div className='section-top-wrapperbox text-left'>
-                                                        <SectionTitle title='Shipping Info' />
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
+                                    <ul className='steps-progress-bars'>
+                                        <li className='steps-progress-bars-item active'></li>
+                                        <li className='steps-progress-bars-item active'></li>
+                                        <li className='steps-progress-bars-item active'></li>
+                                        <li className='steps-progress-bars-item active'></li>
+                                    </ul>
+                                    <div className='step-progress-steps-titlebox'>
+                                        <Row justify="start" gutter={[0, 16]}>
+                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                                <div className='section-top-wrapperbox text-left'>
+                                                    <SectionTitle title='Shipping Info' />
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </div>
 
-                                        <div className='basic-info-input-data-box'>
+                                    <div className='basic-info-input-data-box'>
 
 
                                         <form action="post" className='async-user-input-form'>
-        
-                                   
-        
+
+
+
                                             <div className='async-input-fild-group'>
                                                 <Row>
                                                     <Col xxl={{ span: 24, offset: 0 }} >
@@ -146,13 +149,13 @@ const CheckoutSTepsOne = () => {
                                             </div>
                                             <Row>
                                                 <Col xxl={{ span: 24, offset: 0 }} >
-                                                    <Button className='submit-button black-button'>Save and continue</Button>
+                                                    <Button onClick={() => handleSubmitAndContinue()} className='submit-button black-button'>Save and continue</Button>
                                                     <div className='privecy-info-pin-text' >  <Image src='/assets/images/bxs_lock-alt.png' width={24} height={24} alt='lock icons' />  <p className='info-text-desc'>256-BIT TLS SECURITY</p></div>
                                                 </Col>
                                             </Row>
-                                           
+
                                         </form>
-        
+
                                     </div>
 
                                 </div>
