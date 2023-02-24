@@ -5,15 +5,17 @@ import { Button, Col, Row } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const UserAuthWithGoogle = ({ handleStep, currval }) => {
+const UserAuthWithGoogle = ({ handleStep, currval ,AuthWithGoogle}) => {
     const handleGoogleSignin = () => {
         // enter your google sign in auth after completing need to update step for next process
         handleStep(6);
+        AuthWithGoogle(true);
     }
 
     const handleEmailPasswordSignUp = () => {
         // enter your email password signup after completing need to update step for next process
         handleStep(5);
+        AuthWithGoogle(false)
     }
     return (
         <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval - 1} NextPage={true} BackToPrev={true} SiteTitle='Welcome' >

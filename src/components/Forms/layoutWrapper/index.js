@@ -44,7 +44,9 @@ const propTypes = {
 	SiteTitle: PropTypes.string,
 };
 
-const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, BgclassName, handleStep, currval,topHeaderName,bottomHeaderName }) => {
+
+const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, BgclassName, handleStep, currval,topHeaderName,bottomHeaderName,,isgoogle }) => {
+
 	const router = useRouter();
 	const dispatch = useDispatch();
 	const { user, removeUser } = useUser();
@@ -82,6 +84,15 @@ const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, Bg
 		}
 	};
 	console.log("user", user);
+
+	const handleback = () => {
+		if (isgoogle) {
+			handleStep(currval - 2)
+		}
+		else {
+			handleStep(currval - 1)
+		}
+	}
 
 	return (
 		<Layout className="layout">
@@ -168,7 +179,7 @@ const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, Bg
 									</Link>}
 
 								{BackToPrev &&
-									<button onClick={() => handleStep(currval-1)} className="back-to-preview"><HiArrowLeft /></button>
+									<button onClick={() => handleback()} className="back-to-preview"><HiArrowLeft /></button>
 								}
 
 								{NextPage &&

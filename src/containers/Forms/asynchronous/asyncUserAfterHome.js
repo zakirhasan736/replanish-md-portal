@@ -5,13 +5,11 @@ import { Col, Row, Button } from 'antd';
 import Image from 'next/image';
 import InfoCard from 'src/components/Forms/asynchronous/infocard/infocard';
 
-const WelcomeDashboard = ({ handleStep, currval }) => {
+const WelcomeDashboard = ({ handleStep, currval,isgoogle }) => {
 
     return (
 
-        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={
-            ((currval + 1) - currval) === 1 ? currval : currval - 1
-        } NextPage={true} BackToPrev={true} SiteTitle='Welcome' >
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Welcome' isgoogle={isgoogle} >
 
             <div className='steps-section-wrapper'>
 
