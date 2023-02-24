@@ -158,7 +158,10 @@ const CheckoutFinalSteps = () => {
                                           <span className='bodytext charge-price'>-$15</span>
                                         </li>
                                         <li className='price-info-list'>
-                                          <p className='bodytext'>First order promo</p>
+                                          <p className='bodytext'>
+                                          <span>Healthcare professional review</span>
+                                          <span>Typically occurs within 24 hours</span>
+                                          </p>
                                           <span className='bodytext offer-text'>Free</span>
                                         </li>
                                         <li className='price-info-list'>

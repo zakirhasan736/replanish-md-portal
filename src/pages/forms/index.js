@@ -1,5 +1,5 @@
 import React from "react";
-import Forms from "src/containers/Forms/asynchronous/asyncStepTwo";
+import Forms from "src/containers/Forms/asynchronous/asyncStepThree";
 
 const FormsPage = () => {
 	return <Forms />;

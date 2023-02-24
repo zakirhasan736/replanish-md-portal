@@ -8,14 +8,14 @@ const index = () => {
 
   return (
     
-    <LayoutWrapper SiteLogo={true} NextPage={false} BackToPrev={false} BgclassName='is-bg-image'>
+    <LayoutWrapper SiteLogo={true} NextPage={false} BackToPrev={false} BgclassName='is-bg-image' bottomHeaderName='bottom-header-home'>
     
       <div className='steps-section-wrapper'>
 
         <div className='steps-one-wrapper'>
         
           <Row justify="start" gutter={[0, 20]}>
-            <Col xxl={{ span: 18, offset: 4 }} >
+            <Col xxl={{ span: 18, offset: 4 }} xl={{ span: 18, offset: 4 }} lg={{ span: 18, offset: 4 }} >
               <div className='section-top-wrapperbox'>
                 <SectionTitle title='Do you ever have a problem Erectile dysfunction?' subtitle='LET’S GET STARTED' />
               </div>
@@ -23,7 +23,7 @@ const index = () => {
           </Row>
 
           <Row justify="start">
-            <Col xxl={{ span: 12, offset: 6 }} >
+            <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 12, offset: 6 }} >
             <div className='steps-section-mainbox'>
               
             <SelectQuestion StepNext={false} StepQuestionData={'StepEnter'} />
