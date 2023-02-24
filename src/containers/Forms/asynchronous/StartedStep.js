@@ -16,7 +16,7 @@ const StartedStep = ({ handleStep,StepNext }) => {
 
   return (
 
-    <LayoutWrapper SiteLogo={true} NextPage={false} BackToPrev={false} BgclassName='is-bg-image'>
+    <LayoutWrapper SiteLogo={true} NextPage={false} BackToPrev={false} BgclassName='is-bg-image' bottomHeaderName='bottom-header-home'>
 
       <div className='steps-section-wrapper'>
 
