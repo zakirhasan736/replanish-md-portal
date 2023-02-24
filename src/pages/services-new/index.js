@@ -23,12 +23,15 @@ import WelcomeStep from 'src/containers/Forms/asynchronous/welcomeStep';
 
 export default function ServicesNewPage() {
 	const router = useRouter();
+	const [isgoogle, setGoogle] = useState(null);
 	const { started } = router.query;
 	const [step, setStep] = useState(1);
 	const handleStep = (pro) => {
 		setStep(pro);
 	}
-console.log({step})
+	const AuthWithGoogle = (val) => {
+		setGoogle(val)
+	}
 	return (
 		<div>
 			{started === "true" && (
@@ -39,11 +42,11 @@ console.log({step})
 
 					{step === 3 && <AsyncStepThree handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={3} />}
 
-					{step === 4 && <UserAuthWithGoogle handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={4} />}
+					{step === 4 && <UserAuthWithGoogle handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={4} AuthWithGoogle={AuthWithGoogle} />}
 
-					{step === 5 && <SignupByEmailPassword handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={5} />}
+					{step === 5 && <SignupByEmailPassword handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={5} AuthWithGoogle={AuthWithGoogle} />}
 
-					{step === 6 && <WelcomeDashboard handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={6} />}
+					{step === 6 && <WelcomeDashboard handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={6} isgoogle={isgoogle} />}
 
 					{step === 7 && <BasicsStepsOne handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={7} />}
 
@@ -69,7 +72,7 @@ console.log({step})
 
 					{step === 18 && <CheckoutSTepsOne handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={18} />}
 
-					{step === 19 && <CheckoutFinalSteps handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={19} />}
+					{step === 19 && <CheckoutFinalSteps handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={19} />}			
 				</>
 			)}
 		</div>

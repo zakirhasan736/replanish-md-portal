@@ -11,7 +11,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
 
     const submitFullCheckoutInfo = () => {
         //complete all required task here after that need to update stepvalue
-        handleStep(20)
+        handleStep(19)
     }
     return (
         <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Checkout'>

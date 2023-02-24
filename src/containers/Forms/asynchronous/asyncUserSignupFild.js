@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InputField from 'src/common/inputField';
 
-const SignupByEmailPassword = ({ handleStep, currval }) => {
+const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
     const onChange = (e) => {
         console.log(`checked = ${e.target.checked}`);
     };
@@ -15,7 +15,7 @@ const SignupByEmailPassword = ({ handleStep, currval }) => {
         handleStep(6)
     }
     return (
-        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Welcome'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} isgoogle={false} SiteTitle='Welcome'>
             <div className='steps-section-content'>
 
                 <div className='steps-with-sidebar-wrapper'>
