@@ -7,11 +7,14 @@ import ContactCard from 'src/common/contactCard';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CTAStepOne = () => {
-
+const CTAStepOne = ({ handleStep, currval }) => {
+    const handleDtata = () => {
+        //handle all input data and store or set a state then update step value
+        handleStep(9)
+    }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='SMS Updates'>
+        <LayoutWrapper SiteLogo={false} NextPage={true} handleStep={handleStep} currval={currval} BackToPrev={true} SiteTitle='SMS Updates'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }}>
@@ -41,8 +44,8 @@ const CTAStepOne = () => {
                                     <Row>
                                         <Col xxl={{ span: 24, offset: 0 }} >
                                             <ul className='opt-sms-infobox'>
-                                            <li className='opt-sms-infolist' ><Image height={28} width={28} alt='info-icon' src='/assets/images/carbon_medication-reminder.png' /> <span>Prescription expiration reminders</span></li>
-                                            <li className='opt-sms-infolist' ><Image height={24} width={24} alt='info-icon' src='/assets/images/akar-icons_health.png' /> <span>Prescription expiration reminders</span></li>
+                                                <li className='opt-sms-infolist' ><Image height={28} width={28} alt='info-icon' src='/assets/images/carbon_medication-reminder.png' /> <span>Prescription expiration reminders</span></li>
+                                                <li className='opt-sms-infolist' ><Image height={24} width={24} alt='info-icon' src='/assets/images/akar-icons_health.png' /> <span>Prescription expiration reminders</span></li>
                                             </ul>
 
                                         </Col>
@@ -50,15 +53,15 @@ const CTAStepOne = () => {
 
                                     <Row>
                                         <Col xxl={{ span: 24, offset: 0 }} >
-                                            <Button className='submit-button black-button'>Text me updates</Button>
-                                            <Button className='submit-button transparent-button'>no Thanks, i am good!</Button>
+                                            <Button onClick={() => handleDtata()} className='submit-button black-button'>Text me updates</Button>
+                                            <Button onClick={() => handleDtata()} className='submit-button transparent-button'>no Thanks, i am good!</Button>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col xxl={{ span: 24, offset: 0 }} >
                                             <div className='info-text-box'>
                                                 <p className='info-text-desc'>
-                                                By selecting "Text me updates", you agree to receive texts from Ro to the number you provided that might be considered marketing. Agreeing is not required to purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help. Reply STOP to opt out.Read <Link href='/'>RMD’s SMS policy</Link> .
+                                                    By selecting "Text me updates", you agree to receive texts from Ro to the number you provided that might be considered marketing. Agreeing is not required to purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help. Reply STOP to opt out.Read <Link href='/'>RMD’s SMS policy</Link> .
                                                 </p>
                                             </div>
                                         </Col>

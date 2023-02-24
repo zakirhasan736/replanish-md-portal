@@ -5,11 +5,14 @@ import { Col, Row, Button, Radio } from 'antd';
 import InputField from 'src/common/inputField';
 
 
-const BasicsStepsOne = () => {
-
+const BasicsStepsOne = ({ handleStep, currval }) => {
+    const handleSubmit = () => {
+        //handle user input value in a state or database then update the step value
+        handleStep(8);
+    }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='The Basics'>
+        <LayoutWrapper SiteLogo={false} NextPage={true} handleStep={handleStep} currval={currval} BackToPrev={true} SiteTitle='The Basics'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }}>
@@ -21,7 +24,7 @@ const BasicsStepsOne = () => {
                                 <li className='steps-progress-bars-item'></li>
                                 <li className='steps-progress-bars-item'></li>
                             </ul>
-                            
+
                             <div className='step-progress-steps-titlebox'>
                                 <Row justify="start" gutter={[0, 16]}>
                                     <Col xxl={{ span: 24, offset: 0 }} >
@@ -107,7 +110,7 @@ const BasicsStepsOne = () => {
 
                                     <Row>
                                         <Col xxl={{ span: 24, offset: 0 }} >
-                                            <Button className='submit-button black-button'>Next</Button>
+                                            <Button onClick={() => handleSubmit()} className='submit-button black-button'>Next</Button>
                                         </Col>
                                     </Row>
 

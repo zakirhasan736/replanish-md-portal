@@ -5,11 +5,14 @@ import { Col, Row, Button } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const MedicalQuestionStepOne = () => {
-
+const MedicalQuestionStepOne = ({ handleStep, currval }) => {
+    const handleMedicalData = () => {
+        //store or set data in a state after that need to update the step value for the next processing
+        handleStep(10);
+    }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }}>
@@ -34,14 +37,14 @@ const MedicalQuestionStepOne = () => {
                             <div className='basic-info-input-data-box'>
                                 <div className='async-user-medical-question-infobox'>
                                     <div className='medical-question-modalimg text-center'>
-                                    <Image src='/assets/images/md-question-modal.png' width={307.28} height={316.7} alt='medical question modal image' />
+                                        <Image src='/assets/images/md-question-modal.png' width={307.28} height={316.7} alt='medical question modal image' />
                                     </div>
                                     <Row>
                                         <Col xxl={{ span: 24, offset: 0 }} >
-                                            <Button className='submit-button black-button'>Continue</Button>
+                                            <Button onClick={() => handleMedicalData()} className='submit-button black-button'>Continue</Button>
                                         </Col>
                                     </Row>
-                                 
+
                                 </div>
 
                             </div>

@@ -1,32 +1,31 @@
-import React, { useState } from 'react'
-import SectionTitle from 'src/common/Forms/sectionTitle'
-import LayoutWrapper from 'src/components/Forms/layoutWrapper'
-import { Col, Row, Radio, Button } from 'antd';
-import { QuestionStepThreeEnter } from 'src/components/Forms/asynchronous/db';
+import React, { useState } from 'react';
+import SectionTitle from 'src/common/Forms/sectionTitle';
+import LayoutWrapper from 'src/components/Forms/layoutWrapper';
+import { Col, Row , Button, Radio} from 'antd';
+import { QuestionStepEnter } from 'src/components/Forms/asynchronous/db';
+import PropTypes from "prop-types";
 import QuestionSelectItem from 'src/common/Forms/questionSelectItem';
 
-const AsyncStepThree = ({ handleStep, StepNext, FillBtnText, currval }) => {
-
-  const [value, setValue] = useState(null);
+const StartedStep = ({ handleStep,StepNext }) => {
+  const [value, setValue] = useState(1);
 
   const onChange = (e) => {
     setValue(e.target.value);
+    handleStep(2);
   };
 
-const onChangeData = ()=>{
-  //save the selected data and then update step
-  handleStep(4)
-}
-
   return (
-    <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='Welcome' BgclassName='is-bg-image'>
+
+    <LayoutWrapper SiteLogo={true} NextPage={false} BackToPrev={false} BgclassName='is-bg-image'>
+
       <div className='steps-section-wrapper'>
 
-        <div className='steps-three-wrapper'>
+        <div className='steps-one-wrapper'>
+
           <Row justify="start" gutter={[0, 20]}>
-            <Col xxl={{ span: 24, offset: 0 }} >
-              <div className='section-top-wrapperbox text-center'>
-                <SectionTitle title='How often do you wake up with an Erectile dysfunction?' />
+            <Col xxl={{ span: 18, offset: 4 }} >
+              <div className='section-top-wrapperbox'>
+                <SectionTitle title='Do you ever have a problem Erectile dysfunction?' subtitle='LET’S GET STARTED' />
               </div>
             </Col>
           </Row>
@@ -34,6 +33,7 @@ const onChangeData = ()=>{
           <Row justify="start">
             <Col xxl={{ span: 12, offset: 6 }} >
               <div className='steps-section-mainbox'>
+
                 <div className="question-select-box">
                   <Radio.Group
                     onChange={onChange}
@@ -43,18 +43,19 @@ const onChangeData = ()=>{
                   >
                     {
                       <Row gutter={[0, 32]}>
-                        {QuestionStepThreeEnter.map((data) => (
+                        {QuestionStepEnter.map((data) => (
                           <QuestionSelectItem data={data} />
                         ))}
                       </Row>
                     }
-
                   </Radio.Group>
 
                   {StepNext &&
-                    <Button onClick={() => onChangeData()} className='trigger-Button black-button'>{FillBtnText}</Button>
+                    <Button className='trigger-Button black-button'>{FillBtnText}</Button>
                   }
+
                 </div>
+
               </div>
             </Col>
           </Row>
@@ -62,9 +63,11 @@ const onChangeData = ()=>{
         </div>
 
       </div>
+
     </LayoutWrapper>
 
   )
 }
 
-export default AsyncStepThree
+export default StartedStep
+

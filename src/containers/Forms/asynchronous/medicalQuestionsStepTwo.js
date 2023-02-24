@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SectionTitle from 'src/common/Forms/sectionTitle'
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
-import { Col, Row, Button } from 'antd';
-import SelectQuestion from 'src/components/Forms/asynchronous/questionselect';
+import { Col, Row, Button, Radio } from 'antd';
+import { MedicalQuestionData } from 'src/components/Forms/asynchronous/db';
+import QuestionSelectItem from 'src/common/Forms/questionSelectItem';
 
-const MedicalQuestionStepTwo = () => {
+const MedicalQuestionStepTwo = ({ handleStep, currval, StepNext,FillBtnText  }) => {
+    const [value, setValue] = useState(null);
 
+    const onChange = (e) => {
+        setValue(e.target.value);
+    };
+
+    const handleMedicalData = () => {
+        //store or set data in a state after that need to update the step value for the next processing
+        handleStep(11);
+    }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
             <div className='steps-section-wrapper'>
                 <div className='steps-progress-section-wrapper'>
                     <div className='stepstwo-progress-medicale-question'>
@@ -40,19 +50,34 @@ const MedicalQuestionStepTwo = () => {
                             <Row justify="start">
                                 <Col xxl={{ span: 12, offset: 6 }}>
                                     <div className='medical-question-itembox'>
-                                        <SelectQuestion StepNext={true} FillBtnText="Next" StepQuestionData={'MedicalQuestion'} />
+                                        <div className="question-select-box">
+                                            <Radio.Group
+                                                onChange={onChange}
+                                                value={value}
+                                                size="large"
+                                                className="radio-group-container question-select"
+                                            >
+                                                {
+                                                    <Row gutter={[0, 32]}>
+                                                        {MedicalQuestionData.map((data) => (
+                                                            <QuestionSelectItem data={data} />
+                                                        ))}
+                                                    </Row>
+                                                }
+
+                                            </Radio.Group>
+
+                                            {StepNext &&
+                                                <Button onClick={() => handleMedicalData()} className='trigger-Button black-button'>{FillBtnText}</Button>
+                                            }
+
+                                        </div>
                                     </div>
                                 </Col>
                             </Row>
                         </div>
-
-
                     </div>
                 </div>
-
-
-
-
             </div>
         </LayoutWrapper>
 

@@ -1,14 +1,22 @@
 import React from 'react'
 import SectionTitle from 'src/common/Forms/sectionTitle'
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
-import {Button, Col, Row } from 'antd';
-import  Link  from 'next/link';
+import { Button, Col, Row } from 'antd';
+import Link from 'next/link';
 import Image from 'next/image';
 
-const AsyncStepThree = () => {
+const UserAuthWithGoogle = ({ handleStep, currval }) => {
+    const handleGoogleSignin = () => {
+        // enter your google sign in auth after completing need to update step for next process
+        handleStep(6);
+    }
 
+    const handleEmailPasswordSignUp = () => {
+        // enter your email password signup after completing need to update step for next process
+        handleStep(5);
+    }
     return (
-        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='Welcome' >
+        <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval - 1} NextPage={true} BackToPrev={true} SiteTitle='Welcome' >
             <div className='steps-section-content'>
 
                 <div className='steps-with-sidebar-wrapper'>
@@ -24,23 +32,23 @@ const AsyncStepThree = () => {
                                     </div>
                                     <ul className='info-details-list'>
                                         <li className='info-details-item'>
-                                        <div className='icons-img'>
-                                        <Image src='/assets/images/usersimg.png' alt='img' width={47.66} height={27.24} />
-                                        </div>
+                                            <div className='icons-img'>
+                                                <Image src='/assets/images/usersimg.png' alt='img' width={47.66} height={27.24} />
+                                            </div>
                                             <span className='info-details-title'>Medical evaluation and
                                                 prescriptions by<br />
                                                 U.S.-licensed physicians</span>
                                         </li>
                                         <li className='info-details-item'>
-                                        <div className='icons-img'>
-                                        <Image src='/assets/images/bi_truck.png' alt='img' width={32} height={31} />
-                                        </div>
+                                            <div className='icons-img'>
+                                                <Image src='/assets/images/bi_truck.png' alt='img' width={32} height={31} />
+                                            </div>
                                             <span className='info-details-title'>FREE 2-day shipping</span>
                                         </li>
                                         <li className='info-details-item'>
-                                        <div className='icons-img'>
-                                        <Image src='/assets/images/akar-icons_chat-approve.png' alt='img' width={32} height={32} />
-                                        </div>
+                                            <div className='icons-img'>
+                                                <Image src='/assets/images/akar-icons_chat-approve.png' alt='img' width={32} height={32} />
+                                            </div>
                                             <span className='info-details-title'>Continued support from your doctor and our care team</span>
                                         </li>
                                     </ul>
@@ -65,34 +73,31 @@ const AsyncStepThree = () => {
                                     </p>
                                 </div>
                                 <Row>
-                                <Col xxl={{ span: 15, offset: 0 }} >
-                                <div className='user-auth-cont-box'>
-                                <p>Already a member? <Link href='/'>Log in and continue</Link></p>
-                                  <Button className='transparent-button'>
-                                  <Image src='/assets/images/google-img.png' alt='img' width={23} height={23} />
-                                   Continue with google</Button>
-                                  <div className='divider-cont-box'>
-                                  <span className='line-shape'></span>
-                                  <span>OR</span>
-                                  <span className='line-shape'></span>
-                                  </div>
-                                  <Button className='black-button'><Image src='/assets/images/small-brand-icon.png' alt='img' width={12} height={17} /> Signup with email</Button>
-                                </div>
+                                    <Col xxl={{ span: 15, offset: 0 }} >
+                                        <div className='user-auth-cont-box'>
+                                            <p>Already a member? <Link href='/'>Log in and continue</Link></p>
+                                            <Button onClick={() => handleGoogleSignin()} className='transparent-button'>
+                                                <Image src='/assets/images/google-img.png' alt='img' width={23} height={23} />
+                                                Continue with google</Button>
+                                            <div className='divider-cont-box'>
+                                                <span className='line-shape'></span>
+                                                <span>OR</span>
+                                                <span className='line-shape'></span>
+                                            </div>
+                                            <Button onClick={() => handleEmailPasswordSignUp()} className='black-button'><Image src='/assets/images/small-brand-icon.png' alt='img' width={12} height={17} /> Signup with email</Button>
+                                        </div>
 
-                                </Col>
+                                    </Col>
                                 </Row>
-                               
+
                             </div>
                         </Col>
-
                     </Row>
-
                 </div>
-
             </div>
         </LayoutWrapper>
 
     )
 }
 
-export default AsyncStepThree
+export default UserAuthWithGoogle
