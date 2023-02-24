@@ -40,7 +40,7 @@ const VerificationStepOne = ({ handleStep, currval }) => {
         <LayoutWrapper SiteLogo={false} handleStep={handleStep}  currval={currval} NextPage={true} BackToPrev={true} SiteTitle='3. Identity Verification'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
-                    <Col xxl={{ span: 11, offset: 6 }}>
+                    <Col xxl={{ span: 12, offset: 6 }}>
                         <div className='steps-progress-section-wrapper'>
                             <div className='steps-progress-verify-steps'>
 

@@ -15,8 +15,8 @@
 	padding-top: 120px;
 }
 .section-top-wrapperbox {
-	padding-left: 38px;
-	margin-bottom: 40px;
+    padding-left: 22px;
+    margin-bottom: 40px;
 }
 
 button.black-button {
@@ -61,14 +61,15 @@ button.transparent-button {
 	}
 }
 .user-auth-cont-box {
-	button.transparent-button {
+ button.transparent-button {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
-		gap: 36px;
+		gap: 40px;
 		height: 50px;
 		max-width: 369px;
 		width: 100%;
+		padding-left: 28px;
 	}
 }
 .user-auth-cont-box {
@@ -138,13 +139,13 @@ button {
 	justify-content: space-between;
 }
 .sidebar-top-main-text {
-	padding: 39px 39px 0 0;
-	margin-bottom: 0;
+    padding: 24px 39px 0 7px;
+    margin-bottom: 0;
 }
 .sidebar-top-text-cont {
 	.sidebar-top-main-text {
-		.desc {
-			font-family: @primary-font;
+ .desc {
+			font-family: "Tenor", sans-serif;
 			font-style: normal;
 			font-weight: 400;
 			font-size: 18px;
@@ -153,7 +154,7 @@ button {
 			letter-spacing: -0.03em;
 			color: #000000;
 			margin: 0;
-			margin-bottom: 8px;
+			margin-bottom: 24px;
 		}
 	}
 }
@@ -175,12 +176,13 @@ button {
 	}
 }
 .sidebar-top-text-cont {
-	.info-details-list {
+.info-details-list {
 		padding-top: 49px;
 		padding-right: 21px;
 		padding-bottom: 30px;
 		padding-right: 18px;
 		position: relative;
+		padding-left: 23px;
 	}
 }
 .sidebar-top-text-cont {
@@ -415,17 +417,18 @@ form.async-user-input-form {
 		padding-left: 18px;
 		margin-bottom: 25.97px;
 		.step-home-top-contwrap {
-			padding: 41px 0 42px;
-			width: 100%;
-			border-bottom: 1px solid rgb(153, 153, 153, 0.4);
+				padding: 43px 0 28px;
+				width: 100%;
+				border-bottom: 1px solid #999999;
 		}
 	}
 }
 
 .step-home-top-contwrap {
-	.top-home-button {
-		margin-top: 0;
+ .top-home-button {
+		margin-top: -13px;
 		margin-left: auto;
+		margin-right: 4px;
 	}
 	.step-home-top-cont {
 		.home-top-box-title {
@@ -455,10 +458,10 @@ form.async-user-input-form {
 }
 
 .step-home-section-titlebox {
-	margin-bottom: 50px;
+	margin-bottom: 9px;
 }
 .step-home-top-cont {
-	padding-left: 18px;
+    padding-left: 3px;
 }
 
 // progress steps styles
@@ -501,7 +504,7 @@ ul.steps-progress-bars {
 }
 
 .gender-select-box {
-	h4.subtitle {
+  h4.subtitle {
 		font-family: "Montserrat";
 		font-style: normal;
 		font-weight: 500;
@@ -509,7 +512,7 @@ ul.steps-progress-bars {
 		line-height: 17px;
 		text-transform: uppercase;
 		color: #000000;
-		margin-bottom: 6px;
+		margin-bottom: 11px;
 	}
 }
 .gender-select-itembox {
@@ -578,7 +581,7 @@ ul.steps-progress-bars {
 		&.ant-btn-default {
 			&.submit-button {
 				&.black-button {
-					margin-top: 8px;
+					margin-top: 2px;
 				}
 			}
 		}
@@ -603,7 +606,7 @@ ul.steps-progress-bars {
 }
 .basic-info-input-data-box {
 	form.async-user-input-form {
-		max-width: 496px;
+		max-width: 471px;
 		width: 100%;
 		margin-left: 0;
 	}
@@ -895,7 +898,7 @@ ul.steps-progress-bars {
 }
 
 .basic-info-input-data-box .card-info-box .card-group-img {
-	margin-bottom: 23px;
+    margin-bottom: 17px;
 }
 
 .basic-info-input-data-box .card-info-box .card-input-fild-group {
@@ -945,7 +948,7 @@ ul.steps-progress-bars {
 	&.steps-checkout-two
 	.basic-info-input-data-box
 	button.submit-button.black-button {
-	margin-top: 21px;
+	    margin-top: 38px;
 }
 }
 
@@ -974,7 +977,7 @@ ul.steps-progress-bars {
 		line-height: 17px;
 		text-transform: uppercase;
 		color: #000000;
-		margin-bottom: 25px;
+		margin-bottom: 22px;
 	}
 }
 .steps-sidebar-wrapper{
@@ -1097,7 +1100,7 @@ ul.steps-progress-bars {
 		justify-content: space-between;
 		align-items: flex-start;
 		margin-top: 19px;
-		margin-bottom: 35px;
+		margin-bottom: 23px;
 	}
 }
 
@@ -1108,7 +1111,7 @@ ul.steps-progress-bars {
 	align-items: flex-start;
 	gap: 15px;
 			.product-details-info {
-				padding-top: 30px;
+				padding-top: 26px;
 			}
 		}
 	}
@@ -1368,11 +1371,12 @@ ul.steps-progress-bars {
 	&.steps-checkout-two {
 		.steps-sidebar-wrapper {
 			.sidebar-top-text-cont {
-				margin-bottom: 270px;
+				margin-bottom: 204px;
 			}
 		}
 	}
 }
+
 .steps-sidebar-wrapper{
 	&.right-sidebar-wrapper {
 		.sidebar-top-text-cont {
@@ -1386,6 +1390,81 @@ ul.steps-progress-bars {
     gap: 10px;
 }
 
+
+// pixalated correction design styles
 .steps-section-mainbox {
     padding-left: 21px;
+    padding-right: 18px;
+}
+
+.steps-with-sidebar-wrapper .steps-main-content-wrapper {
+    padding-left: 12px;
+}
+
+.user-auth-cont-box button.transparent-button {
+    margin-top: 18px;
+}
+.user-after-home-info-cardbox > div:nth-child(1) div {
+    margin-left: 10px;
+}
+
+.steps-progress-section-wrapper {
+    padding-left: 47px;
+}
+
+.medical-question-itembox {
+    margin-left: -14px;
+    padding-right: 28px;
+}
+.steps-progress-treatment-prefthree .section-top-wrapperbox {
+    margin-bottom: 48px;
+}
+.ant-checkbox-group.radio-group-container.question-select {
+    padding-right: 54px;
+}
+.steps-progress-treatment-prefthree .question-select-box .radio-group-container.question-select {
+    padding-right: 0;
+}
+.steps-progress-verify-steps .async-user-medical-question-infobox {
+    max-width: 672px;
+}
+.steps-progress-verify-steps.verification-step-two {
+    padding-right: 43px;
+}
+.steps-checkout-wrapper.steps-checkout-one .steps-progress-section-wrapper {
+    padding-left: 122px;
+	margin-left: 0;
+    padding-right: 41px;
+}
+.steps-checkout-wrapper.steps-checkout-one .basic-info-input-data-box form.async-user-input-form{max-width: 100%;}
+.steps-checkout-wrapper.steps-checkout-one .sidebar-top-text-cont .sidebar-top-main-text .desc {
+    margin-bottom: 47px;
+}
+.steps-checkout-wrapper.steps-checkout-two .steps-progress-section-wrapper {
+    margin-left: 0px;
+}
+.steps-checkout-wrapper.steps-checkout-two .steps-progress-section-wrapper .section-top-wrapperbox {
+    padding-top: 0;
+    margin-bottom: 44px;
+}
+.steps-checkout-wrapper.steps-checkout-two .basic-info-input-data-box .card-info-box {
+    padding: 29px 21px 46px 29px;
+}
+
+.steps-sidebar-wrapper.right-sidebar-wrapper .sidebar-bottom-text-cont {
+    padding: 0;
+}
+.sidebar-top-main-text.text-center p.desc {
+    margin-bottom: 61px;
+}
+
+@media screen and (max-width:991px) {
+	.radio-group-container.question-select {
+		width: 100%;
+	}
+	.radio-group-container.question-select .radio-btn {
+		padding: 20px 20px 20px 27px;
+		font-size: 17px;
+		min-height: 68px;
+	}
 }
