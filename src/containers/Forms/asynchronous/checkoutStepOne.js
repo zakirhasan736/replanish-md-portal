@@ -61,7 +61,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                 </div>
                             </Col>
 
-                            <Col xxl={{ span: 10, offset: 0 }}>
+                            <Col xxl={{ span: 11, offset: 0 }}>
                                 <div className='steps-progress-section-wrapper'>
                                     <ul className='steps-progress-bars'>
                                         <li className='steps-progress-bars-item active'></li>

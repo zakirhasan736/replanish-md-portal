@@ -7,6 +7,9 @@
 		height: 100%;
 		max-height: 1600px;
 		overflow: hidden;
+		@media screen and (max-width: 991px) {
+			max-height: 100%;
+		}
 		&.is-bg-image {
 			background-image: url("/assets/forms/forms-bg.jpg") !important;
 			background-repeat: no-repeat;
@@ -58,7 +61,15 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 122px;
+			&.bottom-header-home {
+				height: 122px;
+				padding-top: 38px;
+				.border-btn {
+					position: relative;
+					top: -14px !important;
+				}
+			}
+			height: 97px;
 			padding: 1rem;
 
 			.header-wrapper {
@@ -79,6 +90,10 @@
 					line-height: 37px;
 					letter-spacing: -0.03em;
 					color: #f8f3e9;
+					position: relative;
+					position: relative;
+					left: 94px;
+					top: 8px;
 				}
 				@media (min-width: 1700px) {
 					left: 0rem !important;
@@ -103,8 +118,7 @@
 			.border-btn {
 				color: @white;
 				border-color: @primary-color;
-					position: relative;
-					top: -14px;
+
 				a {
 					font-size: 12px;
 					border: none;
@@ -182,7 +196,6 @@
 						border-bottom: 0;
 					}
 				}
-				
 			}
 		}
 	}

@@ -44,7 +44,9 @@ const propTypes = {
 	SiteTitle: PropTypes.string,
 };
 
-const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, BgclassName, handleStep, currval ,isgoogle}) => {
+
+const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, BgclassName, handleStep, currval,topHeaderName,bottomHeaderName,,isgoogle }) => {
+
 	const router = useRouter();
 	const dispatch = useDispatch();
 	const { user, removeUser } = useUser();
@@ -96,7 +98,7 @@ const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, Bg
 		<Layout className="layout">
 			<div className={`forms-layout--wrapper  ${BgclassName}`}>
 				{screens.lg ? (
-					<Header className="top-header">
+					<Header className={`top-header ${topHeaderName}`}>
 						<div className="header-wrapper">
 							<div className="header-inline-item">
 								<div className="hou-call">
@@ -164,7 +166,7 @@ const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, Bg
 
 				{screens.lg && (
 					<Affix offsetTop={0} style={{ zIndex: 16 }}>
-						<Header className="bottom-header">
+						<Header className={`bottom-header  ${bottomHeaderName}`}>
 							<div className="header-wrapper">
 
 								{SiteLogo &&
