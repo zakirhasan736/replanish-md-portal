@@ -22,7 +22,7 @@ const AsyncStepTwo = () => {
           </Row>
 
           <Row justify="start">
-            <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 12, offset: 6 }} >
+            <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 18, offset: 4 }} >
             <div className='steps-section-mainbox'>
               <SelectQuestion StepNext={true} FillBtnText="Next" StepQuestionData={'StepTwoEnter'} />
             </div>

@@ -18,14 +18,14 @@ const WelcomeDashboard = ({ handleStep, currval,isgoogle }) => {
                     <div className='step-home-top-wrapper'>
                         <div className='step-home-top-contwrap'>
                             <Row gutter={[0, 16]} align="middle">
-                                <Col xxl={{ span: 6, offset: 0 }} >
+                                <Col xxl={{ span: 6, offset: 0 }} lg={{ span: 12, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                     <div className='step-home-top-cont'>
                                         <h2 className='home-top-box-title'>Hi <span>Mak's</span></h2>
                                         <p className='desc'>thanks for starting your
                                             online visit.</p>
                                     </div>
                                 </Col>
-                                <Col xxl={{ span: 4, offset: 14 }} >
+                                <Col xxl={{ span: 4, offset: 14 }} lg={{ span: 4, offset: 8 }}  xs={{ span: 24, offset: 0 }} >
                                     <Button onClick={() => handleStep(7)} className='black-button top-home-button'><Image src='/assets/images/small-brand-icon.png' width={12.86} height={17} alt='brand logo' />   <span>Start my visit</span></Button>
                                 </Col>
                             </Row>

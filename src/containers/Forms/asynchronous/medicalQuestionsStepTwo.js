@@ -23,7 +23,7 @@ const MedicalQuestionStepTwo = ({ handleStep, currval, StepNext,FillBtnText  }) 
                 <div className='steps-progress-section-wrapper'>
                     <div className='stepstwo-progress-medicale-question'>
                         <Row gutter={[0, 16]}>
-                            <Col xxl={{ span: 11, offset: 6 }}>
+                            <Col xxl={{ span: 11, offset: 6 }} xl={{ span: 16, offset: 3 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                 <ul className='steps-progress-bars'>
                                     <li className='steps-progress-bars-item active'></li>
                                     <li className='steps-progress-bars-item active'></li>
@@ -33,10 +33,10 @@ const MedicalQuestionStepTwo = ({ handleStep, currval, StepNext,FillBtnText  }) 
                             </Col>
                         </Row>
                         <Row gutter={[0, 16]} justify='center'>
-                            <Col xxl={{ span: 24, offset: 0 }}>
+                            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                 <div className='step-progress-steps-titlebox'>
                                     <Row justify="start" gutter={[0, 16]}>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                             <div className='section-top-wrapperbox text-center'>
                                                 <SectionTitle title='How often do you wake up with an Testosterone?' />
                                             </div>
@@ -48,7 +48,7 @@ const MedicalQuestionStepTwo = ({ handleStep, currval, StepNext,FillBtnText  }) 
 
                         <div className='async-user-medical-question-wrapper'>
                             <Row justify="start">
-                                <Col xxl={{ span: 12, offset: 6 }}>
+                                <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                     <div className='medical-question-itembox'>
                                         <div className="question-select-box">
                                             <Radio.Group

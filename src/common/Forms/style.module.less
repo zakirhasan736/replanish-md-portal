@@ -23,12 +23,27 @@
 .section-title-box .title:empty {
 	display: none;
 }
-@media screen and (max-width:991px) {
-	.section-title-box .subtitle {
-		font-size: 14px;
+@media screen and (max-width: 991px) {
+	.section-title-box {
+		.title {
+			font-size: 38px;
+			line-height: 48px;
+			text-align: left;
+		}
+		
 	}
-	.section-title-box .title {
-		font-size: 32px;
+}
+@media screen and (max-width: 991px) {
+	.section-title-box {
+		.title {
+			font-size: 32px;
+			line-height: 42px;
+			text-align: left;
+		}
+		.subtitle {
+			font-size: 14px;
+			text-align: left;
+		}
 	}
 }
 // selected question item styles
@@ -101,6 +116,13 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 22px;
+		@media screen and (max-width: 992px) {
+			width: 55px;
+			height: 55px;
+			border-radius: 10px;
+			font-size: 32px;
+			line-height: 42px;
+		}
 	}
 	.info-card-title {
 		margin-bottom: 10px;
@@ -114,6 +136,11 @@
 		height: 127px;
 		overflow: hidden;
 		transform: matrix(1, 0, 0, 1, 0, 0);
+		@media screen and (max-width: 992px) {
+			font-size: 24px;
+			line-height: 32px;
+			height: unset;
+		}
 	}
 	.info-card-desc {
 		font-family: "Montserrat";
@@ -124,6 +151,10 @@
 		letter-spacing: -0.03em;
 		color: #000000;
 		opacity: 0.5;
+		@media screen and (max-width: 992px) {
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 }
 
@@ -135,6 +166,10 @@
 				height: 24px;
 				border-radius: 4px !important;
 				border: 1px solid #000;
+				@media screen and (max-width: 991px) {
+					width: 18px;
+					height: 18px;
+				}
 				&::after {
 					left: 7px;
 					background-color: #4e8b6e;
@@ -178,46 +213,55 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
-		&:empty{display: none;}
+		&:empty {
+			display: none;
+		}
+		@media screen and (max-width: 991px) {
+			font-size: 11px;
+			line-height: 16px;
+			max-width: auto;
+			height: 35px;
+			right: 16px;
+			top: -66px;
+		}
 	}
 }
 
-
 .check-box-info-item {
-	.ant-checkbox-wrapper{
-		&.radio-btn span{
+	.ant-checkbox-wrapper {
+		&.radio-btn span {
 			&:nth-child(2) {
 				.pref-item-title-box {
 					display: flex;
 					justify-content: space-between;
 					width: 100%;
-				  }
+				}
 			}
 		}
 	}
 }
-.check-box-info-itembox{
-  .check-box-info-item {
-	.ant-checkbox-wrapper{
-		&.radio-btn {
-			> span{
-				&:nth-child(2) {
-					width: 100%;
-				  }
+.check-box-info-itembox {
+	.check-box-info-item {
+		.ant-checkbox-wrapper {
+			&.radio-btn {
+				> span {
+					&:nth-child(2) {
+						width: 100%;
+					}
+				}
 			}
 		}
-		}
 	}
-		.descriptionText {
-			margin-bottom: 0;
-			margin-top: 13px;
-			margin-left: 18px;
-			font-family: 'Manrope';
-			font-style: normal;
-			font-weight: 300;
-			font-size: 16px;
-			line-height: 22px;
-			color: #1B1B1B;
-			max-width: 660px;
-		}
-  }
+	.descriptionText {
+		margin-bottom: 0;
+		margin-top: 13px;
+		margin-left: 18px;
+		font-family: "Manrope";
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 22px;
+		color: #1b1b1b;
+		max-width: 660px;
+	}
+}

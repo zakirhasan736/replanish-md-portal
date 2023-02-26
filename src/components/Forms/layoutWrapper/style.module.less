@@ -17,6 +17,9 @@
 			background-position: left top;
 			min-height: 100vh;
 			height: 100%;
+		@media screen and (min-width: 992px) and (max-width: 1440px) {
+			background-position: center;
+		}
 		}
 		.top-header {
 			display: flex;
@@ -25,7 +28,10 @@
 			color: @white;
 			border-bottom: 1px solid #ffffff1a;
 			height: 47px;
-			@media (max-width: 576px) {
+			@media (max-width: 991px) {
+				height: 64px;
+			}
+				@media (max-width: 576px) {
 				padding: 0 1.25rem;
 			}
 			.socials-widget {
@@ -44,9 +50,10 @@
 				width: 100%;
 				padding-right: 23px;
 				padding-left: 17px;
-				// @media (max-width: 991px) {
-				// 	width: auto;
-				// }
+				@media (max-width: 991px) {
+					padding-right: 0px;
+				padding-left: 0px;
+				}
 			}
 			.logo {
 				display: flex;
@@ -94,6 +101,9 @@
 					position: relative;
 					left: 94px;
 					top: 8px;
+				@media (min-width: 992px) and (max-width:1440px) {
+					left: 36px;
+				}
 				}
 				@media (min-width: 1700px) {
 					left: 0rem !important;
@@ -195,6 +205,9 @@
 					a {
 						border-bottom: 0;
 					}
+				}
+				@media screen and (max-width:1199px) and (min-width:992px) {
+					margin-right: 56px;
 				}
 			}
 		}

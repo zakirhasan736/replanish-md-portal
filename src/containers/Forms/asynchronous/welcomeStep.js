@@ -20,7 +20,7 @@ const WelcomeStep = ({ handleStep, StepNext, FillBtnText,currval }) => {
 
         <div className='steps-two-wrapper'>
           <Row justify="start" gutter={[0, 20]}>
-            <Col xxl={{ span: 24, offset: 0 }} >
+            <Col xxl={{ span: 24, offset: 0 }}  xl={{ span: 24, offset: 0 }} lg={{ span: 18, offset: 3 }}>
               <div className='section-top-wrapperbox text-center'>
                 <SectionTitle title='Do you get Erectile dysfunction?' />
               </div>
@@ -28,7 +28,7 @@ const WelcomeStep = ({ handleStep, StepNext, FillBtnText,currval }) => {
           </Row>
 
           <Row justify="start">
-            <Col xxl={{ span: 12, offset: 6 }} >
+            <Col  xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
               <div className='steps-section-mainbox'>
                 <div className="question-select-box">
                   <Radio.Group

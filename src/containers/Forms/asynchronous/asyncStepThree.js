@@ -24,7 +24,7 @@ const onChangeData = ()=>{
 
         <div className='steps-three-wrapper'>
           <Row justify="start" gutter={[0, 20]}>
-            <Col xxl={{ span: 24, offset: 0 }} >
+            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
               <div className='section-top-wrapperbox text-center'>
                 <SectionTitle title='How often do you wake up with an Erectile dysfunction?' />
               </div>
@@ -32,7 +32,7 @@ const onChangeData = ()=>{
           </Row>
 
           <Row justify="start">
-            <Col xxl={{ span: 12, offset: 6 }} >
+            <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
               <div className='steps-section-mainbox'>
                 <div className="question-select-box">
                   <Radio.Group

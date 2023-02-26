@@ -16,7 +16,7 @@ const MedicalQuestionStepThree = ({ handleStep, currval }) => {
         <LayoutWrapper SiteLogo={false} handleStep={handleStep} currval={currval} NextPage={true} BackToPrev={true} SiteTitle='2. Medical Questions'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
-                    <Col xxl={{ span: 11, offset: 6 }}>
+                    <Col xxl={{ span: 11, offset: 6 }} xl={{ span: 16, offset: 4 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                         <div className='steps-progress-section-wrapper'>
                         <div className='stepsthree-progress-medicale-question'>
                             <ul className='steps-progress-bars'>
@@ -27,7 +27,7 @@ const MedicalQuestionStepThree = ({ handleStep, currval }) => {
                             </ul>
                             <div className='step-progress-steps-titlebox'>
                                 <Row justify="start" gutter={[0, 16]}>
-                                    <Col xxl={{ span: 24, offset: 0 }} >
+                                    <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}> 
                                         <div className='section-top-wrapperbox text-left'>
                                             <SectionTitle title='No problem, we know how busy you are.' />
                                             <p className='desc'>
@@ -44,7 +44,7 @@ const MedicalQuestionStepThree = ({ handleStep, currval }) => {
 
                                 <div className='async-input-fild-group'>
                                     <Row>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}> 
                                             <InputField
                                                 placeholder='Email address'
                                                 name='email'
@@ -57,14 +57,14 @@ const MedicalQuestionStepThree = ({ handleStep, currval }) => {
                                 </div>
                                 <div className='async-input-fild-group'>
                                     <Row>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}> 
                                         <textarea placeholder='Comments' className='medical-qa-text-area'></textarea>
                                         </Col>
                                     </Row>
                                 </div>
                              
                                 <Row>
-                                    <Col xxl={{ span: 24, offset: 0 }} >
+                                    <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}> 
                                         <Button onClick={()=>handleMedicalData()} className='submit-button black-button'>Submit</Button>
                                     </Col>
                                 </Row>

@@ -20,9 +20,9 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
 
                 <div className='steps-with-sidebar-wrapper'>
 
-                    <Row gutter={[30, 16]}>
+                    <Row  gutter={[16, { xs: 60,md: 60, lg: 30 }]}>
 
-                        <Col xxl={{ span: 6, offset: 0 }} >
+                        <Col  xxl={{ span: 6, offset: 0, order:1, }} xl={{ span: 8, offset: 0 , order:1,}} lg={{ span: 10, offset: 0, order:1, }} xs={{ span: 24, offset: 0, order:2 }}>
                             <div className="steps-sidebar-wrapper">
                                 <div className='sidebar-top-text-cont'>
                                     <div className='sidebar-top-main-text text-center'>
@@ -63,7 +63,7 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
                             </div>
                         </Col>
 
-                        <Col xxl={{ span: 12, offset: 0 }} >
+                        <Col  xxl={{ span: 12, offset: 0, order:2, }} xl={{ span: 14, offset: 0 , order:2,}} lg={{ span: 14, offset: 0, order:2, }} xs={{ span: 24, offset: 0, order:1 }}  >
                             <div className="steps-main-content-wrapper">
                                 <div className='section-top-wrapperbox user--signup text-left'>
                                     <SectionTitle title='Continue with your ED visit.' />
@@ -72,13 +72,13 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
                                     </p>
                                 </div>
                                 <Row>
-                                    <Col xxl={{ span: 15, offset: 0 }} >
+                                    <Col xxl={{ span: 15, offset: 0 }} xl={{ span: 20, offset: 0 }} lg={{ span: 22, offset: 0 }}>
                                         <div className='async-user-signup-formbox'>
                                             <form action="post" className='async-user-input-form' >
 
                                                 <div className='async-input-fild-group'>
-                                                    <Row gutter={[9, 0]}>
-                                                        <Col xxl={{ span: 12, offset: 0 }} >
+                                                    <Row gutter={[9, 20]}>
+                                                        <Col xxl={{ span: 12, offset: 0 }} xl={{ span: 12, offset: 0 }} lg={{ span: 12, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                             <InputField
                                                                 placeholder='Legal First name'
                                                                 name='firstName'
@@ -88,7 +88,7 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
                                                             />
                                                         </Col>
 
-                                                        <Col xxl={{ span: 12, offset: 0 }} >
+                                                        <Col xxl={{ span: 12, offset: 0 }} xl={{ span: 12, offset: 0 }} lg={{ span: 12, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                             <InputField
                                                                 placeholder='Legal last name'
                                                                 name='firstName'
@@ -102,7 +102,7 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
 
                                                 <div className='async-input-fild-group'>
                                                     <Row>
-                                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                                        <Col lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                                             <InputField
                                                                 placeholder='Email address'
                                                                 name='email'
@@ -116,7 +116,7 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
 
                                                 <div className='async-input-fild-group'>
                                                     <Row>
-                                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                                        <Col lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                                             <InputField
                                                                 placeholder='Create Password'
                                                                 name='password'
@@ -130,14 +130,14 @@ const SignupByEmailPassword = ({ handleStep, currval ,isgoogle}) => {
 
                                                 <div className='term-condition-info-checkbox'>
                                                     <Row>
-                                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                                        <Col lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                             <Checkbox onChange={onChange}>
                                                                 i agree to <Link href='/'>terms and conditions</Link> and consent to <Link href='/'>telehealth</Link>
                                                             </Checkbox>
                                                         </Col>
                                                     </Row>
                                                     <Row>
-                                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                                        <Col lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                             <Button
                                                                 onClick={() => handleGotoDashboard()}
                                                                 className='submit-button black-button'>Start my visit</Button>

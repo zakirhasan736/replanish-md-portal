@@ -20,7 +20,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
 
                         <Row gutter={[0, 16]}>
 
-                            <Col xxl={{ span: 6, offset: 0 }} >
+                            <Col xxl={{ span: 6, offset: 0, order: 1 }} xl={{ span: 8, offset: 0, order: 1 }} lg={{ span: 10, offset: 0, order: 1 }} md={{ span: 24, offset: 0, order: 2 }} xs={{ span: 24, offset: 0, order: 2 }}>
                                 <div className="steps-sidebar-wrapper">
                                     <div className='sidebar-top-text-cont'>
                                         <div className='sidebar-top-main-text text-center'>
@@ -61,7 +61,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                 </div>
                             </Col>
 
-                            <Col xxl={{ span: 11, offset: 0 }}>
+                            <Col xxl={{ span: 11, offset: 0, order: 2 }} xl={{ span: 14, offset: 0, order: 2 }} lg={{ span: 14, offset: 0, order: 2 }} md={{ span: 24, offset: 0, order: 1 }} xs={{ span: 24, offset: 0, order: 1 }}>
                                 <div className='steps-progress-section-wrapper'>
                                     <ul className='steps-progress-bars'>
                                         <li className='steps-progress-bars-item active'></li>
@@ -71,7 +71,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                     </ul>
                                     <div className='step-progress-steps-titlebox'>
                                         <Row justify="start" gutter={[0, 16]}>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                 <div className='section-top-wrapperbox text-left'>
                                                     <SectionTitle title='Shipping Info' />
                                                 </div>
@@ -88,7 +88,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
 
                                             <div className='async-input-fild-group'>
                                                 <Row>
-                                                    <Col xxl={{ span: 24, offset: 0 }} >
+                                                    <Col xxl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                         <InputField
                                                             placeholder='Street address'
                                                             name='text'
@@ -101,7 +101,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                             </div>
                                             <div className='async-input-fild-group'>
                                                 <Row>
-                                                    <Col xxl={{ span: 24, offset: 0 }} >
+                                                    <Col xxl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                         <InputField
                                                             placeholder='address 2'
                                                             name='text'
@@ -114,7 +114,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                             </div>
                                             <div className='async-input-fild-group'>
                                                 <Row>
-                                                    <Col xxl={{ span: 24, offset: 0 }} >
+                                                    <Col xxl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                         <InputField
                                                             placeholder='City'
                                                             name='text'
@@ -126,8 +126,8 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                                 </Row>
                                             </div>
                                             <div className='async-input-fild-group'>
-                                                <Row gutter={[11, 0]}>
-                                                    <Col xxl={{ span: 12, offset: 0 }} >
+                                                <Row gutter={[11, 18]}>
+                                                    <Col xxl={{ span: 12, offset: 0 }} xl={{ span: 12, offset: 0 }} lg={{ span: 12, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                         <InputField
                                                             placeholder='State'
                                                             name='phone'
@@ -136,7 +136,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                                             errors='pleas fill the required password'
                                                         />
                                                     </Col>
-                                                    <Col xxl={{ span: 12, offset: 0 }} >
+                                                    <Col xxl={{ span: 12, offset: 0 }} xl={{ span: 12, offset: 0 }} lg={{ span: 12, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                         <InputField
                                                             placeholder='Zipcode'
                                                             name='phone'
@@ -148,7 +148,7 @@ const CheckoutSTepsOne = ({ handleStep, currval }) => {
                                                 </Row>
                                             </div>
                                             <Row>
-                                                <Col xxl={{ span: 24, offset: 0 }} >
+                                                <Col xxl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                     <Button onClick={() => handleSubmitAndContinue()} className='submit-button black-button'>Save and continue</Button>
                                                     <div className='privecy-info-pin-text' >  <Image src='/assets/images/bxs_lock-alt.png' width={24} height={24} alt='lock icons' />  <p className='info-text-desc'>256-BIT TLS SECURITY</p></div>
                                                 </Col>

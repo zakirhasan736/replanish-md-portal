@@ -12,9 +12,9 @@ const propTypes = {
 const InfoCard = () => {
 
 	return (
-        <Row gutter={[80, 0]}>
+        <Row gutter={[{xl:80,}, { xs: 40, lg: 0 }]}>
         {InfoCardData.map((data) => (
-            <Col xxl={{ span: 6, offset: 0 }} >
+            <Col xxl={{ span: 6, offset: 0 }} lg={{ span: 7, offset: 0 }} xs={{ span: 24, offset: 0 }} >
             <InfoCardItem data={data} />
             </Col>
         ))}        

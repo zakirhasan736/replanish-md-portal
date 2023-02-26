@@ -45,7 +45,7 @@ const propTypes = {
 };
 
 
-const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, BgclassName, handleStep, currval,topHeaderName,bottomHeaderName,,isgoogle }) => {
+const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, BgclassName, handleStep, currval,topHeaderName,bottomHeaderName,isgoogle }) => {
 
 	const router = useRouter();
 	const dispatch = useDispatch();
@@ -143,10 +143,9 @@ const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, Bg
 					<Affix offsetTop={0} style={{ zIndex: 16 }}>
 						<Header className="top-header">
 							<div className="header-wrapper">
-								<AlignLeftOutlined
-									className="side-nav-icon"
-									onClick={() => setIsMobile(true)}
-								/>
+							{BackToPrev &&
+								<button onClick={() => handleback()} className="back-to-preview"><HiArrowLeft /></button>
+							}
 								{/* <div className="logo">
 								{IconLogo}
 								&nbsp; &nbsp;
@@ -159,6 +158,10 @@ const LayoutWrapper = ({ children, SiteLogo, BackToPrev, NextPage, SiteTitle, Bg
 										{TextLogo}
 									</div>
 								</Link>
+								<AlignLeftOutlined
+								className="side-nav-icon"
+								onClick={() => setIsMobile(true)}
+							/>
 							</div>
 						</Header>
 					</Affix>

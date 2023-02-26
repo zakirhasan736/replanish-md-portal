@@ -15,7 +15,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
         <LayoutWrapper SiteLogo={false} NextPage={true} handleStep={handleStep} currval={currval} BackToPrev={true} SiteTitle='The Basics'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
-                    <Col xxl={{ span: 11, offset: 6 }}>
+                    <Col xxl={{ span: 11, offset: 6 }} xl={{ span: 16, offset: 4 }} lg={{ span: 18, offset: 3 }}>
                         <div className='steps-progress-section-wrapper'>
 
                             <ul className='steps-progress-bars'>
@@ -27,7 +27,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
 
                             <div className='step-progress-steps-titlebox'>
                                 <Row justify="start" gutter={[0, 16]}>
-                                    <Col xxl={{ span: 24, offset: 0 }} >
+                                    <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                         <div className='section-top-wrapperbox text-left'>
                                             <SectionTitle title='The Basics' subtitle='START WITH' />
                                             <p className='desc'>This information helps your doctor determine if you’re eligible for treatment.</p>
@@ -42,7 +42,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
                                 <form action="post" className='async-user-input-form'>
 
                                     <Row>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                             <div className='gender-select-box'>
                                                 <h4 className='subtitle'>Sex Assigned at Birth</h4>
                                                 <div className='gender-select-itembox'>
@@ -59,7 +59,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
 
                                     <div className='async-input-fild-group'>
                                         <Row>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                                 <InputField
                                                     placeholder='Birthdate'
                                                     name='text'
@@ -73,7 +73,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
 
                                     <div className='async-input-fild-group'>
                                         <Row>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                                 <InputField
                                                     placeholder='Zipcode'
                                                     name='text'
@@ -87,7 +87,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
 
                                     <div className='async-input-fild-group'>
                                         <Row gutter={[11, 0]}>
-                                            <Col xxl={{ span: 4, offset: 0 }} >
+                                            <Col xxl={{ span: 4, offset: 0 }} lg={{ span: 4, offset: 0 }} xs={{ span: 4, offset: 0 }}>
                                                 <InputField
                                                     placeholder='+91'
                                                     name='phone'
@@ -96,7 +96,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
                                                     errors='pleas fill the required password'
                                                 />
                                             </Col>
-                                            <Col xxl={{ span: 20, offset: 0 }} >
+                                            <Col xxl={{ span: 20, offset: 0 }} lg={{ span: 20, offset: 0 }} xs={{ span: 20, offset: 0 }} >
                                                 <InputField
                                                     placeholder='Phone number'
                                                     name='phone'
@@ -109,13 +109,13 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
                                     </div>
 
                                     <Row>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                             <Button onClick={() => handleSubmit()} className='submit-button black-button'>Next</Button>
                                         </Col>
                                     </Row>
 
                                     <Row>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                             <div className='info-text-box'>
                                                 <p className='info-text-desc'>
                                                     As part of our efforts to ensure patient safety, we need to verify your phone number. By giving us your phone number and continuing, you agree that Ro may send text messages to you to verify your phone number and for any other lawful purpose related to your Ro account and your use of our services, including order confirmations, shipment notifications, and messages from your provider. Message and data rates may apply. Message frequency varies. Reply HELP for help. Reply STOP to opt out.

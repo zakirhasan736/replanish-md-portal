@@ -22,7 +22,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
 
                         <Row gutter={[0, 16]}>
 
-                            <Col xxl={{ span: 7, offset: 0 }} >
+                            <Col xxl={{  span: 7, offset: 0,order:1 }} xl={{  span: 7, offset: 0,order:1  }}  lg={{ span: 7, offset: 0,order:1 }}  md={{ span: 24, offset: 0 ,order: 3}}  xs={{ span: 24, offset: 0 ,order: 3}} >
                                 <div className="steps-sidebar-wrapper">
                                     <div className='sidebar-top-text-cont'>
                                         <div className='sidebar-top-main-text text-center'>
@@ -63,7 +63,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                                 </div>
                             </Col>
 
-                            <Col xxl={{ span: 10, offset: 0 }}>
+                            <Col xxl={{ span: 10, offset: 0, order:2 }} xl={{ span: 10, offset: 0, order:2 }} lg={{ span: 10, offset: 0, order:2 }} md={{ span: 24, offset: 0, order:1 }} xs={{ span: 24, offset: 0, order:1 }}>
                                 <div className='steps-progress-section-wrapper'>
                                     <ul className='steps-progress-bars'>
                                         <li className='steps-progress-bars-item active'></li>
@@ -73,7 +73,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                                     </ul>
                                     <div className='step-progress-steps-titlebox'>
                                         <Row justify="start" gutter={[0, 16]}>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }} >
                                                 <div className='section-top-wrapperbox text-left'>
                                                     <SectionTitle title='Review treatment and pay' />
                                                 </div>
@@ -102,7 +102,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                                         </div>
 
                                         <Row>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                 <div className='info-text-box'>
                                                     <p className='info-text-desc'>
                                                         By clicking PAY $0 TODAY you agree that, if prescribed, you will be charged $57 less any credits available in your account at the time your payment method is charged for your first shipment, and $72 every 3 months thereafter until you cancel or your prescription expires. You can cancel your plan anytime by logging into your account.
@@ -112,7 +112,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
                                                 <Button onClick={() => submitFullCheckoutInfo()} className='submit-button black-button'>Pay $0 Today</Button>
                                                 <div className='privecy-info-pin-text' >  <Image src='/assets/images/bxs_lock-alt.png' width={24} height={24} alt='lock icons' />  <p className='info-text-desc'>256-BIT TLS SECURITY</p></div>
                                             </Col>
@@ -124,7 +124,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                                 </div>
 
                             </Col>
-                            <Col xxl={{ span: 7, offset: 0 }} >
+                            <Col xxl={{ span: 7, offset: 0,order:3 }} xl={{ span: 7, offset: 0,order:3 }} lg={{ span: 7, offset: 0,order:3 }} md={{ span: 24, offset: 0,order:2 }} xs={{ span: 24, offset: 0,order:2 }}>
                                 <div className="steps-sidebar-wrapper right-sidebar-wrapper">
                                     <div className='sidebar-top-text-cont'>
                                         <div className='sidebar-top-main-text'>

@@ -23,9 +23,9 @@ const UserAuthWithGoogle = ({ handleStep, currval ,AuthWithGoogle}) => {
 
                 <div className='steps-with-sidebar-wrapper'>
 
-                    <Row gutter={[30, 16]}>
+                    <Row gutter={[16, { xs: 60, md:60, lg: 30 }]}>
 
-                        <Col xxl={{ span: 6, offset: 0 }} >
+                        <Col xxl={{ span: 6, offset: 0, order:1, }} xl={{ span: 8, offset: 0 , order:1,}} lg={{ span: 10, offset: 0, order:1, }} xs={{ span: 24, offset: 0, order:2 }}>
                             <div className="steps-sidebar-wrapper">
                                 <div className='sidebar-top-text-cont'>
                                     <div className='sidebar-top-main-text text-center'>
@@ -66,7 +66,7 @@ const UserAuthWithGoogle = ({ handleStep, currval ,AuthWithGoogle}) => {
                             </div>
                         </Col>
 
-                        <Col xxl={{ span: 12, offset: 0 }} >
+                        <Col xxl={{ span: 12, offset: 0, order:2, }} xl={{ span: 14, offset: 0 , order:2,}} lg={{ span: 14, offset: 0, order:2, }} xs={{ span: 24, offset: 0, order:1 }} >
                             <div className="steps-main-content-wrapper">
                                 <div className='section-top-wrapperbox text-left'>
                                     <SectionTitle title='Continue with your ED visit.' />

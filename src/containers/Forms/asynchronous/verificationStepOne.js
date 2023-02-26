@@ -40,7 +40,7 @@ const VerificationStepOne = ({ handleStep, currval }) => {
         <LayoutWrapper SiteLogo={false} handleStep={handleStep}  currval={currval} NextPage={true} BackToPrev={true} SiteTitle='3. Identity Verification'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
-                    <Col xxl={{ span: 12, offset: 6 }}>
+                    <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 16, offset: 4 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                         <div className='steps-progress-section-wrapper'>
                             <div className='steps-progress-verify-steps'>
 
@@ -53,7 +53,7 @@ const VerificationStepOne = ({ handleStep, currval }) => {
 
                                 <div className='step-progress-steps-titlebox'>
                                     <Row justify="start" gutter={[0, 16]}>
-                                        <Col xxl={{ span: 24, offset: 0 }} >
+                                        <Col xxl={{ span: 24, offset: 0 }}  xl={{ span: 24, offset: 0 }}  lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }}  xs={{ span: 24, offset: 0 }} >
                                             <div className='section-top-wrapperbox text-left'>
                                                 <SectionTitle title='Share a photo of yourself' subtitle='Share a photo of yourself' />
                                                 <p className='desc'>Tell your doctor about your symptoms and overall health. Your doctor needs this information to determine the most appropriate treatment for you. It's important that you are honest and respond as accurately as possible.</p>
@@ -70,7 +70,7 @@ const VerificationStepOne = ({ handleStep, currval }) => {
                                         </div>
 
                                         <Row>
-                                            <Col xxl={{ span: 24, offset: 0 }} >
+                                            <Col xxl={{ span: 24, offset: 0 }}  xl={{ span: 24, offset: 0 }}  lg={{ span: 24, offset: 0 }}  md={{ span: 24, offset: 0 }}  xs={{ span: 24, offset: 0 }} >
                                                 <Button onClick={() => uploadPhotoNext()} className='submit-button black-button'>take or upload photo</Button>
                                                 <p className='info-text-desc'>Your Photos won’t be shared with anyone besides your doctor or nurse practitioner.</p>
                                             </Col>

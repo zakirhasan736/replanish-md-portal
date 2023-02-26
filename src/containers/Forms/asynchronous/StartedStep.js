@@ -23,7 +23,7 @@ const StartedStep = ({ handleStep,StepNext }) => {
         <div className='steps-one-wrapper'>
 
           <Row justify="start" gutter={[0, 20]}>
-            <Col xxl={{ span: 18, offset: 4 }} >
+            <Col xxl={{ span: 18, offset: 4 }} xl={{ span: 18, offset: 4 }} lg={{ span: 18, offset: 3 }} >
               <div className='section-top-wrapperbox'>
                 <SectionTitle title='Do you ever have a problem Erectile dysfunction?' subtitle='LET’S GET STARTED' />
               </div>
@@ -31,7 +31,7 @@ const StartedStep = ({ handleStep,StepNext }) => {
           </Row>
 
           <Row justify="start">
-            <Col xxl={{ span: 12, offset: 6 }} >
+            <Col xxl={{ span: 12, offset: 6 }}   xl={{ span: 12, offset: 6 }}  lg={{ span: 18, offset: 3 }}>
               <div className='steps-section-mainbox'>
 
                 <div className="question-select-box">
