@@ -17,7 +17,7 @@ import TreatmentPrefStepOne from 'src/containers/Forms/asynchronous/treatmentPre
 import TreatmentPrefStepThree from 'src/containers/Forms/asynchronous/treatmentPrefStepThree';
 import TreatmentPrefStepTwo from 'src/containers/Forms/asynchronous/treatmentPrefStepTwo';
 import VerificationStepOne from 'src/containers/Forms/asynchronous/verificationStepOne';
-import VerificationStepTwo from 'src/containers/Forms/asynchronous/VerificationStepTwo';
+import VerificationStepTwo from 'src/containers/Forms/asynchronous/verificationStepTwo';
 import WelcomeStep from 'src/containers/Forms/asynchronous/welcomeStep';
 
 
