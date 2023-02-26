@@ -1,24 +1,24 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import AsyncStepThree from '../../containers/Forms/asynchronous/asyncStepThree';
-import WelcomeDashboard from '../../containers/Forms/asynchronous/asyncUserAfterHome';
-import UserAuthWithGoogle from '../../containers/Forms/asynchronous/asyncUserAuth';
-import SignupByEmailPassword from '../../containers/Forms/asynchronous/asyncUserSignupFild';
-import BasicsStepsOne from '../../containers/Forms/asynchronous/BasicsStepOne';
-import CheckoutFinalSteps from '../../containers/Forms/asynchronous/checkoutFinalStep';
-import CheckoutSTepsOne from '../../containers/Forms/asynchronous/checkoutStepOne';
-import CTAStepOne from '../../containers/Forms/asynchronous/CTAStepOne';
-import MedicalQuestionStepOne from '../../containers/Forms/asynchronous/medicalQuestionsStepOne';
-import MedicalQuestionStepThree from '../../containers/Forms/asynchronous/medicalQuestionsStepThree';
-import MedicalQuestionStepTwo from '../../containers/Forms/asynchronous/medicalQuestionsStepTwo';
-import StartedStep from '../../containers/Forms/asynchronous/StartedStep';
-import TreatmentPrefStepFour from '../../containers/Forms/asynchronous/treatmentPrefStepFour';
-import TreatmentPrefStepOne from '../../containers/Forms/asynchronous/treatmentPrefStepOne';
-import TreatmentPrefStepThree from '../../containers/Forms/asynchronous/treatmentPrefStepThree';
-import TreatmentPrefStepTwo from '../../containers/Forms/asynchronous/treatmentPrefStepTwo';
-import VerificationStepOne from '../../containers/Forms/asynchronous/verificationStepOne';
-import VerificationStepTwo from '../../containers/Forms/asynchronous/VerificationStepTwo';
-import WelcomeStep from '../../containers/Forms/asynchronous/welcomeStep';
+import AsyncStepThree from 'src/containers/Forms/asynchronous/asyncStepThree';
+import WelcomeDashboard from 'src/containers/Forms/asynchronous/asyncUserAfterHome';
+import UserAuthWithGoogle from 'src/containers/Forms/asynchronous/asyncUserAuth';
+import SignupByEmailPassword from 'src/containers/Forms/asynchronous/asyncUserSignupFild';
+import BasicsStepsOne from 'src/containers/Forms/asynchronous/BasicsStepOne';
+import CheckoutFinalSteps from 'src/containers/Forms/asynchronous/checkoutFinalStep';
+import CheckoutSTepsOne from 'src/containers/Forms/asynchronous/checkoutStepOne';
+import CTAStepOne from 'src/containers/Forms/asynchronous/CTAStepOne';
+import MedicalQuestionStepOne from 'src/containers/Forms/asynchronous/medicalQuestionsStepOne';
+import MedicalQuestionStepThree from 'src/containers/Forms/asynchronous/medicalQuestionsStepThree';
+import MedicalQuestionStepTwo from 'src/containers/Forms/asynchronous/medicalQuestionsStepTwo';
+import StartedStep from 'src/containers/Forms/asynchronous/StartedStep';
+import TreatmentPrefStepFour from 'src/containers/Forms/asynchronous/treatmentPrefStepFour';
+import TreatmentPrefStepOne from 'src/containers/Forms/asynchronous/treatmentPrefStepOne';
+import TreatmentPrefStepThree from 'src/containers/Forms/asynchronous/treatmentPrefStepThree';
+import TreatmentPrefStepTwo from 'src/containers/Forms/asynchronous/treatmentPrefStepTwo';
+import VerificationStepOne from 'src/containers/Forms/asynchronous/verificationStepOne';
+import VerificationStepTwo from 'src/containers/Forms/asynchronous/VerificationStepTwo';
+import WelcomeStep from 'src/containers/Forms/asynchronous/welcomeStep';
 
 
 export default function ServicesNewPage() {
