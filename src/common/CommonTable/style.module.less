@@ -1,0 +1,38 @@
+.CommonTable {
+	overflow: auto;
+	.ant-table {
+		min-width: 600px;
+		.ant-table-container {
+			.ant-table-content {
+				table {
+					thead {
+						tr {
+							th {
+								background-color: @white;
+								border-bottom: unset;
+								&:before {
+									display: none;
+								}
+								font-family: "Proxima-Nova";
+								font-size: 14px;
+								font-weight: 400;
+							}
+						}
+					}
+					tbody {
+						tr td {
+							background-color: @white;
+							font-size: 12px;
+							color: @black;
+							border-bottom: unset;
+							font-family: "Proxima-Nova";
+						}
+						tr:nth-child(2n) td {
+							background-color: #f1faf9;
+						}
+					}
+				}
+			}
+		}
+	}
+}

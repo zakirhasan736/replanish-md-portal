@@ -20,6 +20,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@manaflair/redux-batch": "^1.0.0",
+    "@react-google-maps/api": "^2.18.1",
     "@reduxjs/toolkit": "^1.8.5",
     "antd": "^4.20.6",
     "axios": "^1.0.0",

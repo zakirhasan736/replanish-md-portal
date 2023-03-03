@@ -82,7 +82,6 @@ const LayoutWrapper = ({ children }) => {
 			console.log("error =>", error);
 		}
 	};
-	console.log("user", user);
 
 	return (
 		<Layout className="layout">
@@ -94,14 +93,14 @@ const LayoutWrapper = ({ children }) => {
 								HOU : &nbsp;
 								<a href="tel:832-770-7975">
 									{CallIcon}
-									&nbsp; (832) 770-7975
+									&nbsp; (346) 955-7943
 								</a>
 							</div>
 							<div className="training-call ml-lg-3">
 								Training :&nbsp;
 								<a href="tel:832-953-0313">
 									{PhoneTextIcon}
-									&nbsp; (832) 953-0313
+									&nbsp; (346) 222-4596
 								</a>
 							</div>
 						</div>
@@ -158,6 +157,8 @@ const LayoutWrapper = ({ children }) => {
 			{screens.lg && (
 				<Affix offsetTop={0} style={{ zIndex: 16 }}>
 					<Header className="bottom-header">
+						{/* <div className="wrapper-left" /> */}
+
 						<div className="header-wrapper">
 							<Link href="/">
 								<a
@@ -171,7 +172,7 @@ const LayoutWrapper = ({ children }) => {
 								</a>
 							</Link>
 							<SubMenu />
-							<Link href="/coming-soon">
+							{/* <Link href="/coming-soon">
 								<a
 									className={
 										currentRoute === "/coming-soon"
@@ -181,7 +182,7 @@ const LayoutWrapper = ({ children }) => {
 								>
 									Membership
 								</a>
-							</Link>
+							</Link> */}
 							{/* <Link
 								href="https://us.fullscript.com/welcome/replenishmd"
 								target="_blank"
@@ -261,18 +262,18 @@ const LayoutWrapper = ({ children }) => {
 								</div>
 							</Link>
 							{/* <Link href="/specials"> */}
-							<Link href="https://replenishmdpromos.com/botox-filler/?rel=fb&service=botox">
-								{/* <a
+							{/* <Link href="https://replenishmdpromos.com/botox-filler/?rel=fb&service=botox"> */}
+							{/* <a
 									className={
 										currentRoute === "/specials"
 											? "active"
 											: "non-active"
 									}
 								> */}
-								<a target="_blank" className="non-active">
-									Specials
-								</a>
-							</Link>
+							{/* <a target="_blank" className="non-active"> */}
+							{/* Specials */}
+							{/* </a> */}
+							{/* </Link> */}
 							<Link href="/blog">
 								<a
 									className={
@@ -297,24 +298,26 @@ const LayoutWrapper = ({ children }) => {
 									Become a provider
 								</a>
 							</Link>
-							<Divider
+							{/* <Divider
 								type="vertical"
 								className="vertical-divider"
-							/>
-							<Button
+							/> */}
+							{/* <Button
 								size="middle"
 								ghost
 								className="border-btn"
 								// onClick={bookingLink}
 							>
-								<Link href="https://replenishmd.myaestheticrecord.com/book/appointments">
+								<Link href="https://replenishmd.janeapp.com/">
 									<a target="_blank">Book Now</a>
 								</Link>
-							</Button>
-							<Divider
+							</Button> */}
+							{/* <Divider
 								type="vertical"
 								className="vertical-divider"
-							/>
+							/> */}
+						</div>
+						<div className="wrapper-right">
 							{token ? (
 								<Button
 									size="middle"
@@ -326,19 +329,14 @@ const LayoutWrapper = ({ children }) => {
 									Logout
 								</Button>
 							) : (
-								<Space
-									direction={
-										!screens?.xl ? "vertical" : "horizontal"
-									}
-									size={!screens?.xl ? 0 : "middle"}
-								>
+								<Space>
 									<Button
 										size="middle"
 										type="primary"
 										className="primary-btn"
 										// onClick={btnHanlder}
 									>
-										<Link href="/login">Login</Link>
+										<Link href="/login">Login to rmd</Link>
 									</Button>
 									<Button
 										size="middle"
@@ -346,7 +344,9 @@ const LayoutWrapper = ({ children }) => {
 										className="secondary-btn"
 										// onClick={btnHanlder}
 									>
-										<Link href="/sign-up">signup</Link>
+										<Link href="/sign-up">
+											signup to rmd
+										</Link>
 									</Button>
 								</Space>
 							)}
@@ -393,7 +393,7 @@ const LayoutWrapper = ({ children }) => {
 									title="Services"
 									popupClassName="submenu-popup-class"
 									className="menu-container"
-									popupOffset={[0, 0]}
+									// popupOffset={[0, 0]}
 									key="SubMenu"
 								>
 									<Row gutter={[16, 16]}>
@@ -642,7 +642,7 @@ const LayoutWrapper = ({ children }) => {
 								</Menu.SubMenu>
 							</Menu>
 
-							<Link href="/coming-soon">
+							{/* <Link href="/coming-soon">
 								<a
 									className={
 										currentRoute === "/coming-soon"
@@ -652,7 +652,7 @@ const LayoutWrapper = ({ children }) => {
 								>
 									Membership
 								</a>
-							</Link>
+							</Link> */}
 							{/* <Link
 								href="https://us.fullscript.com/welcome/replenishmd"
 								target="_blank"
@@ -737,18 +737,18 @@ const LayoutWrapper = ({ children }) => {
 							</Link> */}
 
 							{/* <Link href="/specials"> */}
-							<Link href="https://replenishmdpromos.com/botox-filler/?rel=fb&service=botox">
-								{/* <a
+							{/* <Link href="https://replenishmdpromos.com/botox-filler/?rel=fb&service=botox"> */}
+							{/* <a
 									className={
 										currentRoute === "/specials"
 											? "active"
 											: "non-active"
 									}
 								> */}
-								<a target="_blank" className="non-active">
-									Specials
-								</a>
-							</Link>
+							{/* <a target="_blank" className="non-active"> */}
+							{/* Specials */}
+							{/* </a> */}
+							{/* </Link> */}
 
 							<Link href="/blog">
 								<a
@@ -786,16 +786,16 @@ const LayoutWrapper = ({ children }) => {
 								</a>
 							</Link>
 							<div className="side-nav-btns">
-								<Button
+								{/* <Button
 									size="middle"
 									ghost
 									className="border-btn"
 									// onClick={bookingLink}
 								>
-									<Link href="https://replenishmd.myaestheticrecord.com/book/appointments">
+									<Link href="https://replenishmd.janeapp.com/">
 										<a target="_blank">Book Now</a>
 									</Link>
-								</Button>
+								</Button> */}
 								{token ? (
 									<Button
 										size="middle"
@@ -833,14 +833,14 @@ const LayoutWrapper = ({ children }) => {
 									HOU : &nbsp;
 									<a href="tel:832-770-7975">
 										{CallIcon}
-										&nbsp; (832) 770-7975
+										&nbsp; (346) 955-7943
 									</a>
 								</div>
 								<div className="training-call">
 									Training :&nbsp;
 									<a href="tel:832-953-0313">
 										{PhoneTextIcon}
-										&nbsp; (832) 953-0313
+										&nbsp; (346) 222-4596
 									</a>
 								</div>
 							</div>
@@ -877,30 +877,13 @@ const LayoutWrapper = ({ children }) => {
 			</Content>
 			<Footer className="footer-container">
 				<div className="layout-wrapper">
-					<Row gutter={[32, 32]}>
-						<Col xs={24} lg={6}>
-							{FooterIcon}
-							<br />
-							<Space align="center" className="mt-4">
-								<Link href="https://www.facebook.com/replenishtx">
-									<a target="_blank">{FBIcon}</a>
-								</Link>
-								<Link href="http://www.instagram.com/replenish.md">
-									<a target="_blank">{InstagramIcon}</a>
-								</Link>
-								<Link href="https://www.tiktok.com/@replenishmd">
-									<a target="_blank">{TiktokIcon}</a>
-								</Link>
-								<Link href="https://www.youtube.com/channel/UCydwvyloML68woZYVKZf0cA">
-									<a target="_blank">{YouTubeIcon}</a>
-								</Link>
+					{/* <Row gutter={[32, 32]}> */}
+					{/* <Col xs={24} lg={6}> */}
+					{FooterIcon}
+					{/* <br /> */}
 
-								{/* <Link href="" target="_blank">
-									{TwooIcon}
-								</Link> */}
-							</Space>
-						</Col>
-						<Col xs={0} sm={24} lg={18}>
+					{/* </Col> */}
+					{/* <Col xs={0} sm={24} lg={18}>
 							<List
 								className="footer-list"
 								header={
@@ -931,8 +914,8 @@ const LayoutWrapper = ({ children }) => {
 												key={key}
 												className="list-item"
 											>
-												<Link href="/coming-soon">
-													{list}
+												<Link href={list["href"]}>
+													{list["label"]}
 												</Link>
 											</List.Item>
 										))}
@@ -963,14 +946,31 @@ const LayoutWrapper = ({ children }) => {
 									);
 								})}
 							</Collapse>
-						</Col>
-					</Row>
+						</Col> */}
+					{/* </Row> */}
 
-					<Divider className="footer-divider" />
+					{/* <Divider className="footer-divider" /> */}
 					<p className="term-text">
-						© 2020-22 ReplenishMD ‧ Terms of Use ‧ Membership Terms
-						&amp; Conditions ‧ Privacy Policy ‧
+						© 2022-23 ReplenishMD ‧ Terms of Use ‧ Privacy Policy
 					</p>
+					<Space align="center">
+						<Link href="https://www.facebook.com/replenishtx">
+							<a target="_blank">{FBIcon}</a>
+						</Link>
+						<Link href="http://www.instagram.com/replenish.md">
+							<a target="_blank">{InstagramIcon}</a>
+						</Link>
+						<Link href="https://www.tiktok.com/@replenishmd">
+							<a target="_blank">{TiktokIcon}</a>
+						</Link>
+						<Link href="https://www.youtube.com/channel/UCydwvyloML68woZYVKZf0cA">
+							<a target="_blank">{YouTubeIcon}</a>
+						</Link>
+
+						{/* <Link href="" target="_blank">
+									{TwooIcon}
+								</Link> */}
+					</Space>
 				</div>
 			</Footer>
 		</Layout>
