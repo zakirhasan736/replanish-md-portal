@@ -13,15 +13,55 @@ const ServicesDetails = () => {
 	const servicesArr = [
 		{
 			serviceImg: "/images/service3.png",
-			serviceTitle: "Facials",
+			serviceTitle: "Botox / Dermal Fillers",
 		},
 		{
-			serviceImg: "/images/service2.png",
-			serviceTitle: "Fillers",
+			serviceImg: "/images/service13.png",
+			serviceTitle: "Botox/Filler Parties",
+		},
+		{
+			serviceImg: "/images/service4.png",
+			serviceTitle: "PDO threads",
+		},
+		{
+			serviceImg: "/images/service5.png",
+			serviceTitle: "Microneedling with RF or PRP",
+		},
+		{
+			serviceImg: "/images/service6.png",
+			serviceTitle: "IV therapy",
+		},
+		{
+			serviceImg: "/images/service7.png",
+			serviceTitle: "Dermaplaning",
+		},
+		{
+			serviceImg: "/images/service8.png",
+			serviceTitle: "Acne",
+		},
+		{
+			serviceImg: "/images/service10.png",
+			serviceTitle: "Peels",
+		},
+		{
+			serviceImg: "/images/service9.png",
+			serviceTitle: "Hydrafacials ",
 		},
 		{
 			serviceImg: "/images/service1.png",
-			serviceTitle: "Botox & Dysport",
+			serviceTitle: "Laser Hair Removal / IPL",
+		},
+		{
+			serviceImg: "/images/service2.png",
+			serviceTitle: "Weight Loss",
+		},
+		{
+			serviceImg: "/images/service11.png",
+			serviceTitle: "BHRT / Peptides",
+		},
+		{
+			serviceImg: "/images/service12.png",
+			serviceTitle: "Testosterone Replacement Therapy",
 		},
 	];
 
