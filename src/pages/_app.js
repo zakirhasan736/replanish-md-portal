@@ -1,25 +1,11 @@
-import { Router, useRouter } from "next/router";
 import Script from "next/script";
 import React from "react";
 import { Provider } from "react-redux";
-import LayoutWrapper from "src/components/socialMediaPage/layoutWrapper";
 import { store } from "../store";
-import relativeTime from "dayjs/plugin/relativeTime";
-import dayjs from "dayjs";
-import RouteGuard from "./routeGuard";
-import Layout from "./layout";
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
 
 require("src/styles/index.less");
 
-//this is for calling .fromNow() method in dayjs
-dayjs.extend(relativeTime);
-
-Router.events.on("routeChangeStart", () => NProgress.start());
-Router.events.on("routeChangeComplete", () => NProgress.done());
-Router.events.on("routeChangeError", () => NProgress.done());
-
+// eslint-disable-next-line react/function-component-definition, react/prop-types
 export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
@@ -71,7 +57,7 @@ export default function MyApp({ Component, pageProps }) {
 			/>
 
 			<Provider store={store}>
-				<Layout Component={Component} pageProps={pageProps} />
+				<Component {...pageProps} />
 			</Provider>
 		</>
 	);

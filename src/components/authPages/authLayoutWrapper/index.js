@@ -15,7 +15,7 @@ const AuthLayoutWrapper = ({ children }) => {
 			<div className="auth-footer">
 				{AuthFooterLogo}
 				<p className="footer-text">
-					Copyright © RMD - 2023 | All Rights Reserved
+					Copyright © RMD - 2022 | All Rights Reserved
 				</p>
 			</div>
 		</div>

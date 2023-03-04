@@ -30,7 +30,6 @@ const InputField = ({
 				onChange={onChange}
 				onBlur={onBlur}
 				value={value}
-				suffix
 			/>
 			{errors && (
 				<p

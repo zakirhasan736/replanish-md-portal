@@ -11,6 +11,3 @@ export const SignupComponents = {
 	2: "account_success",
 	3: "create_password",
 };
-
-export const THEMERADIUS=21
-export const NO_USER_THUMB="/thumb-users/nouser.png"
