@@ -1,0 +1,24 @@
+.Medication-History {
+	.ant-row {
+		@media (max-width: 576px) {
+			justify-content: center;
+		}
+	}
+
+	.medication-history-card {
+		box-shadow: 0px 4px 19px 4px #0000000d !important;
+		padding: 22px 15px !important;
+		border-radius: 10px;
+		height: 100%;
+		> .ant-space-vertical {
+			width: 100%;
+			> .ant-space-item {
+				width: 100%;
+				.medication-bottom-section {
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+}
