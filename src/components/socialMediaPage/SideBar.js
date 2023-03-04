@@ -10,12 +10,12 @@ const { Search } = Input;
 const { useBreakpoint } = Grid;
 const SideBar = (props) => {
 	const social = [
-		{ icon: "/icons/support.svg", menuName: "Supporters" },
-		{ icon: "/icons/videogreen.svg", menuName: "Forum" },
-		{ icon: "/icons/groups.svg", menuName: "Groups" },
-		{ icon: "/icons/page.svg", menuName: "Pages" },
-		{ icon: "/icons/plus-shield.svg", menuName: "Emotional health" },
-		{ icon: "/icons/green-heart.svg", menuName: "Favorites" },
+		{ icon: "/icons/support.svg", menuName: "Supporters", route: "support" },
+		{ icon: "/icons/videogreen.svg", menuName: "Forum", route: "forum" },
+		{ icon: "/icons/groups.svg", menuName: "Groups", route: "groups" },
+		{ icon: "/icons/page.svg", menuName: "Pages", route: "pages" },
+		{ icon: "/icons/plus-shield.svg", menuName: "Emotional health", route: "emotional-health" },
+		{ icon: "/icons/green-heart.svg", menuName: "Favorites", route: "favorites" },
 	];
 	const medical = [
 		{
@@ -115,10 +115,9 @@ const SideBar = (props) => {
 												push("/dashboard/social")
 											}
 											block
-											className={`btn-default ${
-												query?.type === "social" &&
+											className={`btn-default ${query?.type === "social" &&
 												"active"
-											}`}
+												}`}
 											style={{
 												height: 44,
 												textAlign: "left",
@@ -148,10 +147,9 @@ const SideBar = (props) => {
 												push("/dashboard/medical")
 											}
 											block
-											className={`btn-default ${
-												query?.type === "medical" &&
+											className={`btn-default ${query?.type === "medical" &&
 												"active"
-											}`}
+												}`}
 											style={{
 												border: "1px solid white",
 												borderRadius: 7,
