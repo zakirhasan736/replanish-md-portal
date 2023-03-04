@@ -52,7 +52,7 @@ const LoginPage = () => {
 				notification.success({
 					message: response?.message,
 				});
-				router.push("/dashboard/social");
+				router.push("/");
 			}
 		} catch (error) {
 			console.log("error =>", error);
@@ -130,10 +130,10 @@ const LoginPage = () => {
 									required: true,
 									message: "Please input your Password!",
 								},
-								// {
-								// 	min: 8,
-								// 	message: "Please enter minimum 8 length",
-								// },
+								{
+									min: 8,
+									message: "Please enter minimum 8 length",
+								},
 							]}
 						>
 							<TextField

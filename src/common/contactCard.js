@@ -7,27 +7,18 @@ const propTypes = {
 	content: PropTypes.string,
 	secondaryText: PropTypes.string,
 	phoneNumber: PropTypes.string,
-	contactDetail: PropTypes.string,
 };
 
-const ContactCard = ({
-	primaryText,
-	content,
-	secondaryText,
-	phoneNumber,
-	contactDetail,
-}) => {
+const ContactCard = ({ primaryText, content, secondaryText, phoneNumber }) => {
 	return (
 		<div className="contact-card-wrapper">
 			<Card className="contact-card">
 				<p className="primary-text">{primaryText}</p>
-				<h1 className="main-text">{content?.toUpperCase()}</h1>
-				<br />
-				<p className="primary-text">{contactDetail}</p>
 				<h1 className="main-text">
 					<a href={`tel:${phoneNumber}`} style={{ color: "#fff" }}>
-						{phoneNumber}
+						&nbsp; {phoneNumber}
 					</a>
+					{content?.toUpperCase()}
 				</h1>
 				<p className="secondary-text">{secondaryText}</p>
 			</Card>

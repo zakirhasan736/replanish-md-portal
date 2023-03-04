@@ -31,7 +31,7 @@ const TopInfoSection = ({ title, btnText }) => {
 					))}
 				</Row>
 				<Button size="large" type="primary" className="online-btn">
-					<Link href="https://replenishmd.janeapp.com/">
+					<Link href="https://replenishmd.myaestheticrecord.com/book/appointments">
 						<a target="_blank">{btnText}</a>
 					</Link>
 				</Button>

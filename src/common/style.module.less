@@ -1,16 +1,8 @@
 @import "./inputField/style.module.less";
 @import "./inputFieldWithoutCount/style.module.less";
 @import "./modal/style.module.less";
-@import "./SearchField/style.modul.less";
-@import "./CommonTable/style.module.less";
-@import "./CommonImagePicker/style.module.less";
-@import "./CommonTabs/style.module.less";
-@import "./PasswordField/style.module.less";
-@import "./RadioBtnSection/style.module.less";
-@import "./HowReplinishWork/style.module.less";
 
 .contact-card-wrapper > .contact-card {
-	border-left-width: 10px;
 	border-color: @primary-color;
 	background: transparent;
 	border-radius: 4px;
@@ -46,16 +38,14 @@
 	h1 {
 		margin: 0;
 	}
-	.ant-card-body {
-		text-align: initial;
-	}
+
 	.primary-text {
 		font-size: 1.25rem;
 		font-family: Tenor, sans-serif;
 	}
 	.main-text {
 		font-family: Montserrat, sans-serif;
-		font-size: 2rem;
+		font-size: 2.5rem;
 		color: @white;
 		line-height: 57px;
 
@@ -74,7 +64,7 @@
 	}
 	.secondary-text {
 		font-family: Manrope, sans-serif;
-		font-size: 1rem;
+		font-size: 1.3rem;
 		color: @white;
 	}
 }
@@ -357,25 +347,4 @@
 			}
 		}
 	}
-}
-
-.widget-card .ant-card-body {
-	padding: 0px;
-}
-.story-card.ant-card {
-	width: 93px;
-	height: 133px;
-	border-radius: 8px;
-}
-.story-card .ant-card-body {
-	width: 93px;
-	height: 133px;
-	display: grid;
-	place-content: end;
-}
-.story-card-container div:nth-child(1) div .story-card .ant-card-body {
-	place-content: center;
-}
-.story-card-container + div .ant-card-body {
-	place-content: center;
 }
