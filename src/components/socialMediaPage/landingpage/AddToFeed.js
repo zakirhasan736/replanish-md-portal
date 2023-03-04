@@ -1,5 +1,5 @@
-
-import { Card, Col, Button, Row, Space, Grid, Dropdown, Input, Avatar, Typography } from 'antd';
+import React, { useState } from 'react';
+import { Card, Upload, Col, Button, Row, Space, Grid, Dropdown, Input, Avatar, Typography } from 'antd';
 import PropTypes from "prop-types";
 import CustomTitle from '../../../common/CustomTitle';
 import EventIcon from '../../../common/EventIcon';
@@ -39,6 +39,79 @@ const items = [
 ];
 const AddToFeed = (props) => {
     const screens = useBreakpoint();
+    const [comment, setcomment] = useState([]);
+    const [postTitle, setTitle] = useState(null);
+    const [postPhoto, setPhoto] = useState(null);
+    const [postAudio, setAudio] = useState(null);
+    const [postVideo, setVideo] = useState(null);
+    const [recording, setRecording] = useState(false);
+
+    //handle photo upload
+
+    const beforePhotoUpload = (file) => {
+        const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
+        if (!isJpgOrPng) {
+            message.error('You can only upload JPG/PNG file!');
+            return false;
+        }
+        return true;
+    };
+
+    const handlePhotoSelect = (info) => {
+        if (info.file.status === 'uploading') {
+            return;
+        }
+        if (info.file.status === 'done') {
+            const fileUrl = URL.createObjectURL(info.file.originFileObj);
+            setPhoto({ fileUrl });
+        }
+    };
+
+    //handle video upload
+
+    const beforeVideoUpload = (file) => {
+        const isVideo = file.type.includes('video/');
+        if (!isVideo) {
+            message.error('You can only upload video files!');
+            return false;
+        }
+        return true;
+    }
+    const handleVideoSelect = (info) => {
+        if (info.file.status === 'uploading') {
+            return;
+        }
+        if (info.file.status === 'done') {
+            const fileUrl = URL.createObjectURL(info.file.originFileObj);
+            setVideo({ fileUrl });
+        }
+    };
+
+    //handle audio upload
+
+    const startRecording = () => {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then((stream) => {
+                const mediaRecorder = new MediaRecorder(stream);
+
+                mediaRecorder.addEventListener('dataavailable', (event) => {
+                    setAudio(URL.createObjectURL(event.data));
+                });
+
+                mediaRecorder.start();
+
+                setRecording(true);
+            })
+            .catch((error) => {
+                console.error('Error accessing microphone:', error);
+            });
+    };
+    const stopRecording = () => {
+        setRecording(false);
+    };
+    const generateComment = (carr) => {
+        setcomment(carr);
+    }
     return (
         <Space
             direction="vertical"
@@ -75,13 +148,31 @@ const AddToFeed = (props) => {
             </Row>
             <Row align="middle">
                 <Col span={15}>
-                    <Input style={{ borderRadis: 30 }} className="input-grey-round" size={screens.sm ? 'large' : 'small'} placeholder="Add to your post" prefix={<img src="/icons/oneeyesmile.svg" width="17" height="17" />} />
+                    <Input style={{ borderRadis: 30 }} className="input-grey-round" size={screens.sm ? 'large' : 'small'} placeholder="Add to your comment" prefix={<img src="/icons/oneeyesmile.svg" width="17" height="17" />} />
                 </Col>
                 <Col span={7} push={1}>
                     <Space>
-                        <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/gallery.svg" />
-                        <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/video.svg" />
-                        <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/mic.svg" />
+                        <Upload
+                            name="avatar"
+                            listType="picture-card"
+                            className="avatar-uploader"
+                            showUploadList={false}
+                            beforeUpload={beforePhotoUpload}
+                            onChange={handlePhotoSelect}
+                        >
+                            <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/gallery.svg" />
+                        </Upload>
+                        <Upload
+                            name="avatar"
+                            listType="picture-card"
+                            className="avatar-uploader"
+                            showUploadList={false}
+                            beforeUpload={beforeVideoUpload}
+                            onChange={handleVideoSelect}
+                        >
+                            <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/video.svg" />
+                        </Upload>
+                        <EventIcon onCLick={() => startRecording()} className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/mic.svg" />
                     </Space>
                 </Col>
 
@@ -115,7 +206,7 @@ const AddToFeed = (props) => {
                                 size={[0, 8]}
                             >
                                 <Col md={24} sm={24}>
-                                    <img src="/img/girlpost.png" />
+                                    <img src="/img/girlcomment.png" />
                                 </Col>
                                 <Col md={22} sm={24}>
                                     <Row justify="space-between">
@@ -154,7 +245,7 @@ const AddToFeed = (props) => {
             <br />
             <Row>
                 <Col span={24}>
-                    <CommentInput imgHeight={54} imgWidth={54} src={NO_USER_THUMB} />
+                    <CommentInput generateComment={generateComment} imgHeight={54} imgWidth={54} src={NO_USER_THUMB} />
                 </Col>
             </Row>
 
@@ -167,11 +258,23 @@ const AddToFeed = (props) => {
                         }}
                         size={[0, 22]}
                     >
-                        <CommentComponent src="assets/img/ProfileImage.png" userName="Deepak" text="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem Ipsum Generator" reply={false} />
-                        <CommentComponent src="assets/img/ProfileImage.png" userName="Deepak" text="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem Ipsum Generator" reply={true} />
+                        {
+                            comment.length > 0 &&
+                            comment.map(((data, index) => (
+                                <CommentComponent key={index} src="assets/img/ProfileImage.png" userName="Deepak" data={data} />
+                            )))
+                        }
                     </Space>
                 </Col>
             </Row>
+            {
+                comment.length > 0 &&
+                <Row>
+                    <Col span={24}>
+                        <CommentInput generateComment={generateComment} imgHeight={54} imgWidth={54} src={NO_USER_THUMB} />
+                    </Col>
+                </Row>
+            }
         </Space>
 
     );

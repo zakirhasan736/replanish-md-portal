@@ -19,6 +19,14 @@ const { Title, Text } = Typography;
 //     </Space>
 // );
 const CommentComponent = (props) => {
+
+    const getALike = (id) => {
+        const updatedTodos = [...todos];
+        const index = updatedTodos.findIndex(todo => todo.id === id);
+        updatedTodos[index].completed = true;
+        setTodos(updatedTodos);
+    }
+
     return (
         <Space
             direction="vertical"
@@ -43,8 +51,15 @@ const CommentComponent = (props) => {
                             <div style={{ position: "relative" }}>
                                 <Space >
                                     <div style={{ background: "#F1F5F5", padding: 13, borderRadius: 3 }}>
-                                        <Text style={{ fontSize: 12, fontWeight: 400 }}>{props.text}</Text>
+                                        <Text style={{ fontSize: 12, fontWeight: 400 }}>{props.data.comment_title}</Text>
                                     </div>
+                                    {props.data.comment_photo && <div>
+                                        <img src={props.data.comment_photo.fileUrl} />
+                                    </div>}
+                                    {props.data.comment_gif && <div>
+                                        <img src={props.data.comment_gif.fileUrl} />
+                                    </div>}
+
                                     <div>
                                         <TotalLikeCount count={10} liketType={[{ bg: "#F5EFFF", icon: 'reaction-like' }, { bg: "#FFE0DE", icon: 'reaction-love' }, { bg: "#FFF3DB", icon: 'reaction-smile' }]} />
                                     </div>
@@ -53,10 +68,10 @@ const CommentComponent = (props) => {
                                 </Space>
                             </div>
                             <div style={{ marginTop: 25 }} >
-                                <Space align="center"><Text style={{ fontSize: 9 }}>Like</Text><Text style={{ fontSize: 9 }}>Reply</Text><Text style={{ fontSize: 9 }}>2 mins ago</Text></Space>
+                                <Space onClick={() => getALike()} align="center"><Text style={{ fontSize: 9 }}>Like</Text><Text style={{ fontSize: 9 }}>Reply</Text><Text style={{ fontSize: 9 }}>2 mins ago</Text></Space>
                             </div>
                             <div>
-                                <Space align="center">{props.reply ? <CommentInput inputHeight={30} inputWidth={460} imgHeight={30} imgWeight={30} src={NO_USER_THUMB} /> : <Text style={{ fontSize: 9 }}>1 Replies</Text>}</Space>
+                                <Space align="center">{props.data.reply_count > 0 ? <CommentInput inputHeight={30} inputWidth={460} imgHeight={30} imgWeight={30} src={NO_USER_THUMB} /> : <Text style={{ fontSize: 9 }}>1 Replies</Text>}</Space>
                             </div>
                         </Col>
                     </Row>
