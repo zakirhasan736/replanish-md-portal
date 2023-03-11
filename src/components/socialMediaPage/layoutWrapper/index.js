@@ -1,48 +1,29 @@
 import React from "react";
 import {
 	Layout,
-	Image,
-	Button,
 	Row,
-	List,
 	Col,
-	Space,
-	Divider,
-	Menu,
 	Grid,
 	Drawer,
 	Collapse,
-	Affix,
 	notification,
-	Dropdown,
 } from "antd";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import { MenuOutlined } from "@ant-design/icons";
 
-import { CallIcon } from "src/components/SVGImageIcon/callIcon";
-import { PhoneTextIcon } from "src/components/SVGImageIcon/phoneTextIcon";
-import { FooterIcon } from "src/components/SVGImageIcon/footerIcon";
-import { TextLogo } from "src/components/SVGImageIcon/textLogo";
-import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
-import { TiktokIcon } from "src/components/SVGImageIcon/tiktokIcon";
-import { SubMenu } from "./subMenu";
-import { FooterListArr } from "./footerData";
+
 import { logout } from "src/components/authPages/auth/services";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import useUser from "src/hooks/useUser";
-import { InstagramIcon } from "src/components/SVGImageIcon/instagramIcon";
-import { FBIcon } from "src/components/SVGImageIcon/fbIcon";
-import { YouTubeIcon } from "src/components/SVGImageIcon/youtubeIcon";
-import LandingPage from "../LandingPage";
+
 import SideBar from "../SideBar";
 import RightSideBar from "../RightSideBar";
-import TabHeader from "../TabHeader";
+
 import RightSideBarHeader from "../RightSideBarHeader";
 const { useBreakpoint } = Grid;
-const { Header, Content, Footer } = Layout;
-const { Panel } = Collapse;
+const { Header, Content } = Layout;
+// const { Panel } = Collapse;
 
 const propTypes = {
 	children: PropTypes.node.isRequired,
@@ -54,13 +35,13 @@ const LayoutWrapper = ({ children }) => {
 	const { user, removeUser } = useUser();
 	const token = user?.token;
 
-	const { isLoading } = useSelector(({ auth }) => auth);
-	const currentRoute = router.pathname;
-	const { id } = router.query;
+	// const { isLoading } = useSelector(({ auth }) => auth);
+	// const currentRoute = router.pathname;
+	// const { id } = router.query;
 
 	const screens = useBreakpoint();
 
-	const [isMobile, setIsMobile] = React.useState(false);
+	// const [isMobile, setIsMobile] = React.useState(false);
 
 	// const btnHanlder = () => {
 	// 	router.push("/coming-soon");

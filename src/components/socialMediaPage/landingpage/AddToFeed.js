@@ -9,6 +9,7 @@ import CommentInput from '../../../common/CommentInput';
 import CommentComponent from '../../../common/CommentComponent';
 import { NO_USER_THUMB } from 'src/utils/constant';
 import { GlobalOutlined } from '@ant-design/icons';
+import Image from 'next/image';
 const { Title, Text } = Typography;
 const { useBreakpoint } = Grid;
 const items = [
@@ -206,7 +207,7 @@ const AddToFeed = (props) => {
                                 size={[0, 8]}
                             >
                                 <Col md={24} sm={24}>
-                                    <img src="/img/girlcomment.png" />
+                                    <Image src='/img/girlpost.png' alt='user posted image' width={595} height={244} />
                                 </Col>
                                 <Col md={22} sm={24}>
                                     <Row justify="space-between">

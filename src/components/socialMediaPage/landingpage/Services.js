@@ -30,7 +30,6 @@ const Services = (props) => {
 
                 <Text className='card-head-title text-grey'>Professional Services</Text>
                 {servicesArray.map((row) => <SubServies icon={row.icon} serviceType={row.serviceType} />)}
-
             </Space>
         </Card>
 

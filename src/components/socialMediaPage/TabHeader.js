@@ -1,23 +1,15 @@
 import React from "react";
 import {
-	Space,
-	Card,
 	Row,
 	Col,
 	Grid,
 	Tabs,
-	Badge,
-	Button,
 	Typography,
 	Input,
 } from "antd";
 import IconTile from "./landingpage/IconTile";
-import { DownOutlined } from "@ant-design/icons";
-import ImgSmallCircle from "src/common/ImgSmallCircle";
 import LandingPage from "./LandingPage";
 const { useBreakpoint } = Grid;
-const { Title, Text } = Typography;
-const { Search } = Input;
 const HeaderMenu = [
 	{ icon: "/icons/home.svg" },
 	{ icon: "/icons/exclusion.svg" },

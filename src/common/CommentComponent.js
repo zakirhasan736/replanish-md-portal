@@ -35,9 +35,8 @@ const CommentComponent = (props) => {
             }}
             size={[0, 20]}
         >
-
-            <Row>
-                <Col>
+        
+        <div className='user-comment-wrapbox'>
                     <Row>
                         <Col span={4}>
                             <ImgSmallCircle imgHeight={54} imgWidth={54} src='/img/ProfileImage.png' />
@@ -47,7 +46,6 @@ const CommentComponent = (props) => {
                         </Col>
                         <Col span={20} >
                             <Text style={{ fontSize: 17, fontWeight: 400 }}>{props.userName}</Text>
-
                             <div style={{ position: "relative" }}>
                                 <Space >
                                     <div style={{ background: "#F1F5F5", padding: 13, borderRadius: 3 }}>
@@ -75,12 +73,11 @@ const CommentComponent = (props) => {
                             </div>
                         </Col>
                     </Row>
-                </Col>
-            </Row>
-
+                    </div>
         </Space>
     );
 }
+
 CommentComponent.propTypes = {
     src: PropTypes.string.isRequired,
 };

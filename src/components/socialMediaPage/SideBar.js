@@ -3,10 +3,9 @@ import { Space, Card, Row, Col, Button, Grid, Typography, Input } from "antd";
 import IconTile from "./landingpage/IconTile";
 import ImgSmallCircle from "src/common/ImgSmallCircle";
 
-import Icon, { SearchOutlined } from "@ant-design/icons";
+
 import { useRouter } from "next/router";
-const { Title, Text } = Typography;
-const { Search } = Input;
+const {Text } = Typography;
 const { useBreakpoint } = Grid;
 const SideBar = (props) => {
 	const social = [
@@ -86,7 +85,7 @@ const SideBar = (props) => {
 									}
 									className="searchInput"
 								/>
-								{/* <Search placeholder="input search text" allowClear /> */}
+						
 							</Space>
 						</Col>
 					</Row>

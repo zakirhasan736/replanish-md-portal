@@ -23,8 +23,6 @@ const LandingMessage = () => {
         <div style={{ marginTop: 6 }}>
 
             <Row style={welcomecss} justify="space-between" className="bg-light" align="middle">
-                {/* <Row gutter={32} justify="space-between" align="middle" style={{ height: 93, position: "relative" }}> */}
-                {/* <div style={{ top: -20, left: 28, position: 'absolute' }}> */}
                 <div style={{ bottom: 0, position: 'absolute' }}>
                     <img src='/img/missdoctor.png' />
                 </div>
@@ -34,7 +32,7 @@ const LandingMessage = () => {
                     </Button>
                 </div>
                 <Col md={15} xs={17} push={screens.sm ? 5 : 7}>
-                    {/* <Space size={20} align="center"> */}
+                    
                     <div>
                         <div style={{ padding: "18px 0px 29px" }}>
                             <div>
@@ -49,14 +47,9 @@ const LandingMessage = () => {
                         </div>
 
                     </div>
-                    {/* </Space> */}
+                 
                 </Col>
-                {/* <Col xs={10} style={{ marginTop: 16 }} push={15}>
-                    <Button shape="round" className='btn-default btn-medium btn-grey'>
-                        <Text>Ask Question</Text>
-                    </Button>
-                </Col> */}
-
+             
             </Row>
 
         </div>
