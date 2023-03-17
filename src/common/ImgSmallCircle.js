@@ -1,11 +1,9 @@
-
-import { Card, Col, Button, Row, Space, Typography } from 'antd';
 import PropTypes from "prop-types";
 import { NO_USER_THUMB } from '../utils/constant';
 
 const ImgSmallCircle = (props) => {
     return (
-        <div style={{
+        <div className='circle-image-item' style={{
             background: `url("${props.src}")`,
             backgroundRepeat: "no-repeat",
             borderRadius: 50,

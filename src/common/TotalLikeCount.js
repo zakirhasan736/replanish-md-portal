@@ -1,9 +1,7 @@
-
-import { EllipsisOutlined } from '@ant-design/icons';
-import { Card, Col, Button, Row, Space, Typography, Input } from 'antd';
+import { Space, Typography } from 'antd';
 import PropTypes from "prop-types";
 import { NO_USER_THUMB } from '../utils/constant';
-const { Title, Text } = Typography;
+const {Text } = Typography;
 const CustomEventIcon = (props) => {
     return (
         <div align="center" style={{ background: props.background, borderRadius: 50,width:20, marginLeft: props.itemNumber !== 0 ? -2 : 0 }} >
@@ -15,7 +13,7 @@ const TotalLikeCount = (props) => {
 
     return (
        
-            <div style={{ padding: 0, position: "absolute", left: 0 ,bottom:-23}}>
+            <div style={{ padding: 0, position: "absolute", left: 0 ,bottom:0}}>
                 
                     <div style={{ padding: 5, marginTop: 30, background: "#FFFFFF", boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)", borderRadius: 10 }}>
                         <Space align="center">

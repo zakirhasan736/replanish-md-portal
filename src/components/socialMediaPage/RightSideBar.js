@@ -1,28 +1,26 @@
 import React from 'react';
-import { Space, Badge, Dropdown, Row, Col, Button, Typography, Input } from 'antd';
-import IconTile from './landingpage/IconTile';
-import ImgSmallCircle from 'src/common/ImgSmallCircle';
-import { DownOutlined } from '@ant-design/icons';
+import { Grid } from 'antd';
 import Services from './landingpage/Services';
 import Sponsored from './landingpage/Sponsored';
 import RightSideBarHeader from './RightSideBarHeader';
+const { useBreakpoint } = Grid;
 
-const RightSideBar = (props) => {
-    return (<>
-        <RightSideBarHeader />
-        <br />
-        <Row style={{ marginTop: 4 }}>
-            <Col span={24}>
-                <Services />
-            </Col>
-        </Row>
-        <br />
-        <Row style={{ marginTop: 20 }}>
-            <Col span={24}>
+const RightSideBar = () => {
+    const screens = useBreakpoint();
+    return (
+        <>
+            <div className='right-sidebar-wrapper'>
+                <div className="sidebar-top-header" style={{ marginTop: screens.lg ? 20 : 10 }}>
+                    <RightSideBarHeader />
+                </div>
+                <div className='Professional-services-wrap'>
+                    <Services />
+                </div>
+                <div className='sponsored-wrapper-box'>
                 <Sponsored />
-            </Col>
-        </Row>
-    </>
+                </div>
+            </div>
+        </>
     );
 }
 

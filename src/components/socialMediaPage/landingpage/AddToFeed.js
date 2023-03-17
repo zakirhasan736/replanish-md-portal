@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import { Card, Upload, Col, Button, Row, Space, Grid, Dropdown, Input, Avatar, Typography } from 'antd';
-import PropTypes from "prop-types";
-import CustomTitle from '../../../common/CustomTitle';
+import { Upload, Col, Button, Row, Space, Grid, Dropdown, Input, Avatar, Typography } from 'antd';
 import EventIcon from '../../../common/EventIcon';
-import { UserOutlined } from '@ant-design/icons';
 import ImgSmallCircle from '../../../common/ImgSmallCircle';
 import CommentInput from '../../../common/CommentInput';
 import CommentComponent from '../../../common/CommentComponent';
 import { NO_USER_THUMB } from 'src/utils/constant';
 import { GlobalOutlined } from '@ant-design/icons';
-import Image from 'next/image';
-const { Title, Text } = Typography;
+const { Text } = Typography;
 const { useBreakpoint } = Grid;
+
 const items = [
     {
         key: '1',
@@ -38,7 +35,8 @@ const items = [
         ),
     },
 ];
-const AddToFeed = (props) => {
+
+const AddToFeed = () => {
     const screens = useBreakpoint();
     const [comment, setcomment] = useState([]);
     const [postTitle, setTitle] = useState(null);
@@ -114,185 +112,170 @@ const AddToFeed = (props) => {
         setcomment(carr);
     }
     return (
-        <Space
-            direction="vertical"
-            style={{
-                width: '100%',
-            }}
-            size={[0, 10]}
-        >
-            <Row>
+        <>
+            <div className='user-feed-comment-wrapper'>
+                <Space
+                    direction="vertical"
+                    className='user-feed-wrapper'
+                >
+                    <div className='user-feed-post-input-wrapper'>
+                        <div className='log-users-mind'>
+                            <Row align='middle'>
+                                <Col span={screens.sm ? 18 : 24}>
+                                    <Space size={20} className='user-mind-cont-box'>
+                                        <ImgSmallCircle />
+                                        <div className='users-min-text-box'>
+                                            <h3 className='title'>
+                                                What's up?
+                                            </h3>
+                                            <p className='desc'>Type something here and everyone will see it</p>
+                                        </div>
+                                    </Space>
 
-                <Col span={screens.sm ? 18 : 24}>
-                    <Space size={20} style={{ paddingLeft: 9 }}>
-                        <ImgSmallCircle />
-                        <div>
-                            <div>
-                                <CustomTitle level={4} >
-                                    What's up?
-                                </CustomTitle>
-                            </div>
-                            <div >
-                                <Text style={{ color: "#C5C5C5" }}>Type something here and everyone will see it</Text>
-                            </div>
+                                </Col>
+                                <Col span={6}>
+                                    {screens.sm && <Dropdown menu={{ items }} placement="bottomLeft" >
+                                        <Button className='link-box-widgets' type="secondary" style={{ background: "#F1F5F5", border: "#aaa", height: 40 }} shape="round" icon={<GlobalOutlined style={{ color: "#aaa", fontSize: 18 }} />}><h3 className='title' style={{ color: "#aaa", fontSize: 14 }}>Everyone</h3></Button>
+                                    </Dropdown>}
+
+                                </Col>
+                            </Row>
+                        </div>
+                        <div className='log-users-mind-post'>
+                            <Row align="middle" gutter={11}>
+                                <Col span={16}>
+                                    <Input className="input-grey-round post-input-box" size={screens.sm ? 'large' : 'small'} placeholder="Add to your comment" prefix={<img src="/icons/oneeyesmile.svg" width="17" height="17" />} />
+                                </Col>
+                                <Col span={7}>
+                                    <Space className='post-attachment-box'>
+                                        <Upload
+                                            name="avatar"
+                                            listType="picture-card"
+                                            className="avatar-uploader"
+                                            showUploadList={false}
+                                            beforeUpload={beforePhotoUpload}
+                                            onChange={handlePhotoSelect}
+                                        >
+                                            <EventIcon className="bg-light" size={screens.sm ? 50 : 35} padding={screens.sm ? 15 : 10} icon="/icons/gallery.svg" />
+                                        </Upload>
+                                        <Upload
+                                            name="avatar"
+                                            listType="picture-card"
+                                            className="avatar-uploader"
+                                            showUploadList={false}
+                                            beforeUpload={beforeVideoUpload}
+                                            onChange={handleVideoSelect}
+                                        >
+                                            <EventIcon className="bg-light" size={screens.sm ? 50 : 35} padding={screens.sm ? 15 : 10} icon="/icons/video.svg" />
+                                        </Upload>
+                                        <EventIcon onCLick={() => startRecording()} className="bg-light" size={screens.sm ? 50 : 35} padding={screens.sm ? 15 : 10} icon="/icons/mic.svg" />
+                                    </Space>
+                                </Col>
+
+                            </Row>
+                        </div>
+                    </div>
+
+                    <div className='users-post-card-item'>
+                        <div className='user-posted-content-box'>
+                            <Row >
+                                <Col span={24}>
+                                    <Space
+                                        direction="vertical"
+
+                                        size={[0, 22]}
+                                    >
+                                        <Row align='middle'>
+                                            <Col span={24}>
+                                                <Space size={17} className='users-post-info'>
+                                                    <ImgSmallCircle />
+                                                    <div className='text-box'>
+                                                        <h3 className='title'>Michle Merni</h3>
+                                                        <p className='desc'>23 Minutes ago</p>
+                                                    </div>
+                                                </Space>
+                                            </Col>
+                                        </Row>
+                                        <Row justify="center" align="middle">
+                                            <Space
+                                                direction="vertical"
+                                                className='post-info-main-card'
+                                                size={[0, 8]}
+                                            >
+                                                <Col md={24} sm={24}>
+                                                    <img src='/img/girlpost.png' className='posted-image' alt='user posted image' width={595} height={244} />
+                                                </Col>
+
+                                                <Col md={24} sm={24}>
+                                                    <div className='react-action-cont-box'>
+                                                        <Row justify="space-between">
+                                                            <Col md={12} sm={20} >
+                                                                <Space className='react-action-icons' >
+                                                                    <div>
+                                                                        <Avatar style={{ background: "none" }} size={45}><img src="/icons/star-blank.svg" /></Avatar>
+                                                                        <Text>20</Text>
+                                                                    </div>
+                                                                    <div>
+                                                                        <Avatar style={{ background: "none" }} size={45}><img src="/icons/comment.svg" /></Avatar>
+                                                                        <Text>23</Text>
+                                                                    </div>
+                                                                </Space>
+                                                            </Col>
+                                                            <Col>
+                                                                <Avatar style={{ background: "none" }} size={45}><img src="/icons/download.svg" /></Avatar>
+                                                            </Col>
+                                                        </Row>
+                                                    </div>
+                                                </Col>
+
+                                                <Col span={24}>
+                                                    <p className='posted-desc-text'>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem Ipsum Generator.</p>
+                                                </Col>
+                                            </Space>
+                                        </Row>
+                                    </Space>
+                                </Col>
+                            </Row>
                         </div>
 
-                    </Space>
+                        <div className='relative-user-comment'>
+                            <Row>
+                                <Col span={24}>
+                                    <CommentInput className='relative-users-input-comment' generateComment={generateComment} imgHeight={54} imgWidth={54} src={NO_USER_THUMB} />
+                                </Col>
+                            </Row>
+                        </div>
 
-                </Col>
-                <Col span={6}>
-                    {screens.sm && <Dropdown menu={{ items }} placement="bottomLeft" >
-                        <Button type="secondary" style={{ background: "#F1F5F5", border: "#aaa", height: 40 }} shape="round" icon={<GlobalOutlined style={{ color: "#aaa", fontSize: 18 }} />}><Text style={{ color: "#aaa", fontSize: 14 }}>Everyone</Text></Button>
-                    </Dropdown>}
+                    </div>
 
-                </Col>
-            </Row>
-            <Row align="middle">
-                <Col span={15}>
-                    <Input style={{ borderRadis: 30 }} className="input-grey-round" size={screens.sm ? 'large' : 'small'} placeholder="Add to your comment" prefix={<img src="/icons/oneeyesmile.svg" width="17" height="17" />} />
-                </Col>
-                <Col span={7} push={1}>
-                    <Space>
-                        <Upload
-                            name="avatar"
-                            listType="picture-card"
-                            className="avatar-uploader"
-                            showUploadList={false}
-                            beforeUpload={beforePhotoUpload}
-                            onChange={handlePhotoSelect}
-                        >
-                            <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/gallery.svg" />
-                        </Upload>
-                        <Upload
-                            name="avatar"
-                            listType="picture-card"
-                            className="avatar-uploader"
-                            showUploadList={false}
-                            beforeUpload={beforeVideoUpload}
-                            onChange={handleVideoSelect}
-                        >
-                            <EventIcon className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/video.svg" />
-                        </Upload>
-                        <EventIcon onCLick={() => startRecording()} className="bg-light" size={screens.sm ? 55 : 35} padding={screens.sm ? 15 : 10} icon="/icons/mic.svg" />
-                    </Space>
-                </Col>
-
-            </Row>
-            <Row style={{ marginTop: 47 }}>
-                <Col span={24}>
-                    <Space
-                        direction="vertical"
-                        style={{
-                            width: '100%',
-                        }}
-                        size={[0, 22]}
-                    >
-                        <Row>
+                    <div className='user-post-base-reply-cont'>
+                        <Row >
                             <Col span={24}>
-                                <Space size={17}>
-                                    <ImgSmallCircle />
-                                    <div style={{ lineHeight: "9px" }}>
-                                        <CustomTitle level={4} color='#000' >Michle Merni</CustomTitle>
-                                        <Text style={{ color: "#AFAFAF" }}>23 Minutes ago</Text>
-                                    </div>
+                                <Space
+                                    direction="vertical"
+                                    className='relative-user-reply-context'
+                                    style={{
+                                        width: '100%',
+                                    }}
+                                    size={[0, 22]}
+                                >
+                                    {
+                                        comment.length > 0 &&
+                                        comment.map(((data, index) => (
+                                            <CommentComponent key={index} src="assets/img/ProfileImage.png" userName="Carter Geidt" data={data} />
+                                        )))
+                                    }
                                 </Space>
                             </Col>
                         </Row>
-                        <Row justify="center" align="middle">
-                            <Space
-                                direction="vertical"
-                                style={{
-                                    width: '100%',
-                                }}
-                                size={[0, 8]}
-                            >
-                                <Col md={24} sm={24}>
-                                    <Image src='/img/girlpost.png' alt='user posted image' width={595} height={244} />
-                                </Col>
-                                <Col md={22} sm={24}>
-                                    <Row justify="space-between">
-                                        <Col md={12} sm={20} >
-                                            <Space >
-                                                <div>
-                                                    <Avatar style={{ background: "none" }} size={45}><img src="/icons/blank-heart.svg" /></Avatar>
-                                                    <Text>10</Text>
-                                                </div>
-                                                <div>
-                                                    <Avatar style={{ background: "none" }} size={45}><img src="/icons/star-blank.svg" /></Avatar>
-                                                    <Text>20</Text>
-                                                </div>
-                                                <div>
-                                                    <Avatar style={{ background: "none" }} size={45}><img src="/icons/comment.svg" /></Avatar>
-                                                    <Text>23</Text>
-                                                </div>
-                                            </Space>
-                                        </Col>
-                                        <Col>
-                                            <Avatar style={{ background: "none" }} size={45}><img src="/icons/download.svg" /></Avatar>
-                                        </Col>
-                                    </Row>
 
 
-                                </Col>
-                                <Col span={22}>
-                                    <Text>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem Ipsum Generator.</Text>
-                                </Col>
-                            </Space>
-                        </Row>
-                    </Space>
-                </Col>
+                    </div>
 
-            </Row>
-            <br />
-            <Row>
-                <Col span={24}>
-                    <CommentInput generateComment={generateComment} imgHeight={54} imgWidth={54} src={NO_USER_THUMB} />
-                </Col>
-            </Row>
-
-            <Row style={{ marginTop: 22 }}>
-                <Col span={24}>
-                    <Space
-                        direction="vertical"
-                        style={{
-                            width: '100%',
-                        }}
-                        size={[0, 22]}
-                    >
-                        {
-                            comment.length > 0 &&
-                            comment.map(((data, index) => (
-                                <CommentComponent key={index} src="assets/img/ProfileImage.png" userName="Deepak" data={data} />
-                            )))
-                        }
-                    </Space>
-                </Col>
-            </Row>
-            {
-                comment.length > 0 &&
-                <Row>
-                    <Col span={24}>
-                        <CommentInput generateComment={generateComment} imgHeight={54} imgWidth={54} src={NO_USER_THUMB} />
-                    </Col>
-                </Row>
-            }
-        </Space>
-
+                </Space>
+            </div>
+        </>
     );
 }
-// AddToFeed.propTypes = {
-//     background: PropTypes.string,
-//     icon: PropTypes.element,
-//     title: PropTypes.string.isRequired,
-//     level: PropTypes.number.isRequired,
-//     titleColor: PropTypes.string,
 
-// };
-// AddToFeed.defaultProps = {
-//     background: "#fff",
-//     icon: "",
-//     title: "",
-//     level: 4,
-//     titleColor: "#000",
-// };
 export default AddToFeed;

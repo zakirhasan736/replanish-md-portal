@@ -2,21 +2,13 @@ import React from "react";
 import { useRouter } from "next/router";
 import { Image, Row, Col, Menu } from "antd";
 import Link from "next/link";
-// import { DermalFiller2Icon } from "src/components/SVGImageIcon/dermalFiller2Icon";
-// import { DermalFillerIcon } from "src/components/SVGImageIcon/dermalFillerIcon";
-// import { IVBagIcon } from "src/components/SVGImageIcon/iVBagIcon";
-// import { HormonalTherapyIcon } from "src/components/SVGImageIcon/HormonalTherapyIcon";
-// import { HormonalRingIcon } from "src/components/SVGImageIcon/hormonalRingIcon";
-// import { DietIcon } from "src/components/SVGImageIcon/dietIcon";
-// import { FlaskIcon } from "src/components/SVGImageIcon/flaskIcon";
-// import { SlimBodyIcon } from "src/components/SVGImageIcon/slimBodyIcon";
 import PropTypes from "prop-types";
 
 const propTypes = {
 	subMenuMode: PropTypes.string.isRequired,
 };
 
-export const SubMenu = ({ subMenuMode }) => {
+export const SubMenu = () => {
 	SubMenu.propTypes = propTypes;
 
 	const router = useRouter();
@@ -26,7 +18,6 @@ export const SubMenu = ({ subMenuMode }) => {
 	return (
 		<Menu
 			theme="dark"
-			// triggerSubMenuAction="click"
 			mode="horizontal"
 			className={
 				currentRoute.includes("services")
@@ -58,7 +49,7 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {DermalFillerIcon} */}
+						
 								Botox/Dermal Fillers
 							</a>
 						</Link>
@@ -83,7 +74,7 @@ export const SubMenu = ({ subMenuMode }) => {
 									preview={false}
 									style={{ marginBottom: "0.5rem" }}
 								/>
-								{/* {HormonalTherapyIcon} */}
+							
 								Bioidentical Hormone Replacement Therapy
 							</a>
 						</Link>
@@ -106,7 +97,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {SlimBodyIcon} */}
 								Peptide Therapy (Sermorelin/ Ipamorelin)
 							</a>
 						</Link>
@@ -129,7 +119,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {DermalFiller2Icon} */}
 								Botox / Dermal Filler Parties
 							</a>
 						</Link>
@@ -152,7 +141,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {HormonalRingIcon} */}
 								Testosterone Therapy
 							</a>
 						</Link>
@@ -175,7 +163,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {FlaskIcon} */}
 								Mobile Labs/ Micronutrient Testing
 							</a>
 						</Link>
@@ -198,7 +185,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {IVBagIcon} */}
 								IV therapy
 							</a>
 						</Link>
@@ -221,7 +207,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {DietIcon} */}
 								Medical Weight Loss
 							</a>
 						</Link>
@@ -241,7 +226,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {DietIcon} */}
 								XEO
 							</a>
 						</Link>
@@ -264,7 +248,6 @@ export const SubMenu = ({ subMenuMode }) => {
 									alt="icon"
 									preview={false}
 								/>
-								{/* {DietIcon} */}
 								SecretRf
 							</a>
 						</Link>

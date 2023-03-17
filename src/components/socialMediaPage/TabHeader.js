@@ -4,8 +4,6 @@ import {
 	Col,
 	Grid,
 	Tabs,
-	Typography,
-	Input,
 } from "antd";
 import IconTile from "./landingpage/IconTile";
 import LandingPage from "./LandingPage";
@@ -22,8 +20,9 @@ const HeaderMenu = [
 const { TabPane } = Tabs;
 const TabHeader = (props) => {
 	const screens = useBreakpoint();
-	return (
-		<Row style={{ height: 65, marginTop: screens.sm ? 5 : 30 }}>
+	return (<>
+		<div className='socials-main-cont-wrapper'>
+		<Row style={{ marginTop: screens.lg ? 27 : 30 }}>
 			<Col span={24}>
 				<Tabs
 					className={
@@ -36,6 +35,7 @@ const TabHeader = (props) => {
 				>
 					{HeaderMenu.map((row, index) => (
 						<TabPane
+						
 							tab={
 								<IconTile
 									text=""
@@ -45,6 +45,7 @@ const TabHeader = (props) => {
 									icon={row.icon}
 								/>
 							}
+							
 							key={index + 1}
 						>
 							{index + 1 == 1 && <LandingPage />}
@@ -53,6 +54,8 @@ const TabHeader = (props) => {
 				</Tabs>
 			</Col>
 		</Row>
+		</div>
+		</>
 	);
 };
 

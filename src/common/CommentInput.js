@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Card, Col, Button, Row, Tooltip, Space, Typography, Grid, Input, Upload } from 'antd';
+import {  Button, Tooltip, Space, Typography, Grid, Input, Upload } from 'antd';
 import PropTypes from "prop-types";
 import { NO_USER_THUMB } from '../utils/constant';
 import EventIcon from '../common/EventIcon';
-const { Title, Text } = Typography;
+const {  Text } = Typography;
 const { useBreakpoint } = Grid;
 
 
@@ -152,13 +152,17 @@ const CommentInput = (props) => {
             </Upload>
             {screens.sm && <Button onClick={() => handleCreatedcomment()} shape="round" className="btn-green">
                 <Text style={{ color: "#fff" }}>Comment</Text>
+
+            </Button>}
+             {!screens.sm && <Button onClick={() => handleCreatedcomment()} className="btn-green" shape="circle">
+             <img src='/icons/paper_plane.svg' style={{ width: "51%" }} />
             </Button>}
         </>
     );
     return (
-        <Space>
+        <Space className='comment-input-wrapper'>
             {screens.sm &&
-                <div style={{
+                <div className='user-avatar-comment' style={{
                     background: `url("${props.src}")`,
                     backgroundRepeat: "no-repeat",
                     borderRadius: 50,
@@ -173,18 +177,12 @@ const CommentInput = (props) => {
                 placeholder="your comment here.."
                 suffix={suffix}
                 onChange={(e) => setTitle(e.target.value)}
-                className="input-grey-round"
+                className="input-grey-round relative-users-comment-input"
                 // style={{ borderRadius: 50, height: props.inputHeight ? props.inputHeight : 45, width: props.inputWidth ? props.inputWidth : 534 }}
                 style={{ borderRadius: 50, height: props.inputHeight ? props.inputHeight : 45 }}
 
             />
-            {!screens.sm && <Space wrap>
-                <Tooltip title="comment">
-                    <Button type="primary" size="large" className='btn-grey' shape="circle" >
-                        <img src='/icons/paper_plane.svg' style={{ width: "51%" }} />
-                    </Button>
-                </Tooltip>
-            </Space>}
+           
         </Space >
     );
 }

@@ -13,6 +13,7 @@ const IconTile = (props) => {
 			className={`${lastPath === props?.route ? "acxs" : ""}`}
 			onClick={() => push(`/dashboard/${query?.type}/${props?.route}`)}
 		>
+		    <div className='service-item-icon'>
 			<Avatar
 				className={props.className}
 				style={{ padding: 5 }}
@@ -20,6 +21,7 @@ const IconTile = (props) => {
 				size={props.avatarSize}
 				icon={<img className="default-icon" src={props.icon} />}
 			/>
+			</div>
 			{props.text && (
 				<Text className="card-head-title text-dark">{props.text}</Text>
 			)}
