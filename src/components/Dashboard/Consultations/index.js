@@ -1,4 +1,3 @@
-import { Table } from "antd";
 import dayjs from "dayjs";
 import CommonTable from "src/common/CommonTable";
 import SeacrhField from "src/common/SearchField";
@@ -98,7 +97,6 @@ const Consultations = () => {
 				fontSize={18}
 				fontWeight="400"
 				fontFamily="Proxima-Nova"
-				mt={20}
 				mb={15}
 			>
 				Consultations

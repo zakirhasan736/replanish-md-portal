@@ -13,7 +13,7 @@ const Main = () => {
 
 	return (
 		<div>
-			{screens.md ? (
+			{screens.lg ? (
 				<TabHeader
 					tabPosition="top"
 					handleMenuTab={handleMenuTab}

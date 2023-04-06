@@ -1,5 +1,6 @@
 import { Space } from "antd";
 import dayjs from "dayjs";
+import PropTypes from "prop-types";
 import TextField from "src/common/textField/index";
 
 const NotificationCard = ({ notification }) => {
@@ -23,6 +24,10 @@ const NotificationCard = ({ notification }) => {
 			</Space>
 		</Space>
 	);
+};
+
+NotificationCard.propTypes = {
+	notification: PropTypes.object,
 };
 
 export default NotificationCard;

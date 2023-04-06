@@ -1,23 +1,13 @@
 import React from "react";
 import {
-	Space,
-	Card,
 	Row,
 	Col,
 	Grid,
 	Tabs,
-	Badge,
-	Button,
-	Typography,
-	Input,
 } from "antd";
 import IconTile from "./landingpage/IconTile";
-import { DownOutlined } from "@ant-design/icons";
-import ImgSmallCircle from "src/common/ImgSmallCircle";
 import LandingPage from "./LandingPage";
 const { useBreakpoint } = Grid;
-const { Title, Text } = Typography;
-const { Search } = Input;
 const HeaderMenu = [
 	{ icon: "/icons/home.svg" },
 	{ icon: "/icons/exclusion.svg" },
@@ -30,8 +20,9 @@ const HeaderMenu = [
 const { TabPane } = Tabs;
 const TabHeader = (props) => {
 	const screens = useBreakpoint();
-	return (
-		<Row style={{ height: 65, marginTop: screens.sm ? 5 : 30 }}>
+	return (<>
+		<div className='socials-main-cont-wrapper'>
+		<Row style={{ marginTop: screens.lg ? 17 : 30 }}>
 			<Col span={24}>
 				<Tabs
 					className={
@@ -44,15 +35,17 @@ const TabHeader = (props) => {
 				>
 					{HeaderMenu.map((row, index) => (
 						<TabPane
+						
 							tab={
 								<IconTile
 									text=""
-									className="bg-none"
+									className="bg-none main-header-tabs-item"
 									avatarSize={32}
 									shape="square"
 									icon={row.icon}
 								/>
 							}
+							
 							key={index + 1}
 						>
 							{index + 1 == 1 && <LandingPage />}
@@ -61,6 +54,8 @@ const TabHeader = (props) => {
 				</Tabs>
 			</Col>
 		</Row>
+		</div>
+		</>
 	);
 };
 

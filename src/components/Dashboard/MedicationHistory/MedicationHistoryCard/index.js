@@ -1,6 +1,7 @@
 import { Space } from "antd";
 import dayjs from "dayjs";
 import TextField from "src/common/textField/index";
+import PropTypes from "prop-types";
 
 const MedicationHistoryCard = ({ medication }) => {
 	return (
@@ -90,4 +91,9 @@ const MedicationHistoryCard = ({ medication }) => {
 		</div>
 	);
 };
+
+MedicationHistoryCard.propTypes = {
+	medication: PropTypes.string,
+};
+
 export default MedicationHistoryCard;

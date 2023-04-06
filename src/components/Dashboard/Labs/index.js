@@ -115,7 +115,6 @@ const Labs = () => {
 				fontSize={18}
 				fontWeight="400"
 				fontFamily="Proxima-Nova"
-				mt={20}
 				mb={15}
 			>
 				Labs

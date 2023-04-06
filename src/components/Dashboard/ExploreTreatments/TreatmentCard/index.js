@@ -1,5 +1,6 @@
 import { Card } from "antd";
 import TextField from "src/common/textField/index";
+import PropTypes from "prop-types";
 
 const TreatmentCard = ({ treatment }) => {
 	return (
@@ -21,4 +22,9 @@ const TreatmentCard = ({ treatment }) => {
 		</Card>
 	);
 };
+
+TreatmentCard.propTypes = {
+	treatment: PropTypes.object,
+};
+
 export default TreatmentCard;

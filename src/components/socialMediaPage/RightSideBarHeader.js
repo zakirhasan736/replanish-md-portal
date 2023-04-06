@@ -6,75 +6,71 @@ import {
 	Grid,
 	Row,
 	Col,
-	Button,
 	Typography,
-	Input,
 } from "antd";
 import IconTile from "./landingpage/IconTile";
 import ImgSmallCircle from "src/common/ImgSmallCircle";
 import { DownOutlined } from "@ant-design/icons";
-import Services from "./landingpage/Services";
-import Sponsored from "./landingpage/Sponsored";
-const menuArray = [
-	{ icon: "/icons/support.svg", menuName: "Supporters" },
-	{ icon: "/icons/videogreen.svg", menuName: "Forum" },
-	{ icon: "/icons/groups.svg", menuName: "Groups" },
-	{ icon: "/icons/page.svg", menuName: "Pages" },
-	{ icon: "/icons/plus-shield.svg", menuName: "Emotional health" },
-	{ icon: "/icons/green-heart.svg", menuName: "Favorites" },
-];
 
-const { Title, Text } = Typography;
-const { Search } = Input;
+
+const { Text } = Typography;
+
 const items = [];
 const onClick = ({ key }) => {
 	message.info(`Click on item ${key}`);
 };
 const { useBreakpoint } = Grid;
-const RightSideBarHeader = (props) => {
+
+const RightSideBarHeader = () => {
 	const screens = useBreakpoint();
 	return (
-		<Row>
-			<Col span={24}>
+
+          
+
 				<Row>
 					<Space
 						direction="vertical"
 						style={{
 							width: "100%",
 						}}
+						
 						size={[0, 30]}
-						align={screens.sm ? "center" : "start"}
+						align={screens.lg ? "end" : "start"}
 					>
-						<Row style={{ marginTop: screens.sm ? 24 : 10 }}>
+						<Row >
 							<Col>
-								<Space size={35}>
+								<Space size={35}className='top-header-link-items'>
+
 									<IconTile
 										text=""
-										className="bg-none"
-										avatarSize={32}
+										className="bg-none top-header-link-item"
+										avatarSize={21}
 										shape="square"
 										icon="/icons/grp.svg"
 									/>
+
 									<IconTile
 										text=""
-										className="bg-none"
-										avatarSize={30}
+										className="bg-none top-header-link-item"
+										avatarSize={19}
 										shape="square"
 										icon="/icons/archeive.svg"
 									/>
+
 									<Badge count={3} size="small">
 										<IconTile
 											text=""
-											className="bg-none"
-											avatarSize={30}
+											className="bg-none top-header-link-item"
+											avatarSize={24}
 											shape="square"
 											icon="/icons/ringbell.svg"
 										/>
 									</Badge>
-									{screens.sm && (
-										<div>
+
+									{screens.lg && (
+										<div className="log-user-profile">
 											<Space>
-												<ImgSmallCircle />
+												<ImgSmallCircle imgHeight='25px' imgWidth='25px' />
 												<Dropdown
 													menu={{ items, onClick }}
 												>
@@ -99,8 +95,7 @@ const RightSideBarHeader = (props) => {
 						</Row>
 					</Space>
 				</Row>
-			</Col>
-		</Row>
+		
 	);
 };
 
