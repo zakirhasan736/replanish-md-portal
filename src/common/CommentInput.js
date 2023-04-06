@@ -123,7 +123,7 @@ const CommentInput = (props) => {
             reply_count: 0
         }
         setcomment([...comment, data]);
-        props.generateComment(comment);
+        props.generateComment([...comment, data]);
     }
 
     const suffix = (
