@@ -84,7 +84,6 @@ const MedicationHistory = () => {
 				fontSize={18}
 				fontWeight="400"
 				fontFamily="Proxima-Nova"
-				mt={20}
 				mb={15}
 			>
 				Medication History
@@ -94,7 +93,7 @@ const MedicationHistory = () => {
 
 			<Row gutter={[24, 24]}>
 				{medications.map((medication) => (
-					<Col sm={12} xs={17}>
+					<Col lg={12} sm={22} xs={20}>
 						<MedicationHistoryCard medication={medication} />
 					</Col>
 				))}

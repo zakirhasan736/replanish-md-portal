@@ -2,6 +2,7 @@
 import React from "react";
 import { Input } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
+import PropTypes from "prop-types";
 
 const { Password } = Input;
 
@@ -40,11 +41,27 @@ const PasswordField = ({
 						paddingTop: "5px",
 					}}
 				>
-					{errors[name]}
+					{errors?.[name]}
 				</p>
 			)}
 		</div>
 	);
+};
+
+PasswordField.propTypes = {
+	placeholder: PropTypes.string,
+	name: PropTypes.string,
+	label: PropTypes.string,
+	className: PropTypes.string,
+	maxLength: PropTypes.number,
+	onChange: PropTypes.func,
+	onBlur: PropTypes.func,
+	value: PropTypes.string,
+	errors: PropTypes.object,
+};
+
+PasswordField.defaultProps = {
+	className: "",
 };
 
 export default PasswordField;

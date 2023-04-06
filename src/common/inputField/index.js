@@ -17,7 +17,7 @@ const InputField = ({
 	errors,
 }) => {
 	return (
-		<div>
+		<div className="common-input-feild">
 			<p style={{ marginBottom: "7px", paddingTop: "15px" }}>{label}</p>
 			<Input
 				type={type}

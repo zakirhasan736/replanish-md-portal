@@ -1,11 +1,11 @@
 import React from 'react';
-import { Space, Card, Row, Col, Dropdown, Badge, Button, Typography, Input } from 'antd';
+import { Space, Row, Col, Dropdown, Badge, Typography} from 'antd';
 import IconTile from './landingpage/IconTile';
 import { DownOutlined } from '@ant-design/icons';
 import ImgSmallCircle from 'src/common/ImgSmallCircle';
 
-const { Title, Text } = Typography;
-const { Search } = Input;
+const { Text } = Typography;
+
 const HeaderMenu = [{ icon: "/icons/home.svg" }, { icon: "/icons/exclusion.svg" }, { icon: "/icons/bell.svg" }, { icon: "/icons/notes-medical.svg" }, { icon: "/icons/question-circle.svg" }, { icon: "/icons/chatnew.svg" }]
 
 const onClick = ({ key }) => {
@@ -16,11 +16,11 @@ const items = [
   
 ];
 
-const Header = (props) => {
+const Header = () => {
     return (
-        <div style={{ height: 65,marginTop:15 }}>
+        <div className='top-main-header-box' style={{ height: 65,marginTop:15 }}>
             <Row align="middle">
-                <Col span={6}><img src='icons/logo.svg' alt='logo' /></Col>
+                <Col span={6}><img src='/icons/logo.svg' alt='logo' /></Col>
                 <Col span={12} style={{ paddingLeft: 30 }}>
                     <Space size={30}>
                         {HeaderMenu.map((row) => <IconTile textColor="#000" text='' backgroundColor="#fff" avatarSize={30} shape="square" textSize={14} icon={row.icon} />)}
@@ -40,7 +40,7 @@ const Header = (props) => {
                                 <Space>
                                     <Text>Allison Mango</Text>
                                     <DownOutlined />
-                                </Space>
+                                </Space> 
                             </a>
                         </Dropdown>
                     </Space>

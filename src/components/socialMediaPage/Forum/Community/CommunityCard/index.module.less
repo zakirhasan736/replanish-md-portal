@@ -1,0 +1,46 @@
+.community-card {
+	box-shadow: 0px 16px 24px 0px #836f6f1a;
+	// max-width: 330px;
+	// width: 310px;
+	// min-width: 280px;
+	border-radius: 5px;
+	&:hover {
+		box-shadow: 0px 5px 24px 0px #958383;
+	}
+	cursor: pointer;
+	img {
+		border-radius: 5px 5px 0 0;
+		width: 100%;
+	}
+	.card-content {
+		padding: 10px;
+		.review-section {
+			display: flex;
+			justify-content: space-between;
+			.green {
+				color: #448666;
+			}
+			.review {
+				color: #0e0e0e;
+				font-weight: 600;
+			}
+		}
+		.divider {
+			border-color: #decfb3;
+			margin: 0 0 10px 0;
+		}
+		.community-content {
+			opacity: 0.5;
+		}
+		button {
+			background: none;
+			color: black;
+			width: 114px;
+			height: 31px;
+			&:hover {
+				background: black;
+				color: wheat;
+			}
+		}
+	}
+}

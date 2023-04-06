@@ -31,7 +31,7 @@ const AddressTab = () => {
 			</Space>
 			<Row gutter={[24, 24]}>
 				{allAddress.map((address, key) => (
-					<Col sm={12} xs={24} key={key}>
+					<Col lg={12} md={12} sm={22} key={key}>
 						<AddressCard address={address} />
 					</Col>
 				))}

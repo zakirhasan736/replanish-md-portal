@@ -1,26 +1,18 @@
 import React from "react";
-import {
-	Layout,
-	Row,
-	Col,
-	Grid,
-	Drawer,
-	Collapse,
-	notification,
-} from "antd";
+import { Layout, Row, Col, Grid, Drawer, notification } from "antd";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
-import { MenuOutlined } from "@ant-design/icons";
-
+import { MenuOutlined, AppstoreFilled } from "@ant-design/icons";
 
 import { logout } from "src/components/authPages/auth/services";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import useUser from "src/hooks/useUser";
 
 import SideBar from "../SideBar";
 import RightSideBar from "../RightSideBar";
 
 import RightSideBarHeader from "../RightSideBarHeader";
+import Image from "next/image";
 const { useBreakpoint } = Grid;
 const { Header, Content } = Layout;
 // const { Panel } = Collapse;
@@ -35,6 +27,7 @@ const LayoutWrapper = ({ children }) => {
 	const { user, removeUser } = useUser();
 	const token = user?.token;
 
+	const { name, q, card } = router.query;
 	// const { isLoading } = useSelector(({ auth }) => auth);
 	// const currentRoute = router.pathname;
 	// const { id } = router.query;
@@ -70,8 +63,12 @@ const LayoutWrapper = ({ children }) => {
 	};
 	const [tabKey, setTabKey] = React.useState(1);
 	const [open, setOpen] = React.useState(false);
+	const [open2, setOpen2] = React.useState(false);
 	const handleMenuTab = (e) => {
 		setTabKey(e);
+	};
+	const showDrawer2 = () => {
+		setOpen2(true);
 	};
 	const showDrawer = () => {
 		setOpen(true);
@@ -79,93 +76,175 @@ const LayoutWrapper = ({ children }) => {
 
 	const onClose = () => {
 		setOpen(false);
+		setOpen2(false);
 	};
 	return (
-		<div className="social-layout-wrapper">
-			<Layout
-				className="layout social-media"
-				style={{ background: "#fff" }}
-			>
-				{screens.sm ? (
-					<Row gutter={48} justify="space-between">
-						<Col
-							className="gutter-row fixed-width-left"
-							xs={6}
-							sm={6}
-							md={6}
-							lg={6}
-							xl={6}
-							xxl={6}
-						>
-							<SideBar />
-						</Col>
-						<Col
-							className="gutter-row fixed-width-middle"
-							xs={11}
-							sm={11}
-							md={11}
-							lg={11}
-							xl={11}
-							xxl={11}
-						>
-							{children}
-						</Col>
-						<Col
-							className="gutter-row fixed-width-right"
-							xs={7}
-							sm={7}
-							md={7}
-							lg={7}
-							xl={7}
-							xxl={7}
-						>
-							<RightSideBar />
-						</Col>
-					</Row>
+		<div className="social-intraction-wrapper-box">
+			<div className="social-layout-wrapper">
+				{screens.lg ? (
+					<div className="modal-shape-box">
+						<div className="modal-shadow-shape modal-shape-1">
+							<Image
+								src="/images/left-ellips.png"
+								alt="shadow shape blob"
+								width="633"
+								height="598"
+							/>
+						</div>
+						<div className="modal-shadow-shape modal-shape-2">
+							<Image
+								src="/images/middle-elips.png"
+								alt="shadow shape blob"
+								width="633"
+								height="598"
+							/>
+						</div>
+						<div className="modal-shadow-shape modal-shape-3">
+							<Image
+								src="/images/right-ellips.png"
+								alt="shadow shape blob"
+								width="633"
+								height="598"
+							/>
+						</div>
+					</div>
 				) : (
-					<div className="social-media">
-						<Header>
-							<Row justify="space-between" align="middle">
-								<Col span={9}>
-									<img src="icons/logo.svg" alt="logo" />
-								</Col>
-								<Col span={3}>
-									<MenuOutlined
-										style={{ fontSize: 20, color: "#000" }}
-										onClick={showDrawer}
-									/>
-								</Col>
-							</Row>
-							<Drawer
-								closable={false}
-								className="social-media mobile-drawer"
-								width={318}
-								title={<RightSideBarHeader />}
-								placement="right"
-								onClose={onClose}
-								open={open}
+					""
+				)}
+
+				<Layout
+					className="layout social-media"
+					style={{ background: "#fff" }}
+				>
+					{screens.lg ? (
+						<Row justify="space-between">
+							<Col
+								className="gutter-row fixed-width-left left-sidebar-wrapper"
+								xs={6}
+								sm={6}
+								md={6}
+								lg={6}
+								xl={6}
+								xxl={6}
 							>
 								<SideBar />
-							</Drawer>
-						</Header>
-						<Content style={{ padding: "0 20px" }}>
-							<Row>
+							</Col>
+							{token && (q !== "forum" || card) ? (
+								<>
+									<Col
+										className="gutter-row fixed-width-middle middle-content-wrapper"
+										xs={11}
+										sm={11}
+										md={11}
+										lg={11}
+										xl={11}
+										xxl={11}
+									>
+										{children}
+									</Col>
+
+									<Col
+										className="gutter-row fixed-width-right right-sidebar-wrappers"
+										xs={7}
+										sm={7}
+										md={7}
+										lg={7}
+										xl={7}
+										xxl={7}
+									>
+										<RightSideBar />
+									</Col>
+								</>
+							) : (
 								<Col
-									className="gutter-row"
-									xs={24}
-									sm={24}
-									md={24}
-									lg={24}
-									xl={24}
-									xxl={24}
+									className="gutter-row fixed-width-middle middle-content-wrapper"
+									xs={18}
+									sm={18}
+									md={18}
+									lg={18}
+									xl={18}
+									xxl={18}
 								>
 									{children}
 								</Col>
-							</Row>
-						</Content>
-					</div>
-				)}
-			</Layout>
+							)}
+						</Row>
+					) : (
+						<div className="social-media">
+							<Header>
+								<Row justify="space-between" align="middle">
+									<Col span={9}>
+										<div className="header-mobo-left-trigger-box">
+											<MenuOutlined
+												style={{
+													fontSize: 20,
+													color: "#000",
+												}}
+												onClick={showDrawer}
+												className="menu-left-trigger-btn"
+											/>
+											<img
+												src="/icons/logo.svg"
+												alt="logo"
+											/>
+										</div>
+									</Col>
+									<Col
+										span={3}
+										className="menu-trigger-btnbox"
+									>
+										<AppstoreFilled
+											style={{
+												fontSize: 20,
+												color: "#000",
+											}}
+											onClick={showDrawer2}
+											className="menu-trigger-btn"
+										/>
+									</Col>
+								</Row>
+								<Drawer
+									closable={false}
+									className="social-media mobile-drawer mobile-sidebar-top-header"
+									width={318}
+									title={<RightSideBarHeader />}
+									placement="left"
+									onClose={onClose}
+									open={open}
+								>
+									<SideBar />
+								</Drawer>
+								<Drawer
+									closable={false}
+									className="social-media mobile-drawer mobile-sidebar-top-header mobile-top-sidebar-right"
+									width={318}
+									// title={<RightSideBarHeader />}
+									placement="right"
+									onClose={onClose}
+									open={open2}
+								>
+									<RightSideBar />
+								</Drawer>
+							</Header>
+							<Content style={{ padding: "0 20px" }}>
+								<Row>
+									<Col
+										className="gutter-row"
+										xs={24}
+										sm={24}
+										md={24}
+										lg={24}
+										xl={24}
+										xxl={24}
+									>
+										{children}
+									</Col>
+								</Row>
+							</Content>
+						</div>
+					)}
+				</Layout>
+			</div>
 		</div>
 	);
 };

@@ -24,7 +24,7 @@ export const register = createAsyncThunk(
 			"Content-Type": "application/json",
 			// Authorization: "Bearer *",
 		};
-		const url = `${APIEndpoint}/user_services/register`;
+		const url = `${APIEndpoint}user_services/register`;
 		const response = await axios.post(url, body, {
 			headers: headers,
 		});
