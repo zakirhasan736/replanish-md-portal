@@ -1,0 +1,35 @@
+.community-banner {
+	height: 191px;
+	display: flex;
+	background: #f4f4f4;
+	border-radius: 22px;
+	margin-bottom: 20px;
+	position: relative;
+	.banner-content {
+		margin: 15px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		div:first-child {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			h2 {
+				margin: 0px;
+			}
+			button {
+				border-radius: 25px;
+				background-color: #535353;
+				span {
+					font-size: 14px;
+				}
+				@media @xs {
+					position: absolute;
+					bottom: 10px;
+					right: 10px;
+				}
+			}
+		}
+	}
+}

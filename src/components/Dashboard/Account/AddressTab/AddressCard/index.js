@@ -1,5 +1,6 @@
 import { Space } from "antd";
 import TextField from "src/common/textField/index";
+import PropTypes from "prop-types";
 
 const AddressCard = ({ address }) => {
 	return (
@@ -35,6 +36,10 @@ const AddressCard = ({ address }) => {
 			</Space>
 		</div>
 	);
+};
+
+AddressCard.propTypes = {
+	address: PropTypes.object,
 };
 
 export default AddressCard;

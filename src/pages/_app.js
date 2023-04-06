@@ -3,7 +3,7 @@ import Script from "next/script";
 import React from "react";
 import { Provider } from "react-redux";
 import LayoutWrapper from "src/components/socialMediaPage/layoutWrapper";
-import { store } from "../store";
+import { store } from "../redux/store";
 import relativeTime from "dayjs/plugin/relativeTime";
 import dayjs from "dayjs";
 import RouteGuard from "./routeGuard";

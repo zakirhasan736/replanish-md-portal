@@ -1,9 +1,5 @@
 import React from 'react';
-
-import { AutoComplete, Cascader, Checkbox, Col, Row, DatePicker, Layout, Tabs, Form, Input, InputNumber, Select, Button } from 'antd';
-import LandingMessage from './landingpage/LandingMessage';
-import Widget from '../../common/Widget';
-import AddToFeed from './landingpage/AddToFeed';
+import { Col, Row, DatePicker,Tabs, Form, Input, Select} from 'antd';
 import Services from './landingpage/Services';
 import SideBar from './SideBar';
 import TabHeader from './TabHeader';

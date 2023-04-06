@@ -22,7 +22,7 @@ const CommonModal = ({
 			<Modal
 				width={width}
 				title="Basic Modal"
-				visible={isModalVisible}
+				open={isModalVisible}
 				onOk={handleOk}
 				onCancel={handleCancel}
 			>

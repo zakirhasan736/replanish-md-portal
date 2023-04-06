@@ -62,7 +62,6 @@ const ExploreTreatments = () => {
 				fontSize={18}
 				fontWeight="400"
 				fontFamily="Proxima-Nova"
-				mt={20}
 				mb={15}
 			>
 				Explore Treatments
@@ -71,7 +70,7 @@ const ExploreTreatments = () => {
 
 			<Row gutter={[24, 24]}>
 				{treatments.map((treatment) => (
-					<Col sm={8}>
+					<Col lg={8} md={12} sm={24}>
 						<TreatmentCard treatment={treatment} />
 					</Col>
 				))}

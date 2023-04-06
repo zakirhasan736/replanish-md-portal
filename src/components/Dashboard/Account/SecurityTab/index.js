@@ -1,4 +1,4 @@
-import { Button, Col, Row, Space } from "antd";
+import { Col, Row, Space } from "antd";
 import { Formik } from "formik";
 import CommonButton from "src/common/button";
 import PasswordField from "src/common/PasswordField";
@@ -44,7 +44,7 @@ const SecurityTab = () => {
 				{({ values, errors, handleChange, handleSubmit }) => (
 					<Row gutter={[24, 24]}>
 						{fields.map(({ name, label, placeholder }, key) => (
-							<Col sm={12} xs={24} key={key}>
+							<Col md={12} sm={24} xs={24} key={key}>
 								<PasswordField
 									label={label}
 									placeholder={placeholder}
