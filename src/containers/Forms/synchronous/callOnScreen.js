@@ -11,10 +11,8 @@ import VideoScreen from 'src/components/Forms/synchronous/videoScreen';
 import VideoFullScreen from 'src/components/Forms/synchronous/videoFullScreen';
 import ProviderInfo from 'src/common/Forms/providerInfo';
 
-const callOnScreen = () => {
+const callOnScreen = ({ handleClosed }) => {
     const screens = useBreakpoint();
-
-
     return (
         <div className='meet-call-screen'>
             <LayoutWrapper SiteLogo={false} NextPage={true} MassageOpenBtn={true} SiteTitle='Virtual Meet'>
@@ -25,7 +23,7 @@ const callOnScreen = () => {
                                 <Col md={6} xs={24}>
                                     <div className='meet-screen-sidebar sidebar-content-wrapper'>
                                         <div className='meet-screen-sidebar-wrap provider-sidebar-wrap'>
-                                           <ProviderInfo />
+                                            <ProviderInfo />
                                             {/* ==============*/}
 
                                             <div className='meet-users-chat-widget'>
@@ -39,8 +37,8 @@ const callOnScreen = () => {
 
                                 <Col md={18} xs={24}>
                                     <div className='desk-meet-video-screen'>
-                                       { /*<VideoFullScreen />*/}
-                                        <VideoScreen />
+                                        { /*<VideoFullScreen />*/}
+                                        <VideoScreen handleClosed={handleClosed} />
                                     </div>
                                 </Col>
                             </Row>
@@ -49,13 +47,13 @@ const callOnScreen = () => {
                         :
                         (
                             <div className='meet-call-user-screen-box'>
-                            
+
                                 <div className='mobo-users-chat-widgets meet-users-chat-widget'>
                                     {/* <UserChatWidget / > */}
-                                  </div>
+                                </div>
 
                                 <div className='mobo-meet-video-screen'>
-                                    <VideoScreen />
+                                    <VideoScreen handleClosed={handleClosed} />
                                 </div>
                             </div>
                         )

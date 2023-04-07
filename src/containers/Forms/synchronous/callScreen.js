@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
 
-const callScreen = () => {
+const callScreen = ({handleClosed}) => {
   return (
     <div className='meet-call-screen'>
       <LayoutWrapper SiteLogo={false} NextPage={true} SiteTitle='Virtual Meet' BgclassName='is-bg-image'>
@@ -19,7 +19,7 @@ const callScreen = () => {
           </div>
 
           <div className='sync-users-settings-box'>
-            <button className='users-settings-item'><Image src='/icons/forms/call-end-Icon.svg' width={37} height={37} preview={false} /></button>
+            <button onClick={handleClosed} className='users-settings-item'><Image src='/icons/forms/call-end-Icon.svg' width={37} height={37} preview={false} /></button>
             <button className='users-settings-item'><Image src='/icons/forms/maximize.svg' width={37} height={37} preview={false} /></button>
             <button className='users-settings-item'><Image src='/icons/forms/phone-call.svg' width={37} height={37} preview={false} /></button>
             <button className='users-settings-item'><Image src='/icons/forms/video.svg' width={37} height={37} preview={false} /></button>
