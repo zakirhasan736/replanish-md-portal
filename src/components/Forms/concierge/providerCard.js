@@ -2,8 +2,9 @@ import React from 'react'
 import { Col } from 'antd';
 import Image from 'next/image'
 import { AiFillStar } from "react-icons/ai";
+import { useRouter } from 'next/router';
 const ProviderCard = ({ providerImage, providerName, serviceType, ratingPoint, ratingsNumber, descText, experticeYr, educatinsTypes }) => {
-
+    const router = useRouter();
     return (
         <Col xxl={8} xl={8} lg={8} md={12} xs={24} >
             <div className='providers--card'>
@@ -29,7 +30,7 @@ const ProviderCard = ({ providerImage, providerName, serviceType, ratingPoint, r
                         <p className='description-text'>{descText}</p>
                         <div className='button-box'>
                             <button className='transparent-button'>View  profile</button>
-                            <button  className='black-button'>Book An Appointment </button>
+                            <button onClick={()=>router.push("/manage_services/concierge?wizard=2&tab=location-provider")} className='black-button'>Book An Appointment </button>
                         </div>
                     </div>
 

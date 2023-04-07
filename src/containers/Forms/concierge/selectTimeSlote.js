@@ -5,9 +5,11 @@ import SectionTitle from 'src/common/Forms/sectionTitle';
 import ProviderInfo from 'src/common/Forms/providerInfo';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import DatePicker from 'src/components/Forms/DatePicker';
+import { useRouter } from 'next/router';
 
 const SelectTimeSlote = () => {
   const [value, setValue] = useState(1);
+  const router = useRouter();
   const onChange = (e) => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
@@ -163,7 +165,7 @@ const SelectTimeSlote = () => {
                               </div>
                             </div>
                           </div>
-                          <button className='black-button appointment-button'>Scheduled Appointment</button>
+                          <button onClick={() => router.push("/manage_services/concierge?wizard=4&tab=appointment-confrimation")} className='black-button appointment-button'>Scheduled Appointment</button>
                         </div>
 
                       </div>

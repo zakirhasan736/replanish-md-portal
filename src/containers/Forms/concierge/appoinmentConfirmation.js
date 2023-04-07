@@ -34,7 +34,14 @@ const AppoinmentConfirmation = () => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
+  const handleSubmit = () => {
+    setOpenConsultantPopUp(true);
+  }
 
+  const handleFinalConfrim = () => {
+    setOpenConsultantPopUp(false);
+    setOpenConfirmationPopup(true);
+  }
   return (
     <div className='appoinment-confirmation-wrapper'>
       <div className='concierge-layout-main'>
@@ -182,19 +189,19 @@ const AppoinmentConfirmation = () => {
 
             { /* ========popUp box======== */}
             {OpenConfirmationPopup && <div className='popup-widgets-wrapper'>
-               <div className='popup-widget-main'>
-               <button className='pop-close-btn'><IoMdClose /></button>
-                   <div className='popup-main-content-box'>
-                   <div className='check-mark-icon-box'>
-                   <Image src='/icons/forms/check-mark.svg' className='check-mark-icon' width={106} height={106} prefix={false} preview={false} />
-                   </div>
-                      <h2 className='popup-main-title'>Your booking has been confirmed.</h2>
-                      <p className='popup-main-desc'>You will be notified by mail and sms once the best provider has been selected for your service. <span>This usealy takes upto 2 hours.</span></p>
-                 
-                   </div>
-   
-               </div>
-           </div> }
+              <div className='popup-widget-main'>
+                <button onClick={()=>    setOpenConfirmationPopup(false)} className='pop-close-btn'><IoMdClose /></button>
+                <div className='popup-main-content-box'>
+                  <div className='check-mark-icon-box'>
+                    <Image src='/icons/forms/check-mark.svg' className='check-mark-icon' width={106} height={106} prefix={false} preview={false} />
+                  </div>
+                  <h2 className='popup-main-title'>Your booking has been confirmed.</h2>
+                  <p className='popup-main-desc'>You will be notified by mail and sms once the best provider has been selected for your service. <span>This usealy takes upto 2 hours.</span></p>
+
+                </div>
+
+              </div>
+            </div>}
 
 
 
@@ -202,7 +209,7 @@ const AppoinmentConfirmation = () => {
             {OpenConsultantPopUp && <div className='consultation-booking-confirmation-popup'>
               <div className='popup-widgets-wrapper'>
                 <div className='popup-widget-main'>
-                  <button className='pop-close-btn'><IoMdClose /></button>
+                  <button onClick={()=>setOpenConsultantPopUp(false)} className='pop-close-btn'><IoMdClose /></button>
                   <div className='popup-main-content-box'>
                     <h2 className='popup-main-title'>Book Consultation</h2>
                     <ProviderInfo />
@@ -211,7 +218,7 @@ const AppoinmentConfirmation = () => {
                       <div className='event-duration'><span className='clock-icons'><AiOutlineClockCircle /></span> in <span className='duretion-titme'>30</span>Minutes</div>
                     </div>
                     <div className='popup-main-btn-box text-center'>
-                      <button className='action-button black-button'>Confirm</button>
+                      <button onClick={() => handleFinalConfrim()} className='action-button black-button'>Confirm</button>
                     </div>
                   </div>
                 </div>

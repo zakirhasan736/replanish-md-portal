@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
-import { Col, Radio, Row } from "antd";
+import { Button, Col, Radio, Row } from "antd";
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
 import SectionTitle from 'src/common/Forms/sectionTitle';
 import ProviderInfo from 'src/common/Forms/providerInfo';
-
-
-
+import { useRouter } from 'next/router';
 
 const LocationCategory = () => {
-    const [value, setValue] = useState(1);
-    const onChange = (e) => {
-        console.log('radio checked', e.target.value);
-        setValue(e.target.value);
+
+    const router = useRouter();
+    const onChange = (val) => {
+        if (val===1) { // 1 means clinic and 2 means place
+            router.push("/manage_services/concierge?wizard=3&tab=time-slot")
+        }
+        else {
+            router.push("/manage_services/concierge?wizard=3&tab=select-location-address")
+        }
+
     };
     return (
         <div className='location-category-wrapper'>
@@ -36,15 +40,13 @@ const LocationCategory = () => {
 
                                         <div className='provider-main-wrapperbox'>
                                             <div className='provider-select-location'>
-                                                <Radio.Group
-                                                    onChange={onChange}
-                                                    value={value}
+                                                <div
                                                     size="large"
                                                     className="radio-group-container question-select"
                                                 >
-                                                    <div className='provider-select-location-item'><Radio value='1' className="radio-btn">Providers clinic</Radio></div>
-                                                    <div className='provider-select-location-item'><Radio value='2' className="radio-btn">at my place</Radio></div>
-                                                </Radio.Group>
+                                                    <div className='provider-select-location-item'><Button onClick={()=>onChange(1)} value={1} className="radio-btn">Providers clinic</Button></div>
+                                                    <div className='provider-select-location-item'><Button onClick={()=>onChange(2)} className="radio-btn">at my place</Button></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
