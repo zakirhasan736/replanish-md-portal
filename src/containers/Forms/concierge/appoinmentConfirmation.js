@@ -51,7 +51,7 @@ const AppoinmentConfirmation = () => {
             <div className='layout-user-screen-box'>
 
               <Row>
-                <Col md={6} xs={24}>
+                <Col lg={8} md={24} xs={24}>
                   <div className='sidebar-content-wrapper'>
                     <div className='provider-sidebar-wrap'>
                       <ProviderInfo ExtraInfo={true} />
@@ -60,7 +60,7 @@ const AppoinmentConfirmation = () => {
                   </div>
                 </Col>
 
-                <Col md={18} xs={24}>
+                <Col lg={16} md={24} xs={24}>
                   <div className='provider-overview-wrapper'>
                     <div className='section-title-wrapper'>
                       <SectionTitle title='Tomorrow ,19 Dec' />
@@ -72,7 +72,7 @@ const AppoinmentConfirmation = () => {
 
                         <form action="post" className='async-user-input-form'>
                           <div className='async-input-fild-group'>
-                            <Row gutter={10}>
+                            <Row gutter={[10,10]}>
                               <Col xxl={{ span: 12, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                 <InputField
                                   placeholder='First name'
@@ -95,7 +95,7 @@ const AppoinmentConfirmation = () => {
                           </div>
 
                           <div className='async-input-fild-group'>
-                            <Row gutter={32}>
+                            <Row gutter={[32, 32]}>
                               <Col xxl={{ span: 5, offset: 0 }} xl={{ span: 5, offset: 0 }} lg={{ span: 6, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                 <InputField
                                   placeholder='Age'

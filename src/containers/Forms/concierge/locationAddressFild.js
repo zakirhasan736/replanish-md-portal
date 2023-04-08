@@ -34,7 +34,7 @@ const LocationAddressFild = () => {
 
             <div className='layout-user-screen-box'>
               <Row>
-                <Col md={6} xs={24}>
+                <Col lg={8} md={24} xs={24}>
                   <div className='sidebar-content-wrapper'>
                     <div className='provider-sidebar-wrap'>
                       <ProviderInfo ExtraInfo={true} />
@@ -43,7 +43,7 @@ const LocationAddressFild = () => {
                   </div>
                 </Col>
 
-                <Col md={18} xs={24}>
+                <Col lg={16} md={24} xs={24}>
                   <div className='provider-overview-wrapper'>
                     <SectionTitle title='Select Location' />
 
@@ -115,7 +115,7 @@ const LocationAddressFild = () => {
                             </Row>
                           </div>
                           <div className='async-input-fild-group'>
-                            <Row gutter={11}>
+                            <Row gutter={[11,11]}>
                               <Col xxl={{ span: 12, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
                                 <InputField
                                   placeholder='Town/City'

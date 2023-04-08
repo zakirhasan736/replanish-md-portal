@@ -31,7 +31,7 @@ const LocationAddressOverview = () => {
 
             <div className='layout-user-screen-box'>
               <Row>
-                <Col md={6} xs={24}>
+                <Col lg={8} md={24} xs={24}>
                   <div className='sidebar-content-wrapper'>
                     <div className='provider-sidebar-wrap'>
                       <ProviderInfo ExtraInfo={true} />
@@ -40,7 +40,7 @@ const LocationAddressOverview = () => {
                   </div>
                 </Col>
 
-                <Col md={18} xs={24}>
+                <Col lg={16} md={24} xs={24}>
                   <div className='provider-overview-wrapper'>
                     <SectionTitle title='Select Location' />
 

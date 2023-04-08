@@ -2416,6 +2416,9 @@ ul.steps-progress-bars {
 	padding: 34px 0px 23px 28px;
 	position: relative;
 	height: 100%;
+	@media screen and (max-width: 767px) {
+		height: calc(100vh - 108px);
+	}
 	&.right-sidebar-content {
 		padding-left: 16px;
 		padding-right: 28px;
@@ -2448,6 +2451,9 @@ ul.steps-progress-bars {
 		text-transform: uppercase;
 		margin-bottom: 13px;
 		color: #000000;
+		@media screen and (max-width: 1280px) {
+			font-size: 16px;
+		}
 	}
 	.widgets-main-cont {
 		padding-bottom: 58px;
@@ -2516,8 +2522,26 @@ ul.steps-progress-bars {
 
 .provider-overview-wrapper {
 	padding: 71px 0 45px 144px;
+	@media screen and (max-width: 1440px) {
+		padding-left: 35px;
+		padding-top: 45px;
+	}
+	@media screen and (max-width: 991px) {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 45px;
+	}
+	@media screen and (max-width: 767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	.section-title-box {
 		margin-bottom: 34px;
+		@media screen and (max-width: 1280px) {
+			.title {
+				font-size: 35px;
+			}
+		}
 	}
 
 	.provider-main-wrapperbox {
@@ -2603,11 +2627,13 @@ ul.steps-progress-bars {
 	}
 }
 .provider-category-box {
-	height: calc(100vh - 372px);
-	position: relative;
-	overflow: hidden;
-	overflow-y: scroll;
-	padding-right: 16px;
+	@media screen and (min-width: 992px) {
+		height: calc(100vh - 372px);
+		position: relative;
+		overflow: hidden;
+		overflow-y: scroll;
+		padding-right: 16px;
+	}
 	.provider-category-wrapper {
 		padding-bottom: 12px;
 		&.in-your-place {
@@ -2628,8 +2654,6 @@ ul.steps-progress-bars {
 			max-width: 273px;
 			width: 100%;
 		}
-		.category-based-providers {
-		}
 	}
 }
 
@@ -2648,7 +2672,7 @@ ul.steps-progress-bars {
 }
 .providers-profile-overview {
 	padding: 0 20px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -2770,13 +2794,13 @@ ul.steps-progress-bars {
 		display: flex;
 		align-items: center;
 		gap: 7px;
-		a{
-		    background: #2d2d2b;
-    width: 100%;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		a {
+			background: #2d2d2b;
+			width: 100%;
+			border-radius: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 		a,
 		button {
@@ -3369,10 +3393,16 @@ ul.steps-progress-bars {
 		padding: 62px 86px 63px 87px;
 		text-align: center;
 		position: relative;
+		@media screen and (max-width: 767px) {
+			padding: 66px 7px 34px 10px;
+		}
 
 		.popup-main-content-box {
 			.check-mark-icon-box {
 				margin-bottom: 46px;
+				@media screen and (max-width: 767px) {
+					margin-bottom: 30px;
+				}
 			}
 			.popup-main-title {
 				margin-bottom: 14px;
@@ -3383,6 +3413,10 @@ ul.steps-progress-bars {
 				line-height: 42px;
 				text-align: center;
 				color: #000000;
+				@media screen and (max-width: 767px) {
+					font-size: 24px;
+					line-height: 28px;
+				}
 			}
 			.popup-main-desc {
 				font-family: "Manrope", sans-serif;
@@ -3391,6 +3425,9 @@ ul.steps-progress-bars {
 				line-height: 22px;
 				text-align: center;
 				color: #1b1b1b;
+				@media screen and (max-width: 767px) {
+					font-size: 14px;
+				}
 			}
 			.popup-main-btn-box {
 				margin-top: 46px;
@@ -3399,25 +3436,25 @@ ul.steps-progress-bars {
 				margin-right: auto;
 				display: block;
 				.popup-pin-text {
-					font-family: 'Manrope', sans-serif;
+					font-family: "Manrope", sans-serif;
 					font-style: normal;
 					font-weight: 300;
 					font-size: 16px;
 					line-height: 22px;
 					text-align: center;
-					color: #1B1B1B;
+					color: #1b1b1b;
 					margin-bottom: 0;
-				  }
-				 button{
-					&.action-button{
+				}
+				button {
+					&.action-button {
 						&.black-button {
 							height: 50px;
 							margin-top: 15px;
+							cursor: pointer;
 						}
 					}
-				 }
+				}
 			}
-
 		}
 	}
 }
@@ -3438,25 +3475,21 @@ ul.steps-progress-bars {
 	background-color: #f8f3e9;
 }
 
-
-
-
-
-  .consultation-booking-confirmation-popup {
+.consultation-booking-confirmation-popup {
 	.popup-widgets-wrapper {
 		.popup-widget-main {
 			.popup-main-content-box {
 				.popup-main-btn-box {
 					.popup-pin-text {
-						font-family: 'Manrope', sans-serif;
+						font-family: "Manrope", sans-serif;
 						font-style: normal;
 						font-weight: 300;
 						font-size: 16px;
 						line-height: 22px;
 						text-align: center;
-						color: #1B1B1B;
+						color: #1b1b1b;
 						margin-bottom: 0;
-					  }
+					}
 				}
 			}
 			.provider-info-wrapper-box {
@@ -3467,25 +3500,29 @@ ul.steps-progress-bars {
 						margin-left: auto;
 						margin-right: auto;
 						margin-bottom: 19px;
-					  }
-					  .users-info-cont {
+						@media screen and (max-width: 1440px) {
+							width: 98px;
+							height: 98px;
+						}
+					}
+					.users-info-cont {
 						text-align: center;
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
-					  }
-				  }
+					}
+				}
 			}
 		}
 	}
-  }
+}
 
-  .sync-meet-users-info-box {
+.sync-meet-users-info-box {
 	.call-info-text {
 		text-align: center;
-	  }
-	  .meet-call-user-image {
+	}
+	.meet-call-user-image {
 		width: 109px;
 		height: 109px;
 		display: flex;
@@ -3498,7 +3535,7 @@ ul.steps-progress-bars {
 		border: 1px solid #438465;
 		position: relative;
 		&:before {
-			content: '';
+			content: "";
 			position: absolute;
 			right: 17px;
 			top: 6px;
@@ -3506,19 +3543,17 @@ ul.steps-progress-bars {
 			width: 8px;
 			height: 8px;
 			border-radius: 30px;
-		  }
-	  }
-  }
+		}
+	}
+}
 
-
-
-  .popup-widgets-wrapper {
+.popup-widgets-wrapper {
 	.popup-widget-main {
 		.popup-main-content-box {
 			.popup-main-btn-box {
 				margin-top: 0;
-			  }
-			  .selected-event-schedule {
+			}
+			.selected-event-schedule {
 				position: relative;
 				padding-top: 17px;
 				padding-bottom: 23px;
@@ -3528,7 +3563,7 @@ ul.steps-progress-bars {
 				padding-left: 13px;
 				padding-right: 13px;
 				.event-days-time {
-					font-family: 'Montserrat';
+					font-family: "Montserrat";
 					font-style: normal;
 					font-weight: 700;
 					font-size: 12px;
@@ -3536,9 +3571,9 @@ ul.steps-progress-bars {
 					text-align: center;
 					color: #000000;
 					margin-bottom: 0;
-				  }
-				  .event-duration {
-					font-family: 'Montserrat';
+				}
+				.event-duration {
+					font-family: "Montserrat";
 					font-style: normal;
 					font-weight: 400;
 					font-size: 12px;
@@ -3553,13 +3588,308 @@ ul.steps-progress-bars {
 						height: 18px;
 						font-size: 18px;
 						line-height: 18px;
-						color: #DECFB3;
-					  }
-					  .duretion-titme {
+						color: #decfb3;
+					}
+					.duretion-titme {
 						font-weight: 600;
-					  }
-				  }
-			  }
+					}
+				}
+			}
 		}
 	}
-  }
+}
+.radio-group-container {
+	&.question-select {
+		.provider-select-location-item {
+			.ant-btn {
+				background: transparent;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1440px) {
+	.time-slot-wrapper-cont .provider-info-box {
+		padding-left: 0;
+	}
+	.time-slot-wrapper-cont .provider-overview-wrapper {
+		padding-left: 0;
+	}
+	.time-slot-wrapper-cont .provider-user-image {
+		width: 98px;
+		height: 91px;
+	}
+	.time-slot-wrapper-cont .layout-wrapper-with-sidebar {
+		height: auto;
+	}
+}
+@media screen and (max-width: 1280px) and (min-width: 992px) {
+	.time-slot-wrapper-cont
+		.sidebar-content-wrapper
+		.provider-info-box
+		.provider-user-image {
+		height: 75px;
+	}
+	.time-slot-wrapper-cont .sidebar-content-wrapper.right-sidebar-content {
+		padding-right: 10px;
+	}
+	.time-slot-wrapper-cont
+		.sidebar-content-wrapper.right-sidebar-content
+		.provider-sidebar-wrap {
+		padding-left: 10px;
+	}
+	.time-slot-wrapper-cont
+		.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-bottom-content
+		.dates
+		div {
+		padding: 19px 18px 16px 11px;
+		height: 62px;
+		line-height: 23px;
+	}
+}
+@media screen and (max-width: 1199px) {
+	.time-slot-wrapper-cont .sidebar-content-wrapper {
+		padding: 34px 0px 23px 15px;
+	}
+	.time-slot-wrapper-cont .sidebar-content-wrapper .provider-sidebar-wrap {
+		padding-right: 10px;
+	}
+	.time-slot-wrapper-cont .users-info-cont .user-name {
+		font-size: 20px;
+	}
+	.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-top-content
+		.days-name
+		div {
+		padding: 10px;
+		font-size: 16.811px;
+	}
+	.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-top-content
+		.days-name {
+		height: 53px;
+	}
+	.time-slot-wrapper-cont
+		.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-bottom-content
+		.dates
+		div {
+		padding: 10px 10px 10px 11px;
+		height: 50px;
+		line-height: 25px;
+		font-size: 15px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.sidebar-content-wrapper .section-title-box {
+		display: none;
+	}
+}
+@media screen and (max-width: 1280px) {
+	.sidebar-content-wrapper .provider-info-box {
+		padding-left: 0;
+	}
+	.sidebar-content-wrapper .provider-info-box .provider-user-image {
+		height: 100px;
+	}
+	.sidebar-content-wrapper .provider-info-box .provider-user-image::before {
+		right: 11px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.sidebar-content-wrapper .provider-info-box .provider-user-image {
+		height: 88px;
+	}
+}
+@media screen and (max-width: 991px) {
+	.concierge-layout-main .layout-wrapper-with-sidebar {
+		height: auto;
+	}
+	.provider-sidebar-wrap .section-title-box {
+		margin-bottom: 20px;
+	}
+	.provider-sidebar-wrap .section-title-box title {
+		font-size: 35px;
+	}
+	.provider-overview-wrapper .section-title-box {
+		margin-bottom: 0;
+	}
+	.provider-overview-wrapper .section-title-box .title {
+		display: none;
+	}
+	.search-provider-widgets .widgets-main-cont {
+		padding-bottom: 30px;
+	}
+	.providers-profile-overview .providers-info-details-view {
+		max-width: 560px;
+		height: 617px;
+		display: block;
+		overflow-y: scroll;
+	}
+	.pop-close-btn {
+		top: 9px;
+		right: 13px;
+	}
+	.providers-profile-overview
+		.providers-info-details-view
+		.providers-profile-info-cont
+		.providers-name {
+		font-size: 28px;
+	}
+	.providers-profile-overview
+		.providers-info-details-view
+		.providers-profile-info-cont
+		.providers-name
+		.providers-bio-info {
+		font-size: 12px;
+	}
+	.sidebar-content-wrapper {
+		padding-right: 30px;
+	}
+	.sidebar-content-wrapper .provider-sidebar-wrap {
+		border-top: 1px solid #999999;
+		border-right: 0;
+	}
+	.provider-overview-wrapper {
+		padding-bottom: 0;
+	}
+	.appoinment-confirmation-wrapper,
+	.time-slot-wrapper-cont,
+	.address-fild-wrapper,
+	.location-category-wrapper {
+		padding-bottom: 35px;
+	}
+
+	.appoinment-confirmation-wrapper
+		.layout-wrapper-with-sidebar
+		.layout-user-screen-box
+		.ant-row,
+	.time-slot-wrapper-cont
+		.layout-wrapper-with-sidebar
+		.layout-user-screen-box
+		.ant-row,
+	.address-fild-wrapper
+		.layout-wrapper-with-sidebar
+		.layout-user-screen-box
+		.ant-row,
+	.location-category-wrapper
+		.layout-wrapper-with-sidebar
+		.layout-user-screen-box
+		.ant-row {
+		height: 100%;
+		flex-direction: column-reverse;
+	}
+	.time-slot-wrapper-cont .provider-overview-wrapper {
+		padding-left: 30px;
+	}
+	.sidebar-content-wrapper.right-sidebar-content .provider-sidebar-wrap {
+		padding-left: 0;
+		border-left: 0;
+		border: 0;
+	}
+	.provider-select-date-time .time-slot-calendar-box {
+		padding: 27px 0px 40px 0px;
+	}
+	.provider-select-date-time h6.title {
+		padding-left: 0;
+	}
+	.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-bottom-content
+		.dates
+		div {
+		padding: 10px 10px 10px 10px;
+		font-size: 14.811px;
+		height: 50px;
+	}
+	.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-top-content
+		.days-name
+		div {
+		padding: 10px 10px 10px 10px;
+		font-size: 14.811px;
+		height: 50px;
+	}
+	.provider-select-date-time
+		.time-slot-calendar-box
+		.calendar-main-content
+		.calendar-top-content
+		.days-name {
+		height: 50px;
+	}
+	.location-category-wrapper  .provider-sidebar-wrap {
+		border-top: 1px solid !important;
+	}
+	.concierge-layout-main .provider-sidebar-wrap {
+		border-top: 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.search-provider-widgets p.desc-text {
+		text-align: center;
+	}
+	.sidebar-content-wrapper {
+		padding-left: 15px;
+		padding-bottom: 0;
+	}
+	.sidebar-content-wrapper .provider-sidebar-wrap {
+		padding-right: 15px;
+	}
+	.provider-overview-wrapper
+		.provider-main-wrapperbox
+		.service-info-header
+		.fillter-item-box
+		.input-select-items {
+		max-width: 80px;
+	}
+	.provider-overview-wrapper
+		.provider-main-wrapperbox
+		.service-info-header
+		.fillter-item-box {
+		width: 144px;
+	}
+	.providers-profile-overview .providers-info-details-view {
+		padding-left: 15px;
+	}
+	.providers-profile-overview
+		.providers-info-details-view
+		.providers-profile-image {
+		width: 100%;
+	}
+	.providers-profile-overview
+		.providers-info-details-view
+		.providers-profile-info-cont
+		.providers-name {
+		font-size: 24px;
+		line-height: 1;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+	.time-slot-wrapper-cont .provider-user-image,
+	.location-category-wrapper .provider-user-image,
+	.address-fild-wrapper .provider-user-image {
+		height: 90px;
+	}
+	.provider-select-location-address-overview
+		.listed-address-wrapper
+		.listed-address-main-wrap
+		.listed-address-items
+		p.address-text {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.time-slot-wrapper-cont .provider-overview-wrapper {
+		padding-left: 15px;
+	}
+}

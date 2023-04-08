@@ -22,7 +22,7 @@ const SelectTimeSlote = () => {
 
             <div className='layout-user-screen-box'>
               <Row>
-                <Col md={6} xs={24}>
+                <Col  xl={6} lg={6} md={24} xs={24}>
                   <div className='sidebar-content-wrapper'>
                     <div className='provider-sidebar-wrap'>
                       <ProviderInfo ExtraInfo={true} />
@@ -31,7 +31,7 @@ const SelectTimeSlote = () => {
                   </div>
                 </Col>
 
-                <Col md={11} xs={24}>
+                <Col  xl={11} lg={9} md={24} xs={24}>
                   <div className='provider-overview-wrapper'>
                     <SectionTitle title='Select Time Slot' />
 
@@ -108,7 +108,7 @@ const SelectTimeSlote = () => {
                   </div>
                 </Col>
 
-                <Col md={7} xs={24}>
+                <Col xl={7} lg={9}  md={24} xs={24}>
                   <div className='sidebar-content-wrapper right-sidebar-content'>
                     <div className='provider-sidebar-wrap'>
                       <div className='time-slot-event-schedule'>

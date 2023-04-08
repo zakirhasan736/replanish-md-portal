@@ -217,7 +217,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
             { /* ========popUp box======== */}
             {OpenConfimationPopup && <div className='popup-widgets-wrapper'>
             <div className='popup-widget-main'>
-            <button className='pop-close-btn'><IoMdClose /></button>
+            <button className='pop-close-btn' onClick={() => setOpenConfimationPopup(false)}><IoMdClose /></button>
                 <div className='popup-main-content-box'>
                 <div className='check-mark-icon-box'>
                 <Image src='/icons/forms/check-mark.svg' className='check-mark-icon' width={106} height={106} prefix={false} preview={false} />
