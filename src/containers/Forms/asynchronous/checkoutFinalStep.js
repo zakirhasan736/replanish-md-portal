@@ -6,9 +6,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IoMdClose } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
+import { useRouter } from 'next/router';
 
 const CheckoutFinalSteps = ({ handleStep, currval }) => {
 
+    const router = useRouter()
     const submitFullCheckoutInfo = () => {
         //complete all required task here after that need to update stepvalue
         handleStep(19)
@@ -116,7 +118,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                                         </Row>
                                         <Row>
                                             <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} md={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}  >
-                                                <Button onClick={() => submitFullCheckoutInfo()} className='submit-button black-button'>Pay $0 Today</Button>
+                                                <Button onClick={() => setOpenConfimationPopup(true)} className='submit-button black-button'>Pay $0 Today</Button>
                                                 <div className='privecy-info-pin-text' >  <Image src='/assets/images/bxs_lock-alt.png' width={24} height={24} alt='lock icons' />  <p className='info-text-desc'>256-BIT TLS SECURITY</p></div>
                                             </Col>
                                         </Row>
@@ -215,7 +217,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
             { /* ========popUp box======== */}
             {OpenConfimationPopup && <div className='popup-widgets-wrapper'>
             <div className='popup-widget-main'>
-            <button className='pop-close-btn'><IoMdClose /></button>
+            <button className='pop-close-btn' onClick={() => setOpenConfimationPopup(false)}><IoMdClose /></button>
                 <div className='popup-main-content-box'>
                 <div className='check-mark-icon-box'>
                 <Image src='/icons/forms/check-mark.svg' className='check-mark-icon' width={106} height={106} prefix={false} preview={false} />
@@ -224,7 +226,7 @@ const CheckoutFinalSteps = ({ handleStep, currval }) => {
                    <p className='popup-main-desc'>You will be notified by mail and sms once the best provider has been selected for your service. <span>This usealy takes upto 2 hours.</span></p>
                    <div className='popup-main-btn-box text-center'>
                    <span className='popup-pin-text'>Know what is best for you?</span>
-                   <button className='action-button black-button'>Select your provider</button>
+                   <button onClick={()=>router.push("/manage_services/concierge?wizard=1&tab=ConciergeHome")} className='action-button black-button'>Select your provider</button>
                    </div>
                 </div>
 

@@ -111,6 +111,16 @@ const AddToFeed = () => {
     const generateComment = (carr) => {
         setcomment(carr);
     }
+
+    // handle like count  next working is here
+
+    const getALike = (id) => {
+        const updatedTodos = [...todos];
+        const index = updatedTodos.findIndex(todo => todo.id === id);
+        updatedTodos[index].completed = true;
+        setTodos(updatedTodos);
+    }
+
     return (
         <>
             <div className='user-feed-comment-wrapper'>

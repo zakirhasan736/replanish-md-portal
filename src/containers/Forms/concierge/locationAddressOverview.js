@@ -8,12 +8,20 @@ import ProviderInfo from 'src/common/Forms/providerInfo';
 import { AiOutlinePlus, AiOutlineDelete } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { FiEdit2 } from "react-icons/fi";
+import { useRouter } from 'next/router';
+
 const LocationAddressOverview = () => {
+
+  const router = useRouter();
   const [value, setValue] = useState(1);
   const onChange = (e) => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
+
+  const backToAddAddress = () => {
+    router.push("/manage_services/concierge?wizard=3&tab=select-location-address")
+  }
 
   return (
     <div className='address-fild-wrapper'>
@@ -23,7 +31,7 @@ const LocationAddressOverview = () => {
 
             <div className='layout-user-screen-box'>
               <Row>
-                <Col md={6} xs={24}>
+                <Col lg={8} md={24} xs={24}>
                   <div className='sidebar-content-wrapper'>
                     <div className='provider-sidebar-wrap'>
                       <ProviderInfo ExtraInfo={true} />
@@ -32,7 +40,7 @@ const LocationAddressOverview = () => {
                   </div>
                 </Col>
 
-                <Col md={18} xs={24}>
+                <Col lg={16} md={24} xs={24}>
                   <div className='provider-overview-wrapper'>
                     <SectionTitle title='Select Location' />
 
@@ -53,7 +61,7 @@ const LocationAddressOverview = () => {
                             </Radio.Group>
                           </div>
                         </div>
-                        <button className='add-address-button black-button'><span className='plus-icon'><AiOutlinePlus /></span> Add Address</button>
+                        <button onClick={() => backToAddAddress()} className='add-address-button black-button'><span className='plus-icon'><AiOutlinePlus /></span> Add Address</button>
                         <div className='listed-address-wrapper'>
                           <h4 className='title'>Your Addresses</h4>
                           <div className='listed-address-main-wrap'>
@@ -75,7 +83,7 @@ const LocationAddressOverview = () => {
                               </div>
                             </div>
                           </div>
-                           <button className='black-button address-continue-btn'>continue</button>
+                          <button onClick={() => router.push("/manage_services/concierge?wizard=3&tab=time-slot")} className='black-button address-continue-btn'>continue</button>
                         </div>
                       </div>
                     </div>

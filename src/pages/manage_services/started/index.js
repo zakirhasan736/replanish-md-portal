@@ -34,7 +34,7 @@ export default function ServicesNewPage() {
 	}
 	return (
 		<div>
-			{started === "true" && (
+			{ (
 				<>
 					{step === 1 && <StartedStep handleStep={handleStep} StepNext={false} FillBtnText={""} currval={1} />}
 
@@ -72,7 +72,7 @@ export default function ServicesNewPage() {
 
 					{step === 18 && <CheckoutSTepsOne handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={18} />}
 
-					{step === 19 && <CheckoutFinalSteps handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={19} />}			
+					{step === 19 && <CheckoutFinalSteps handleStep={handleStep} StepNext={true} FillBtnText={"Next"} currval={19} />}
 				</>
 			)}
 		</div>
