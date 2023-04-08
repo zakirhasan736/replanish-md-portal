@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React from 'react'
 import { Col, Row } from 'antd';
 import LayoutWrapper from 'src/components/Forms/layoutWrapper'
 import SearchProvider from 'src/components/Forms/concierge/searchProvider';
@@ -9,8 +8,6 @@ import ProviderCard from 'src/components/Forms/concierge/providerCard';
 import { ProviderSuggestData, ProviderInPlaceData } from '../../../components/Forms/concierge/db'
 
 const ConciergeHome = ({ }) => {
-
-
 
     return (
         <div className='concierge-layout-main'>

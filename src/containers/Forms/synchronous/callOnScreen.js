@@ -20,7 +20,7 @@ const callOnScreen = ({ handleClosed }) => {
                     {screens.md ? (
                         <div className='meet-call-user-screen-box layout-user-screen-box'>
                             <Row>
-                                <Col md={6} xs={24}>
+                                <Col lg={6} md={24} xs={24}>
                                     <div className='meet-screen-sidebar sidebar-content-wrapper'>
                                         <div className='meet-screen-sidebar-wrap provider-sidebar-wrap'>
                                             <ProviderInfo />
@@ -35,7 +35,7 @@ const callOnScreen = ({ handleClosed }) => {
                                     </div>
                                 </Col>
 
-                                <Col md={18} xs={24}>
+                                <Col lg={18} md={24} xs={24}>
                                     <div className='desk-meet-video-screen'>
                                         { /*<VideoFullScreen />*/}
                                         <VideoScreen handleClosed={handleClosed} />
