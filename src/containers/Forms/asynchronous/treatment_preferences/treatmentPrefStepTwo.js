@@ -5,11 +5,8 @@ import { Col, Row,Checkbox } from 'antd';
 import { TreatmentPrefDataTwo } from 'src/components/Forms/asynchronous/db';
 import CheckBoxQuestionSelect from 'src/common/Forms/checkboxQuestion';
 
-
 const TreatmentPrefStepTwo = ({ handleStep, currval }) => {
-
     const [value, setvalue] = useState(null);
-
     const onChange = (checkedValues) => {
         setvalue(checkedValues);
         handleSubmitData()

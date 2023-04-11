@@ -2,9 +2,9 @@ import { useRouter } from "next/router"
 import { useLayoutEffect } from "react";
 import { useState } from "react";
 
-import CallOnScreen from 'src/containers/Forms/synchronous/callOnScreen';
-import CallScreen from 'src/containers/Forms/synchronous/callScreen';
-import EndedCallScreen from 'src/containers/Forms/synchronous/endedCallScreen';
+import CallOnScreen from 'src/containers/Forms/video_calling_and_chat/callOnScreen';
+import CallScreen from 'src/containers/Forms/video_calling_and_chat/callScreen';
+import EndedCallScreen from 'src/containers/Forms/video_calling_and_chat/endedCallScreen';
 
 const Meet = () => {
     const router = useRouter();

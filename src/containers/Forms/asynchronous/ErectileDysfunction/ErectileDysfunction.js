@@ -1,18 +1,51 @@
 import React, { useState } from 'react';
 import SectionTitle from 'src/common/Forms/sectionTitle';
 import LayoutWrapper from 'src/components/Forms/layoutWrapper';
-import { Col, Row , Button, Radio} from 'antd';
-import { QuestionStepEnter } from 'src/components/Forms/asynchronous/db';
-import PropTypes from "prop-types";
+import { Col, Row, Button, Radio } from 'antd';
 import QuestionSelectItem from 'src/common/Forms/questionSelectItem';
+import { useRouter } from 'next/router';
+import { question_db, title_db } from './data';
 
-const StartedStep = ({ handleStep,StepNext }) => {
+const ErectileDysfunction = ({ handleStep, StepNext }) => {
   const [value, setValue] = useState(1);
+
+  const router = useRouter();
+  const { wizard, name, tab } = router.query;
+
+  const handleUpdateQuery = (wizard, name, tab) => {
+    router.push({
+      pathname: '/manage_services/started',
+      query: { wizard: wizard, name: name, tab: tab },
+    });
+  };
 
   const onChange = (e) => {
     setValue(e.target.value);
-    handleStep(2);
+    if (!value) return
+    switch (name) {
+      case "ED_problems":
+        handleUpdateQuery(wizard,"ED_symptoms", 2);
+        break;
+      case "ED_symptoms":
+        handleUpdateQuery(wizard,"Morning_ED", 3);
+      case "Morning_ED":
+        handleUpdateQuery("authentication","ED_visit", 1);
+        break;
+      default:
+        break;
+    }
   };
+
+  /*
+Erectile Dysfunction
+
+1.Erectile issues? (or ED problems?)
+2.ED symptoms?
+3.Morning ED? (or morning wood?)
+  
+  */
+
+  //1,2,3
 
   return (
 
@@ -25,13 +58,17 @@ const StartedStep = ({ handleStep,StepNext }) => {
           <Row justify="start" gutter={[0, 20]}>
             <Col xxl={{ span: 18, offset: 4 }} xl={{ span: 18, offset: 4 }} lg={{ span: 18, offset: 3 }} >
               <div className='section-top-wrapperbox'>
-                <SectionTitle title='Do you ever have a problem Erectile dysfunction?' subtitle='LET’S GET STARTED' />
+                {
+                  title_db.filter((items => items.name === name)).map(({ name, text }) => (
+                    <SectionTitle title={text} subtitle={`${name === "ED_problems" ? "LET’S GET STARTED" : ""}`} />
+                  ))
+                }
               </div>
             </Col>
           </Row>
 
           <Row justify="start">
-            <Col xxl={{ span: 12, offset: 6 }}   xl={{ span: 12, offset: 6 }}  lg={{ span: 18, offset: 3 }}>
+            <Col xxl={{ span: 12, offset: 6 }} xl={{ span: 12, offset: 6 }} lg={{ span: 18, offset: 3 }}>
               <div className='steps-section-mainbox'>
 
                 <div className="question-select-box">
@@ -43,7 +80,7 @@ const StartedStep = ({ handleStep,StepNext }) => {
                   >
                     {
                       <Row gutter={[0, 32]}>
-                        {QuestionStepEnter.map((data) => (
+                        {question_db.filter((items => items.name === name)).map((data) => (
                           <QuestionSelectItem data={data} />
                         ))}
                       </Row>
@@ -69,5 +106,5 @@ const StartedStep = ({ handleStep,StepNext }) => {
   )
 }
 
-export default StartedStep
+export default ErectileDysfunction
 

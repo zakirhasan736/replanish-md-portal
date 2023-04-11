@@ -4,18 +4,14 @@ import LayoutWrapper from 'src/components/Forms/layoutWrapper'
 import { Col, Row, Button } from 'antd';
 import Image from 'next/image';
 
-const TreatmentPrefStepOne = ({ handleStep, currval }) => {
-    
-    const handleSubmitData = () => {
-        //handle input field data afte that need to update step value
-        handleStep(13)
-    }
+const TreatMentPreference = () => {
+
     return (
 
-        <LayoutWrapper SiteLogo={false} currval={currval} handleStep={handleStep} NextPage={true} BackToPrev={true} SiteTitle='3. Treatment Preference'>
+        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='3. Treatment Preference'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
-                    <Col xxl={{ span: 13, offset: 6 }} xl={{ span: 16, offset: 4 }}  lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} sm={{ span: 24, offset: 0 }}>
+                    <Col xxl={{ span: 13, offset: 6 }} xl={{ span: 16, offset: 4 }} lg={{ span: 18, offset: 3 }} md={{ span: 24, offset: 0 }} sm={{ span: 24, offset: 0 }}>
                         <div className='steps-progress-section-wrapper'>
                             <div className='steps-progress-treatment-pref'>
                                 <ul className='steps-progress-bars'>
@@ -63,4 +59,4 @@ const TreatmentPrefStepOne = ({ handleStep, currval }) => {
     )
 }
 
-export default TreatmentPrefStepOne
+export default TreatMentPreference

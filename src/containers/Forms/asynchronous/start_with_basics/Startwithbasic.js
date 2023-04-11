@@ -8,19 +8,26 @@ import {
     InputNumber, Select,
 } from 'antd';
 import InputField from 'src/common/inputField';
+import { useRouter } from 'next/router';
 
 
 const { Option } = Select;
 
-const BasicsStepsOne = ({ handleStep, currval }) => {
-    const handleSubmit = () => {
-        //handle user input value in a state or database then update the step value
-        handleStep(8);
-    }
+const StartWithBasics = ({ handleStep, currval }) => {
+    const router = useRouter();
+    const { wizard, name, tab } = router.query;
+
+    const handleUpdateQuery = (wizard, name, tab) => {
+        router.push({
+            pathname: '/manage_services/started',
+            query: { wizard: wizard, name: name, tab: tab },
+        });
+    };
+
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
             <Select>
-                <Option value="86">+91</Option> 
+                <Option value="86">+91</Option>
                 <Option value="87">+87</Option>
             </Select>
         </Form.Item>
@@ -103,13 +110,13 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
 
                                     <div className='async-input-fild-group basic-info-input-fill'>
                                         <Row gutter={[11, 0]}>
-                                           
+
                                             <Col xxl={{ span: 24, offset: 0 }}>
                                                 <Form.Item
                                                     name="phone"
                                                     rules={[{ required: true, message: 'Please input your phone number!' }]}
                                                 >
-                                                    <Input addonBefore={prefixSelector}  placeholder='Phone number'  className='signup-info-fild phone-number-select-input' style={{ width: '100%' }} />
+                                                    <Input addonBefore={prefixSelector} placeholder='Phone number' className='signup-info-fild phone-number-select-input' style={{ width: '100%' }} />
                                                 </Form.Item>
 
                                             </Col>
@@ -118,7 +125,7 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
 
                                     <Row>
                                         <Col xxl={{ span: 24, offset: 0 }} xl={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }} xs={{ span: 24, offset: 0 }}>
-                                            <Button onClick={() => handleSubmit()} className='submit-button black-button'>Next</Button>
+                                            <Button onClick={() => handleUpdateQuery("Verification","phone",1)} className='submit-button black-button'>Next</Button>
                                         </Col>
                                     </Row>
 
@@ -149,4 +156,4 @@ const BasicsStepsOne = ({ handleStep, currval }) => {
     )
 }
 
-export default BasicsStepsOne
+export default StartWithBasics

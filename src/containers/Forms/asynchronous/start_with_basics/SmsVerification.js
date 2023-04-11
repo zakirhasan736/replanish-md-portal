@@ -6,15 +6,27 @@ import InputField from 'src/common/inputField';
 import ContactCard from 'src/common/contactCard';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-const CTAStepOne = ({ handleStep, currval }) => {
+const SmsVerification = ({ handleStep, currval }) => {
+
+    const router = useRouter();
+    const { wizard, name, tab } = router.query;
+
+    const handleUpdateQuery = (wizard, name, tab) => {
+        router.push({
+            pathname: '/manage_services/started',
+            query: { wizard: wizard, name: name, tab: tab },
+        });
+    };
+
     const handleDtata = () => {
         //handle all input data and store or set a state then update step value
-        handleStep(9)
+        handleUpdateQuery("medical_questions","start_with_health_talk",1);
     }
     return (
 
-        <LayoutWrapper SiteLogo={false} NextPage={true} handleStep={handleStep} currval={currval} BackToPrev={true} SiteTitle='SMS Updates'>
+        <LayoutWrapper SiteLogo={false} NextPage={true} BackToPrev={true} SiteTitle='SMS Updates'>
             <div className='steps-section-wrapper'>
                 <Row gutter={[0, 16]}>
                     <Col xxl={{ span: 11, offset: 6 }} xl={{ span: 16, offset: 3 }} lg={{ span: 18, offset: 3 }} xs={{ span: 24, offset: 0 }}>
@@ -82,4 +94,4 @@ const CTAStepOne = ({ handleStep, currval }) => {
     )
 }
 
-export default CTAStepOne
+export default SmsVerification

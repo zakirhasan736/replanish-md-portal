@@ -4,8 +4,19 @@ import LayoutWrapper from 'src/components/Forms/layoutWrapper'
 import { Col, Row, Button } from 'antd';
 import Image from 'next/image';
 import InfoCard from 'src/components/Forms/asynchronous/infocard/infocard';
+import { useRouter } from 'next/router';
 
-const WelcomeDashboard = ({ handleStep, currval,isgoogle }) => {
+const WelcomeDashboard = ({ handleStep, currval, isgoogle }) => {
+
+    const router = useRouter();
+    const { wizard, name, tab } = router.query;
+
+    const handleUpdateQuery = (wizard, name, tab) => {
+        router.push({
+            pathname: '/manage_services/started',
+            query: { wizard: wizard, name: name, tab: tab },
+        });
+    };
 
     return (
 
@@ -25,8 +36,8 @@ const WelcomeDashboard = ({ handleStep, currval,isgoogle }) => {
                                             online visit.</p>
                                     </div>
                                 </Col>
-                                <Col xxl={{ span: 4, offset: 14 }} lg={{ span: 4, offset: 8 }}  xs={{ span: 24, offset: 0 }} >
-                                    <Button onClick={() => handleStep(7)} className='black-button top-home-button'><Image src='/assets/images/small-brand-icon.png' width={12.86} height={17} alt='brand logo' />   <span>Start my visit</span></Button>
+                                <Col xxl={{ span: 4, offset: 14 }} lg={{ span: 4, offset: 8 }} xs={{ span: 24, offset: 0 }} >
+                                    <Button onClick={() => handleUpdateQuery("Start_With", "basics", 1)} className='black-button top-home-button'><Image src='/assets/images/small-brand-icon.png' width={12.86} height={17} alt='brand logo' />   <span>Start my visit</span></Button>
                                 </Col>
                             </Row>
                         </div>
