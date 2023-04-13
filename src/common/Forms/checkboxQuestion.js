@@ -7,13 +7,14 @@ const propTypes = {
 	questionTitle: PropTypes.string,
 };
 
-const CheckBoxQuestionSelect = ({ data }) => {
+const CheckBoxQuestionSelect = ({ data, name }) => {
+	console.log(name)
 	return (
 
 		<Col xs={24} md={24}>
 			<div className="check-box-info-itembox">
 				<div className="check-box-info-item">
-					<Checkbox value={data.valueI} className="radio-btn"><span className="pref-item-title-box">
+					<Checkbox name={name} value={data.valueI} className="radio-btn"><span className="pref-item-title-box">
 						<span className="prefItemTitle">{data.questionTitle}</span> <span className="doses-charge-per">{data.doseCharge}</span>
 					</span></Checkbox>
 					<span className='suggestedPinText'>{data.suggestPinText}</span>

@@ -4,7 +4,7 @@ import LayoutWrapper from 'src/components/Forms/layoutWrapper';
 import { Col, Row, Button, Radio } from 'antd';
 import QuestionSelectItem from 'src/common/Forms/questionSelectItem';
 import { useRouter } from 'next/router';
-import { question_db, title_db } from './data';
+import { question_db,title_db } from 'src/components/Forms/asynchronous/db';
 
 const ErectileDysfunction = ({ handleStep, StepNext }) => {
   const [value, setValue] = useState(1);
